@@ -47,8 +47,6 @@ class Medium(models.Model):
 
 
 
-
-#* once types and genres are added we want to see type too
     def __str__(self):
         return f'{self.category} - {self.title} - {self.creator}'
 

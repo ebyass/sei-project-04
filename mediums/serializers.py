@@ -35,4 +35,4 @@ class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when
 #     #* should be run through the CommentSerializer and many will need to be handled
 # #     comments = CommentSerializer(many=True)
     genres = GenreSerializer(many=True)
-    categories = CategorySerializer(many=True)
+    category = CategorySerializer()
