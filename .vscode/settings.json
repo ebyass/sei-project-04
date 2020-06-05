@@ -1,0 +1,10 @@
+{
+	"python.pythonPath": "/Users/eleanorbyass/.local/share/virtualenvs/sei-project-4-cGXP_62G/bin/python",
+	"workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8bd6bb",
+    "titleBar.activeBackground": "#8bd6bb",
+    "titleBar.inactiveBackground": "#8bd6bb",
+  },
+  "window.title": "Back-End FAM",
+}
