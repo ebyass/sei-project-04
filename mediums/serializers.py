@@ -16,12 +16,12 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 
-#* making serisalizer
+#* making serializer
 #* importing serializers pacakge to inherit + modelserializer to serialize the models.
 #* stringifys so we can use and send as json
 class MediumSerializer(serializers.ModelSerializer): #* Wite serializer, used still to create/update mediums
     #* what we define here is the shape of the json
-    #* and sepcify what fields. you can specify whcih fields or you can say __all__
+    #* and sepcify what fields. you can specify which fields or you can say __all__
     #* if using only one it will only be a valid tuple like ('this',)
     class Meta:
         model = Medium
