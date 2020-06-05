@@ -1,7 +1,22 @@
 from django.db import models
 
-#* Many to Many requires a joined table
+
 class Medium(models.Model):
+
+    #! ONE TO MANY
+    category = models.ForeignKey(
+        'categories.Category',
+        related_name='mediums',
+        on_delete=models.CASCADE
+        
+    )
+
+    #! Many To Many
+    genres = models.ManyToManyField(
+        'genres.Genre',
+        related_name='mediums'
+    )
+
     #* i.e artist, musician, director
     creator = models.CharField(max_length=50)
     #* date the post was made
@@ -27,14 +42,15 @@ class Medium(models.Model):
     art_gallery = models.CharField(max_length=50, blank=True, null=True)
     #* gallery location for art exhibitions
     art_gallery_location = models.CharField(max_length=50, blank=True, null=True)
+    
 
-    #! Many To Many
-    #* types will be added here
+
+
 
 
 #* once types and genres are added we want to see type too
     def __str__(self):
-        return f'{self.title} - {self.creator}'
+        return f'{self.category} - {self.title} - {self.creator}'
 
 
 

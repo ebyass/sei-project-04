@@ -7,8 +7,7 @@ from rest_framework import status
 from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Medium
-from .serializers import MediumSerializer
-# , PopulatedMediumSerializer #* imports serializer for model
+from .serializers import MediumSerializer, PopulatedMediumSerializer #* imports serializer for model
 
 #* inherits from django rest 
 class MediumListView(APIView):
@@ -27,6 +26,5 @@ class MediumListView(APIView):
     #* get data from database and then pass through serializer
     #* serializer by default only handle one medium at a time. This way we ask the serializer to handle an array at once. We say this by saying many=True. If it's just one you do it without saying many=True.
 
-        #! change medium to PopulatedSerializer after
-        serailized_mediums = MediumSerializer(mediums, many=True)
+        serailized_mediums = PopulatedMediumSerializer(mediums, many=True)
         return Response(serailized_mediums.data, status=status.HTTP_200_OK)

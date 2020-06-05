@@ -2,7 +2,8 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
 # from comments.serializers import CommentSerializer
-# from genres.serializers import GenreSerializer
+from genres.serializers import GenreSerializer
+from categories.serializers import CategorySerializer
 from .models import Medium
 User = get_user_model()
 
@@ -30,7 +31,8 @@ class MediumSerializer(serializers.ModelSerializer): #* Wite serializer, used st
 # # #* second serializer for medium to nest
 # #* this one inheirts from the reqular MediumSerializer
 # #* it already has it's meta class as it's inherited
-# class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when you want to send populated data 
+class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when you want to send populated data 
 #     #* should be run through the CommentSerializer and many will need to be handled
 # #     comments = CommentSerializer(many=True)
-# #     genres = GenreSerializer(many=True)
+    genres = GenreSerializer(many=True)
+    categories = CategorySerializer(many=True)
