@@ -1,0 +1,72 @@
+[
+  {
+    "model": "mediums.medium",
+    "pk": 1,
+    "fields": {
+      "category": 2,
+      "creator": "Gus Van Sant",
+      "date_posted": "2020-06-05T22:48:21Z",
+      "title": "My Own Private Idaho",
+      "duration": 1.44,
+      "year": 1991,
+      "image": "https://m.media-amazon.com/images/M/MV5BZDgxMGU3YTEtODEzOC00MGVlLTk4OWUtYmY0ODU0OTI1NmMxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,670,1000_AL_.jpg",
+      "video": "https://www.youtube.com/watch?v=R0lpGZ-FFTA",
+      "info": "Mike Waters lives on the street and befriends the somewhat older and streetwise Scott Favor who shows him what is necessary to survive. Waters suffers from narcolepsy and can fall asleep at any moment and in almost any circumstance. Favor comes from a rich family and is rebelling against his own background. They travel together extensively - Waters is driven by the need to find his biological mother - and spend time in Italy. Later in life however, Favor has joined mainstream society and has little time for his old friend.",
+      "price": null,
+      "start_date": null,
+      "end_date": null,
+      "art_gallery": null,
+      "art_gallery_location": null,
+      "genres": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 2,
+    "fields": {
+      "category": 3,
+      "creator": "Rihanna ft. Justin Timberlake",
+      "date_posted": "2020-06-05T22:54:05Z",
+      "title": "Rehab",
+      "duration": 4.38,
+      "year": 2008,
+      "image": "https://upload.wikimedia.org/wikipedia/en/a/aa/Rihanna_-_Rehab.png",
+      "video": "https://www.youtube.com/watch?v=rJYcmq__nDM",
+      "info": "\"Rehab\" is a song recorded by Barbadian singer Rihanna for her third studio album, Good Girl Gone Bad. Def Jam Recordings serviced the song to contemporary hit radio in the United States on October 6, 2008, as the eighth and final single from the album.",
+      "price": null,
+      "start_date": null,
+      "end_date": null,
+      "art_gallery": null,
+      "art_gallery_location": null,
+      "genres": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "creator": "V & A",
+      "date_posted": "2020-06-05T22:58:41Z",
+      "title": "Renaissance Watercolours: from Du\u0308rer to Van Dyck",
+      "duration": null,
+      "year": 2020,
+      "image": "https://vanda-production-assets.s3.amazonaws.com/2019/12/05/14/13/10/746e9bd7-564e-4df2-9783-f16bd2d5a4ff/1280.jpg",
+      "video": null,
+      "info": "Bringing together 200 rarely-seen masterpieces, this exhibition presents the exquisite medium as a unified art form for the first time, and explores its pivotal role in understanding, interpreting and documenting the natural world.",
+      "price": "Free",
+      "start_date": "2020-06-17",
+      "end_date": "2020-08-19",
+      "art_gallery": "V & A",
+      "art_gallery_location": "London",
+      "genres": [
+        3
+      ]
+    }
+  }
+  ]
+  

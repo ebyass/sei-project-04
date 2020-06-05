@@ -1,0 +1,24 @@
+[
+  {
+    "model": "genres.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Drama"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Pop"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Watercolour"
+    }
+  }
+  ]
+  
