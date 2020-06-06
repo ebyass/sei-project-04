@@ -3,6 +3,8 @@ from django.db import models
 
 class Medium(models.Model):
 
+
+
     #! ONE TO MANY
     category = models.ForeignKey(
         'categories.Category',
@@ -19,8 +21,6 @@ class Medium(models.Model):
 
     #* i.e artist, musician, director
     creator = models.CharField(max_length=50)
-    #* date the post was made
-    date_posted = models.DateTimeField()
     #* title of the exhibition, film, song
     title = models.CharField(max_length=100, unique=True)
     #* duration of the film or song

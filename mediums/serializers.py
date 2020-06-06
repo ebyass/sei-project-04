@@ -32,7 +32,10 @@ class MediumSerializer(serializers.ModelSerializer): #* Wite serializer, used st
 # #* this one inheirts from the reqular MediumSerializer
 # #* it already has it's meta class as it's inherited
 class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when you want to send populated data 
-#     #* should be run through the CommentSerializer and many will need to be handled
-# #     comments = CommentSerializer(many=True)
+#* should be run through the CommentSerializer and many will need to be handled
+# #comments = CommentSerializer(many=True)
+#! Singular = One to Many
+#! Plural = Many to Many
     genres = GenreSerializer(many=True)
     category = CategorySerializer()
+    
