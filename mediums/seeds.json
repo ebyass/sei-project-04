@@ -5,7 +5,6 @@
     "fields": {
       "category": 2,
       "creator": "Gus Van Sant",
-      "date_posted": "2020-06-05T22:48:21Z",
       "title": "My Own Private Idaho",
       "duration": 1.44,
       "year": 1991,
@@ -28,7 +27,6 @@
     "fields": {
       "category": 3,
       "creator": "Rihanna ft. Justin Timberlake",
-      "date_posted": "2020-06-05T22:54:05Z",
       "title": "Rehab",
       "duration": 4.38,
       "year": 2008,
@@ -51,7 +49,6 @@
     "fields": {
       "category": 1,
       "creator": "V & A",
-      "date_posted": "2020-06-05T22:58:41Z",
       "title": "Renaissance Watercolours: from Du\u0308rer to Van Dyck",
       "duration": null,
       "year": 2020,

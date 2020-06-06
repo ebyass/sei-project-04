@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
-# from comments.serializers import CommentSerializer
+from reviews.serializers import ReviewSerializer
 from genres.serializers import GenreSerializer
 from categories.serializers import CategorySerializer
 from .models import Medium
@@ -33,9 +33,9 @@ class MediumSerializer(serializers.ModelSerializer): #* Wite serializer, used st
 # #* it already has it's meta class as it's inherited
 class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when you want to send populated data 
 #* should be run through the CommentSerializer and many will need to be handled
-# #comments = CommentSerializer(many=True)
 #! Singular = One to Many
 #! Plural = Many to Many
     genres = GenreSerializer(many=True)
     category = CategorySerializer()
+    reviews = ReviewSerializer(many=True)
     
