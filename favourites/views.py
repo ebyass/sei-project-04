@@ -54,7 +54,7 @@ class FavouriteDetailView(APIView):
 
     permission_classes = (IsAuthenticatedOrReadOnly, )
 
-#* now we can reuse the try and except for al the requests, instead of repeating in each request. Makes code leaner.
+#* now we can reuse the try and except for all the requests, instead of repeating in each request. Makes code leaner.
     def get_favourite(self, pk):
         try:
             return Favourite.objects.get(pk=pk)
@@ -74,7 +74,7 @@ class FavouriteDetailView(APIView):
         #* ARE THEY ALLOWED
         self.is_favourite_owner(favourite_to_delete, request.user)
         request.data['owner'] = request.user.id
-        #* if the review has been found then
+        #* if the favourite has been found then
         favourite_to_delete.delete()
         #* nothing to send back because we deleted the review
         return Response(status=status.HTTP_204_NO_CONTENT)

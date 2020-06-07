@@ -28,20 +28,10 @@ class MediumListView(APIView):
         serialized_mediums = PopulatedMediumSerializer(mediums, many=True)
         return Response(serialized_mediums.data, status=status.HTTP_200_OK)
 
-# #! PERMISSION DENIED
-# #* if they are not the same person return permission denied
-# #* add to put methods, delete and update
-# #* if they are not the same permission denied
-#     def is_song_owner(self, song, user):
-#         if song.owner.id != user.id:
-#             raise PermissionDenied()
 
 #* handling single instances - show, delete
     #* pk = primary key
 class MediumDetailView(APIView):
-
-    #! add back in
-    #* permission_classes = (IsAuthenticatedOrReadOnly, )
 
 #* now we can reuse the try and except for al the requests, instead of repeating in each request. Makes code leaner.
     def get_medium(self, pk):

@@ -8,12 +8,4 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
 
-    # user_favourites = models.ForeignKey(
-    # 'favourites.Favourite',
-    # related_name='jwt_auth',
-    # on_delete=models.CASCADE,
-    # null=True
-    # )
-
-
 

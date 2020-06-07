@@ -45,5 +45,5 @@ class ProfileView(APIView):
 
     def get(self, request):
         user = User.objects.get(pk=request.user.id)
-        serialized_user = PopulatedUserSerializer(user)
+        serialized_user = PopulatedUserSerializer(user) #* favourites populated on the user 
         return Response(serialized_user.data)

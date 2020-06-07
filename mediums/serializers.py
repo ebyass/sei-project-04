@@ -16,7 +16,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'username')
 
 
-
 #* making serializer
 #* importing serializers pacakge to inherit + modelserializer to serialize the models.
 #* stringifys so we can use and send as json
@@ -33,7 +32,6 @@ class MediumSerializer(serializers.ModelSerializer): #* Wite serializer, used st
 # #* this one inheirts from the reqular MediumSerializer
 # #* it already has it's meta class as it's inherited
 class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when you want to send populated data 
-#* should be run through the CommentSerializer and many will need to be handled
 #! Singular = One to Many
 #! Plural = Many to Many
     genres = GenreSerializer(many=True)
