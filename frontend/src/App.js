@@ -1,17 +1,23 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-class App extends React.Component {
-  async componentDidMount() {
-    try {
-      const res = await fetch('/')
-      const json = await res.json()
-      console.log(json)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-  render() {
-    return <h1>Hello World</h1>
-  }
+import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
+
+
+
+
+
+
 export default App
