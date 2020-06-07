@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'genres',
     'categories',
     'mediums',
+    'favourites',
 
 
 

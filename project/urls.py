@@ -7,6 +7,7 @@ urlpatterns = [
     path('api/mediums/', include('mediums.urls')),
     path('api/posts/', include('posts.urls')),
     path('api/reviews/', include('reviews.urls')),
+    path('api/favourites/', include('favourites.urls')),
     path('api/', include('jwt_auth.urls')),
     path('api/users/', include('jwt_auth.urls'))
 

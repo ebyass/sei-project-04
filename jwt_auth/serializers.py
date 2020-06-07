@@ -1,8 +1,10 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
+#! comment back in before deployment!!!!!!
 #import django.contrib.auth.password_validation as validations
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
+from favourites.serializers import FavouriteSerializer
 User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
@@ -17,7 +19,8 @@ class UserSerializer(serializers.ModelSerializer):
 
         if password != password_confirmation:
             raise serializers.ValidationError({'password_confirmation': 'Passwords do not match'})
-
+        
+        #! comment back in before deployment!!!!!!
         # try:
         #     validations.validate_password(password=password)
         # except ValidationError as err:
@@ -29,3 +32,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
+
+
+class PopulatedUserSerializer(UserSerializer):
+    favourites = FavouriteSerializer(many=True)
