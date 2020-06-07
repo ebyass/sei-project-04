@@ -1,85 +1,80 @@
 # pylint: disable=no-member, no-self-use
+#! AKA CONTROLLER
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.exceptions import NotFound, PermissionDenied
+
+
 from .models import Favourite
-from .serializers import FavouriteSerializer, PopulatedFavouriteSerializer
-# from jwt_auth.models import User
-# from django.contrib.auth import get_user_model
-# User = get_user_model()
+from .serializers import FavouriteSerializer
 
 class FavouriteListView(APIView):
+
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+
     #! GET ALL FAVOURITES
-    permission_classes = (IsAuthenticated, )
     def get(self, _request):
-        favourite_mediums = Favourite.objects.all()
-        serialized_favourites = FavouriteSerializer(favourite_mediums, many=True)
-        print('HERE', serialized_favourites)
+        favourites = Favourite.objects.all()
+    #* now that we have all reviews -> serialize
+    #* get data from database and then pass through serializer
+    #* serializer by default only handle one song at a time. This way we ask the serializer to hangle an array at once. We say this by saying many=True. If it's just one you do it without saying many=True.
+        serialized_favourites = FavouriteSerializer(favourites, many=True)
         return Response(serialized_favourites.data, status=status.HTTP_200_OK)
 
-    # def get_favourites(self, user_favourites):
-    #     try:
-    #         return User.objects.get(user_favourites=user_favourites)
-    #     except User.DoesNotExist:
-    #         raise PermissionDenied()
+#! PERMISSION DENIED
+#* if they are not the same person return permission denied
+#* add to put methods, delete and update
+#* if they are not the same permission denied
+    def is_review_owner(self, review, user):
+        if review.owner.id != user.id:
+            raise PermissionDenied()
 
-        # print('this is request.user', request.user)
-        # print('this is request.data', request.data['owner'])
-        # print('this is the favourites', request.user['user_favourites'])
-        # print('this is request.user', request.user)
-        # print('this is request.data', request.data['owner'])
-        # print('this is the favourites', request.user['user_favourites'])
 
-    #! CREATE FAVOURITES
-    # def post(self, request):
-    #     request.data['owner'] = request.user.id
-    #     new_fave = PopulatedFavouriteSerializer(data=request.data)
-    #     if new_fave.is_valid():
-    #         new_fave.save()
-    #         return Response(new_fave.data, status=status.HTTP_201_CREATED)
-    #     return Response(new_fave.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)    
+#! CREATE FAVOURITE
+    def post(self, request):
+        #* to add the owner
+        request.data['owner'] = request.user.id
+        #* to convert it from json passing a valid object to fit serializer
+        #* request.data = body
+        new_favourite = FavouriteSerializer(data=request.data)
+        #* if it's True its ok to go ahead and create a song in the database - using iS_valid() method
+        #* returns true or false did this data meet the rules set
+        if new_favourite.is_valid():
+            new_favourite.save()
+            return Response(new_favourite.data, status=status.HTTP_201_CREATED)
+        #* if it's not valid
+        return Response(new_favourite.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+#* handling single instances - show, delete
+    #* pk = primary key
 class FavouriteDetailView(APIView):
-    
-    permission_classes = (IsAuthenticated,)
 
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+
+#* now we can reuse the try and except for al the requests, instead of repeating in each request. Makes code leaner.
     def get_favourite(self, pk):
         try:
             return Favourite.objects.get(pk=pk)
         except Favourite.DoesNotExist:
+            #* equivalent to Throw in js
             raise NotFound()
 
+
     def is_favourite_owner(self, favourite, user):
-        print('this is it', favourite.owner.id)
         if favourite.owner.id != user.id:
             raise PermissionDenied()
 
-    #! UPDATE FAVOURITES
 
-    def put(self, request, pk):
-        favourite_to_add = self.get_favourite(pk)
-        #* ARE THEY ALLOWED
-
-        # self.is_favourite_owner(favourite_to_add, request.user)
-
-        #* merging data coming from database and coming from serializer
-        added_favourite = FavouriteSerializer(favourite_to_add, data=request.data)
-        #* if it's valid
-        if added_favourite.is_valid():
-            added_favourite.save()
-            #* send back with changes
-            return Response(added_favourite.data, status=status.HTTP_202_ACCEPTED)
-        #* if invalid
-        return Response(added_favourite.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-
-    #! DELETE A FAVOURITE
+#! DELETE A FAVOURITE
     def delete(self, request, pk):
         favourite_to_delete = self.get_favourite(pk)
-        print('this is favaourite to delete', favourite_to_delete)
+        #* ARE THEY ALLOWED
         self.is_favourite_owner(favourite_to_delete, request.user)
-        print('request.user', request.user)
-        # request.data['owner'] = request.user.id
+        request.data['owner'] = request.user.id
+        #* if the review has been found then
         favourite_to_delete.delete()
+        #* nothing to send back because we deleted the review
         return Response(status=status.HTTP_204_NO_CONTENT)
