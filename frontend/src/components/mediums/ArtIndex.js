@@ -10,10 +10,9 @@ function FilmIndex() {
 
   useEffect(() => {
     const max = post ? post.length - 1 : null //* making the result ternary. Doing it here rather than the render, using the varaible to specify. Only creates variable max with post length if post exists. (-1 becaue length is not the same as the index number)
-    console.log('this is the max', max)
-    console.log('this is the post in the function', post)
+
     const recentPost = max ? post[max] : null
-    console.log(recentPost)
+
     setRecentPost(recentPost) //* sets post with index that has the greatest value to state -> it can be resued using recentPost
   },[post]) //* every time post changes. It will trigger this function to run
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 
 
@@ -13,11 +13,9 @@ function Home() {
 
   useEffect(() => {
     const max = post ? post.length - 1 : null //* making the result ternary. Doing it here rather than the render, using the varaible to specify. Only creates variable max with post length if post exists. (-1 becaue length is not the same as the index number)
-    console.log('this is the max', max)
-    console.log('this is the post in the function', post)
-    // console.log('post[2]', post[2])
+
     const recentPost = max ? post[max] : null
-    console.log(recentPost)
+
     setRecentPost(recentPost) //* sets post with index that has the greatest value to state -> it can be resued using recentPost
 
   },[post]) //* every time post changes. It will trigger this function to run
@@ -39,11 +37,17 @@ function Home() {
           <h1>{recentPost.title}</h1>
           <h2>{recentPost.info}</h2>
           <h3>{recentPost.film_title}</h3>
-          <img src={recentPost.image_film} />
+          <Link to={'/film'}>
+            <img src={recentPost.image_film} />
+          </Link>
           <h3>{recentPost.art_title}</h3>
-          <img src={recentPost.image_art} />
+          <Link to={'/art'}>
+            <img src={recentPost.image_art} />
+          </Link>
           <h3>{recentPost.music_title}</h3>
-          <img src={recentPost.image_music} />
+          <Link to={'/music'}>
+            <img src={recentPost.image_music} />
+          </Link>
         </div>
         :
         <Spinner />

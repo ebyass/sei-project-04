@@ -19,6 +19,48 @@
     "fields": {
       "name": "Watercolour"
     }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 4,
+    "fields": {
+      "name": "Biography"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 5,
+    "fields": {
+      "name": "R&B"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 6,
+    "fields": {
+      "name": "Hip Hop"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 7,
+    "fields": {
+      "name": "Soul"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 8,
+    "fields": {
+      "name": "Paintings"
+    }
+  },
+  {
+    "model": "genres.genre",
+    "pk": 9,
+    "fields": {
+      "name": "Ceramics"
+    }
   }
   ]
   

@@ -11,8 +11,9 @@ function Navbar() {
   return (
     <nav>
       <Link to="/"><h1>Home</h1></Link>
-      <Link to="/Film"><h1>Film</h1></Link>
-      <Link to="/Art"><h1>Art</h1></Link>
+      <Link to="/film"><h1>Film</h1></Link>
+      <Link to="/art"><h1>Art</h1></Link>
+      <Link to="/music"><h1>Music</h1></Link>
     </nav>
   )
 
