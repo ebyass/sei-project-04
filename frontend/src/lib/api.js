@@ -6,10 +6,17 @@ export const getAllMediums = () => {
   return axios.get(`${baseUrl}/mediums`)
 }
 
-export const getAllPosts = () => {
-  return axios.get(`${baseUrl}/posts`)
+export const getAllPosts = async () => {
+  console.log('posts')
+  const result = await axios.get(`${baseUrl}/posts`)
+  console.log(result)
+  return result
+  
 }
 
 export const getSinglePost = id => {
-  return axios.get(`${baseUrl}/posts/${id}`)
+  console.log('this is the id', id)
+  const result = axios.get(`${baseUrl}/posts/${id}`)
+  console.log(result)
+  return result
 }
