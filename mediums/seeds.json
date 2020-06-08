@@ -25,6 +25,51 @@
     "model": "mediums.medium",
     "pk": 2,
     "fields": {
+      "category": 2,
+      "creator": "Steven Soderbergh",
+      "title": "Erin Brockovich",
+      "duration": 2.11,
+      "year": 2000,
+      "image": "https://m.media-amazon.com/images/M/MV5BYTA1NWRkNTktNDMxNS00NjE4LWEzMDAtNzA3YzlhYzRhNDA4L2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "video": "https://www.youtube.com/watch?v=jjqUUxIy_yk",
+      "info": "An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.",
+      "price": null,
+      "start_date": null,
+      "end_date": null,
+      "art_gallery": null,
+      "art_gallery_location": null,
+      "genres": [
+        1,
+        4
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "creator": "Gregg Araki",
+      "title": "Mysterious Skin",
+      "duration": 1.45,
+      "year": 2004,
+      "image": "https://m.media-amazon.com/images/M/MV5BMTgxMjQ4NzE5OF5BMl5BanBnXkFtZTcwNzkwOTkyMQ@@._V1_.jpg",
+      "video": "https://www.youtube.com/watch?v=5Lp5v4oQZRw",
+      "info": "A teenage hustler and a young man obsessed with alien abductions cross paths, together discovering a horrible, liberating truth.",
+      "price": null,
+      "start_date": null,
+      "end_date": null,
+      "art_gallery": null,
+      "art_gallery_location": null,
+      "genres": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 4,
+    "fields": {
       "category": 3,
       "creator": "Rihanna ft. Justin Timberlake",
       "title": "Rehab",
@@ -45,7 +90,52 @@
   },
   {
     "model": "mediums.medium",
-    "pk": 3,
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "creator": "Duke Dumont",
+      "title": "Ocean Drive",
+      "duration": 3.26,
+      "year": 2015,
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/84/Duke_Dumont_-_Ocean_Drive_cover_art.jpg",
+      "video": "https://www.youtube.com/watch?v=KDxJlW6cxRk",
+      "info": "\"Ocean Drive\" is a song by British DJ and record producer Duke Dumont, and features uncredited vocals by Boy Matthews. It was released as the lead single from his seventh extended play, Blasé Boys Club Part 1, on 31 July 2015. A music video for the song was also released on 15 September through Vevo and YouTube.",
+      "price": null,
+      "start_date": null,
+      "end_date": null,
+      "art_gallery": null,
+      "art_gallery_location": null,
+      "genres": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 6,
+    "fields": {
+      "category": 3,
+      "creator": "Childish Gambino",
+      "title": "Feels Like Summer",
+      "duration": 4.57,
+      "year": 2018,
+      "image": "https://vmp-www.imgix.net/images/Awaken_My_Love.original.jpg?auto=format&w=650&h=433.33&fit=crop&bri=-10",
+      "video": "https://www.youtube.com/watch?v=F1B9Fk_SgI0",
+      "info": "\"Feels Like Summer\" is a song by American recording artist Childish Gambino. The song was released by Wolf+Rothstein, Liberator Music and RCA Records on July 11, 2018. It was written and produced by Gambino and his longtime collaborator Ludwig Göransson.",
+      "price": null,
+      "start_date": null,
+      "end_date": null,
+      "art_gallery": null,
+      "art_gallery_location": null,
+      "genres": [
+        7,
+        5
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 7,
     "fields": {
       "category": 1,
       "creator": "V & A",
@@ -62,6 +152,50 @@
       "art_gallery_location": "London",
       "genres": [
         3
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 8,
+    "fields": {
+      "category": 1,
+      "creator": "Various",
+      "title": "Titian: Love, Desire, Death",
+      "duration": null,
+      "year": 2020,
+      "image": "https://media.timeout.com/images/105548694/1372/772/image.jpg",
+      "video": null,
+      "info": "Bodies flailing through the air, mythical creatures rushing by in a blur, golden rays of light and mounds and mounds of flesh: Titian’s poesie series is wild, dramatic, violent and very, very sensual. The Renaissance master’s works are reunited in full here for the first time since the 1500s.",
+      "price": "£8-£12",
+      "start_date": "2020-06-08",
+      "end_date": "2020-06-12",
+      "art_gallery": "National Gallery",
+      "art_gallery_location": "London",
+      "genres": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "mediums.medium",
+    "pk": 9,
+    "fields": {
+      "category": 1,
+      "creator": "Edmund de Waal",
+      "title": "Edmund de Waal: Library of Exile",
+      "duration": null,
+      "year": 2020,
+      "image": "https://media.timeout.com/images/105621470/1372/772/image.jpg",
+      "video": null,
+      "info": "It stings the heart, this installation by Edmund de Waal. The ceramicist and author has lined the walls of his room within a room in the British Museum with books by writers in exile. Albert Camus’s ‘Exile and the Kingdom’, Jean Rhys’s ‘Wide Sargasso Sea’, Ovid’s ‘Metamorphoses’. Shelf after shelf of stories written by people far from home, thinking of home.",
+      "price": "Free",
+      "start_date": "2020-06-08",
+      "end_date": "2020-06-17",
+      "art_gallery": "British Museum",
+      "art_gallery_location": "London",
+      "genres": [
+        9
       ]
     }
   }

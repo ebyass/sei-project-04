@@ -1,0 +1,80 @@
+[
+{
+  "model": "posts.post",
+  "pk": 1,
+  "fields": {
+    "title": "April Favourites",
+    "date_posted": "2020-04-08T12:00:00Z",
+    "info": "Our favourites for the month",
+    "image_film": "https://www.gstatic.com/tv/thumb/v22vodart/24917/p24917_v_v8_aa.jpg",
+    "image_art": "https://media.timeout.com/images/105548694/1372/772/image.jpg",
+    "image_music": "https://66.media.tumblr.com/9e06a694984062f733dc9321d58008e4/tumblr_ojxz9hhV0I1rql1mzo1_400.gifv",
+    "film_title": "June Film Favourites",
+    "art_title": "June Art Favourites",
+    "music_title": "June Music Favourites",
+    "mediums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 2,
+  "fields": {
+    "title": "May Favourites",
+    "date_posted": "2020-05-08T12:00:00Z",
+    "info": "Our favourites for the month",
+    "image_film": "https://www.gstatic.com/tv/thumb/v22vodart/24917/p24917_v_v8_aa.jpg",
+    "image_art": "https://media.timeout.com/images/105548694/1372/772/image.jpg",
+    "image_music": "https://66.media.tumblr.com/9e06a694984062f733dc9321d58008e4/tumblr_ojxz9hhV0I1rql1mzo1_400.gifv",
+    "film_title": "May Film Favourites",
+    "art_title": "May Art Favourites",
+    "music_title": "May Music Favourites",
+    "mediums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 3,
+  "fields": {
+    "title": "June Favourites",
+    "date_posted": "2020-06-08T18:35:09Z",
+    "info": "Our favourites for the month",
+    "image_film": "https://www.gstatic.com/tv/thumb/v22vodart/24917/p24917_v_v8_aa.jpg",
+    "image_art": "https://media.timeout.com/images/105548694/1372/772/image.jpg",
+    "image_music": "https://66.media.tumblr.com/9e06a694984062f733dc9321d58008e4/tumblr_ojxz9hhV0I1rql1mzo1_400.gifv",
+    "film_title": "June Film Favourites",
+    "art_title": "June Art Favourites",
+    "music_title": "June Music Favourites",
+    "mediums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}
+]
