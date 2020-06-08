@@ -14,7 +14,7 @@ export const getAllPosts = async () => {
   
 }
 
-export const getSinglePost = id => {
+export const getSinglePost = async id => {
   console.log('this is the id', id)
   const result = axios.get(`${baseUrl}/posts/${id}`)
   console.log(result)
