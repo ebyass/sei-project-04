@@ -1,12 +1,24 @@
 import React from 'react'
+import { getAllPosts } from '../../lib/api'
+import useFetch from '../../utils/useFetch'
+import { Redirect } from 'react-router-dom'
 
-// import { getAllMediums } from '../../lib/api'
-// import useFetch from '../../utils/useFetch'
 
 function Home() {
+  const { data: posts, loading, error } = useFetch(getAllPosts)
+  
+  if (error) {
+    return <Redirect to="/notfound" />
+  }
+
   return (
-    <h1> Home </h1>
+    <div>
+      posts.map(post => (
+      <h1 key={post.id} {...post} />
+      ))
+    </div>
   )
+
 }
 
 
@@ -15,16 +27,3 @@ export default Home
 
 
 
-
-// function Home() {
-//   const { data: mediums } = useFetch(getAllMediums)
-  
-//   return (
-//     <div>
-//       mediums.map(medium => (
-//       <h1 key={medium.id} {...medium} />
-//       ))
-//     </div>
-//   )
-
-// }
