@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 import SelectYear from '../common/SelectYear'
 import SelectMonth from '../common/SelectMonth'
@@ -48,7 +48,9 @@ function MusicIndex() {
                 <h1>{medium.title}</h1>
                 <h1>{medium.creator}</h1>
                 <h1>{medium.duration}</h1>
-                <img src={medium.image} alt={medium.title} />
+                <Link to={`/mediums/${medium.id}`}>
+                  <img src={medium.image} alt={medium.title} />
+                </Link>
                 {/* <video src={medium.video} /> */}
               </div>						
               : //* if not 3

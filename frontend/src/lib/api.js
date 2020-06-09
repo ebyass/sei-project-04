@@ -9,7 +9,7 @@ export const getAllMediums = () => {
 }
 
 export const getSingleMedium = async id => {
-  console.log('this is the id')
+  // console.log('this is the id')
   const result = await axios.get(`${baseUrl}/mediums/${id}`)
   // console.log('this is single medium', result)
   return result
