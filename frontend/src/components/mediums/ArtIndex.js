@@ -40,8 +40,7 @@ function FilmIndex() {
               <div key={medium.id}>
                 <h1>{medium.title}</h1>
                 <h1>{medium.creator}</h1>
-                <h1>{medium.duration}</h1>
-                <img src={medium.image} />
+                <img src={medium.image} alt={medium.title} />
               </div>
               :   //* if not 1
               null

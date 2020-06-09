@@ -1,57 +1,62 @@
-import React, { useEffect, useState } from 'react'
-import { getAllPosts } from '../../lib/api'
+import React, { useEffect, useState }  from 'react'
+import { getSingleMedium } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
-import { Redirect } from 'react-router-dom'
+import { Redirect, useParams } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 
-function FilmIndex() {
-  const { data: post, error } = useFetch(getAllPosts) 
-  const [ recentPost, setRecentPost ] = useState('') //* setting state here.  
+function FilmShow() {
+  const { id } = useParams()
+  const { data: medium, loading, error } = useFetch(getSingleMedium, id)
+  // const [ mediumToMap, setMediumToMap ] = useState('')
 
-  useEffect(() => {
-    const max = post ? post.length - 1 : null //* making the result ternary. Doing it here rather than the render, using the varaible to specify. Only creates variable max with post length if post exists. (-1 becaue length is not the same as the index number)
+  console.log('this is medium', medium)
 
-    const recentPost = max ? post[max] : null
+  // useEffect(() => {
+  //   const mediumToMap = medium ? medium : null
+  //   console.log('this is mediumToMap', mediumToMap)
 
-    setRecentPost(recentPost) //* sets post with index that has the greatest value to state -> it can be resued using recentPost
-  },[post]) //* every time post changes. It will trigger this function to run
+  //   setMediumToMap(mediumToMap)
+  //   console.log('this is setMediumToMap(mediumToMap', setMediumToMap(mediumToMap))
+  // },[medium])
 
   if (error) {
     return <Redirect to="/notfound" />
   }
 
+
+  // if (!mediumToMap) return 'no data'
+  // if (!Array.isArray(medium)) return 'results are not array'
   return (
     <div>
-      <h1>Film Index</h1>
+      <h1>Film</h1>
 
-      <br/>
+      <br />
 
-      {recentPost ? 
-        <div>
-          <h1>{recentPost.title}</h1>
-          <h2>{recentPost.film_title}</h2>
-
-          <br/>
-
-          {recentPost.mediums.map(medium => (
-
-            medium.category === 2 ? //* film is category 2
-            
-              <div key={medium.id}>
-                <h1>{medium.title}</h1>
-                <h1>{medium.creator}</h1>
-                <h1>{medium.duration}</h1>
-                <img src={medium.image} />
-                {/* <video src={medium.trailer} /> */}
-              </div>
-              :   //* if not 1
-              null
-          ))}
-        </div>
+      {loading ?
+        <Spinner />
         :
-        <Spinner />	
+        <div>
+          <h1>{medium.title}</h1>
+
+          <br />
+
+          {/* {mediumToMap.genres.map(medium => (
+            <h1 key={medium.id}>{medium.genres}</h1>
+          ))} */}
+          
+          {medium.map(medium => (
+            medium.genres.map(medium => (
+              <h1 key={medium.id}>{medium.genre}</h1>
+            ))
+          ))}
+
+          <h1>{medium.creator}</h1>
+          <h1>{medium.duration}</h1>
+          <img src={medium.image} alt={medium.title} />
+          {/* <video src={medium.trailer} /> */}
+        </div>
       }
     </div>
   )
 }
-export default FilmIndex 
+export default FilmShow 
