@@ -38,15 +38,15 @@ function Home() {
           <h2>{recentPost.info}</h2>
           <h3>{recentPost.film_title}</h3>
           <Link to={'/film'}>
-            <img src={recentPost.image_film} />
+            <img src={recentPost.image_film} alt={recentPost.title} />
           </Link>
           <h3>{recentPost.art_title}</h3>
           <Link to={'/art'}>
-            <img src={recentPost.image_art} />
+            <img src={recentPost.image_art} alt={recentPost.title} />
           </Link>
           <h3>{recentPost.music_title}</h3>
           <Link to={'/music'}>
-            <img src={recentPost.image_music} />
+            <img src={recentPost.image_music} alt={recentPost.title}/>
           </Link>
         </div>
         :

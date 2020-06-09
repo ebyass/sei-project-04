@@ -6,6 +6,8 @@ import MusicIndex from './components/mediums/MusicIndex'
 import Navbar from './components/common/Navbar'
 import FilmIndex from './components/mediums/FilmIndex'
 import ArtIndex from './components/mediums/ArtIndex'
+import FilmShow from './components/mediums/FilmShow'
+import ArtShow from './components/mediums/ArtShow'
 
 function App() {
   return (
@@ -13,9 +15,12 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/music" component={MusicIndex} />
+        <Route path="/mediums/:id" component={FilmShow} />
+        <Route path="/mediums/:id" component={ArtShow} />
         <Route path="/film" component={FilmIndex} />
         <Route path="/art" component={ArtIndex} />
+        <Route path="/music" component={MusicIndex} />
+      
 
       </Switch>
     </BrowserRouter>

@@ -4,7 +4,7 @@ import useFetch from '../../utils/useFetch'
 import { Redirect, useParams } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 
-function FilmShow() {
+function MusicShow() {
   const { id } = useParams()
   const { data: medium, loading, error } = useFetch(getSingleMedium, id)
   const [ mediumToMap, setMediumToMap ] = useState([]) //* setting state here
@@ -25,7 +25,7 @@ function FilmShow() {
   console.log('this is mediumToMap return', mediumToMap)
   return (
     <div>
-      <h1>Film</h1>
+      <h1>Music</h1>
 
       <br />
 
@@ -51,4 +51,4 @@ function FilmShow() {
     </div>
   )
 }
-export default FilmShow 
+export default MusicShow 

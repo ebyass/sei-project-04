@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
-import { Redirect } from 'react-router-dom'
-// import Spinner from '../common/Spinner'
+import { Redirect, Link } from 'react-router-dom'
+import Spinner from '../common/Spinner'
 // import SelectYear from '../common/SelectYear'
 // import SelectMonth from '../common/SelectMonth'
 import moment from 'moment'
@@ -16,8 +16,7 @@ function MusicIndex() {
 
   useEffect(() => {
     const max = post ? post.length - 1 : null //* making the result ternary. Doing it here rather than the render, using the varaible to specify. Only creates variable max with post length if post exists. (-1 becaue length is not the same as the index number)
-    console.log('this is the max', max)
-    console.log('this is the post in the function', post)
+
     const recentPost = max ? post[max] : null
     console.log('post', post)
 
@@ -107,8 +106,13 @@ function MusicIndex() {
                 <h1>{medium.title}</h1>
                 <h1>{medium.creator}</h1>
                 <h1>{medium.duration}</h1>
+								<Link to={`/mediums/${medium.id}`}>
+                <img src={medium.image} alt={medium.title} />
+                </Link>
+                {/* <video src={medium.video} /> */}
               </div>
-            ) : null
+            ) : 
+						< Spinner />
           )}
         </div>
       ) : null}
