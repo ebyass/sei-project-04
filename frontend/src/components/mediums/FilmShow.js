@@ -21,11 +21,8 @@ function FilmShow() {
     return <Redirect to="/notfound" />
   }
 
-
-  console.log('this is mediumToMap return', mediumToMap)
   return (
     <div>
-      <h1>Film</h1>
 
       <br />
 
@@ -33,6 +30,7 @@ function FilmShow() {
         <Spinner />
         :
         <div>
+
           <h1>{medium.title}</h1>
 
           <br />

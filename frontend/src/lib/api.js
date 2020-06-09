@@ -1,6 +1,11 @@
 import axios from 'axios'
+// import { getToken } from './auth'
 
 const baseUrl = '/api'
+
+// const withHeaders = () => {
+//   return { headers: { Authorization: `Bearer ${getToken()}` } }
+// }
 
 //! MEDIUMS
 
@@ -28,8 +33,24 @@ export const getAllPosts = async () => {
 }
 
 export const getSinglePost = async id => {
-  console.log('this is the id', id)
+  // console.log('this is the id', id)
   const result = axios.get(`${baseUrl}/posts/${id}`)
   console.log(result)
+  return result
+}
+
+//! Register
+
+export const registerUser = async data => {
+  // console.log('this is the data in registerUser')
+  const result = axios.post(`${baseUrl}/register`, data)
+  return result
+}
+
+//! Login
+
+export const loginUser = async data => {
+  // console.log('this is the data in loginUser')
+  const result = axios.post(`${baseUrl}/login`, data)
   return result
 }
