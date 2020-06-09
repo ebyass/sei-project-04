@@ -3,8 +3,6 @@ import { getAllPosts } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
 import { Redirect, Link } from 'react-router-dom'
 import Spinner from '../common/Spinner'
-// import SelectYear from '../common/SelectYear'
-// import SelectMonth from '../common/SelectMonth'
 import moment from 'moment'
 
 function MusicIndex() {
@@ -24,11 +22,11 @@ function MusicIndex() {
     console.log('selectedMonth', selectedMonth)
     console.log(recentPost)
     setRecentPost(recentPost) //* sets post with index that has the greatest value to state -> it can be resued using recentPost
-		
+
     const dateOfPosts = post ? post.map(post => (
-			
+
       { ...post, date_posted: moment(post.date_posted).format('LL') } //! Change date into usable format - set these fromatted date posts to state
-    )) : null 
+    )) : null
     console.log('these posts', dateOfPosts)
     setDateOfPosts(dateOfPosts)
 
@@ -81,25 +79,26 @@ function MusicIndex() {
           <div key={post.id}>
             <h1>{post.title}</h1>
             <h2>{post.music_title}</h2>
-            <img alt="post" src={post.image_music} />
             {post.mediums.map((medium) =>
               medium.category === 3 ? (
                 <div key={medium.id}>
                   <h1>{medium.title}</h1>
                   <h1>{medium.creator}</h1>
                   <h1>{medium.duration}</h1>
+                  <Link to={`/mediums/${medium.id}`}>
+                    <img src={medium.image} alt={medium.title} />
+                  </Link>
                 </div>
               ) : null
             )}
           </div>
         ))
 
-				
+
       ) : recentPost ? (
         <div>
           <h1>{recentPost.title}</h1>
           <h2>{recentPost.music_title}</h2>
-
           {recentPost.mediums.map((medium) =>
             medium.category === 3 ? ( //* music is category 3
               
@@ -112,7 +111,7 @@ function MusicIndex() {
                 </Link>
                 {/* <video src={medium.video} /> */}
               </div>
-            ) : 
+            ) :
               < Spinner />
           )}
         </div>
