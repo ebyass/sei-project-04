@@ -5,7 +5,7 @@ function SelectYear() {
   const [items, setItems] = React.useState([
   ])
   const [value, setValue] = React.useState(
-    '2020'
+    'Select Month'
   )
 	
   useEffect(() => {
