@@ -1,11 +1,11 @@
 import axios from 'axios'
-// import { getToken } from './auth'
+import { getToken } from './auth'
 
 const baseUrl = '/api'
 
-// const withHeaders = () => {
-//   return { headers: { Authorization: `Bearer ${getToken()}` } }
-// }
+const withHeaders = () => {
+  return { headers: { Authorization: `Bearer ${getToken()}` } }
+}
 
 //! MEDIUMS
 
@@ -25,7 +25,7 @@ export const getSingleMedium = async id => {
 //! POSTS
 
 export const getAllPosts = async () => {
-  console.log('posts')
+  console.log('gettingAllPostsAPIrunning')
   const result = await axios.get(`${baseUrl}/posts`)
   // console.log(result)
   return result
@@ -53,4 +53,22 @@ export const loginUser = async data => {
   // console.log('this is the data in loginUser')
   const result = axios.post(`${baseUrl}/login`, data)
   return result
+}
+
+//! USER
+
+export const getSingleUser = async () => {
+  console.log('getting user')
+  const result = await axios.get(`${baseUrl}/profile`, withHeaders())
+  console.log(result)
+  return result
+}
+
+//! ADD A FAVOURITE 
+
+
+export const addFavourite = async () => {
+  console.log('adding fave')
+  const res = await axios.post(`${baseUrl}/favourites/`, withHeaders())
+  console.log(res)
 }

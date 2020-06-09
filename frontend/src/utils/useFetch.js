@@ -20,7 +20,6 @@ function useFetch(request, params = null) {
     }
     getData()
   }, [request, params])
-  console.log('state', state)
   return state
 }
 
