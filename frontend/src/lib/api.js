@@ -1,11 +1,11 @@
 import axios from 'axios'
-// import { getToken } from './auth'
+import { getToken } from './auth'
 
 const baseUrl = '/api'
 
-// const withHeaders = () => {
-//   return { headers: { Authorization: `Bearer ${getToken()}` } }
-// }
+const withHeaders = () => {
+  return { headers: { Authorization: `Bearer ${getToken()}` } }
+}
 
 //! MEDIUMS
 
@@ -16,7 +16,7 @@ export const getAllMediums = () => {
 export const getSingleMedium = async id => {
   // console.log('this is the id')
   const result = await axios.get(`${baseUrl}/mediums/${id}`)
-  // console.log('this is single medium', result)
+  console.log('this is single medium', result)
   return result
 }
 
@@ -35,9 +35,24 @@ export const getAllPosts = async () => {
 export const getSinglePost = async id => {
   // console.log('this is the id', id)
   const result = axios.get(`${baseUrl}/posts/${id}`)
-  console.log(result)
+  // console.log(result)
   return result
 }
+
+//! REVIEWS
+
+export const createReview = async ( reviewData, mediumId) => {
+  const result = await axios.post(`${baseUrl}/reviews/${mediumId}/`, reviewData, withHeaders())
+  console.log('createReview result:', result)
+  return result
+}
+
+export const deleteReview = async ( reviewData, reviewId ) => {
+  const result = await axios.delete(`${baseUrl}/reviews/${reviewId}/`, reviewData, withHeaders())
+  console.log('deleteReview result:', result)
+  return result
+}
+
 
 //! Register
 

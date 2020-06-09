@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
+import Footer from './components/common/Footer'
+import ErrorPage from './components/common/Error'
 import FilmIndex from './components/mediums/FilmIndex'
 import ArtIndex from './components/mediums/ArtIndex'
 import MusicIndex from './components/mediums/MusicIndex'
-import FilmShow from './components/mediums/FilmShow'
-import ArtShow from './components/mediums/ArtShow'
-import MusicShow from './components/mediums/MusicShow'
+import MediumShow from './components/mediums/MediumShow'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 
@@ -21,17 +21,15 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/mediums/:id" component={FilmShow} />
-        <Route path="/mediums/:id" component={ArtShow} />
-        <Route path="/mediums/:id" component={MusicShow} />
+        <Route path="/mediums/:id" component={MediumShow} />
         <Route path="/film" component={FilmIndex} />
         <Route path="/art" component={ArtIndex} />
         <Route path="/music" component={MusicIndex} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
-      
-
+        <Route path="/*" component={ErrorPage} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }

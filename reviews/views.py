@@ -33,21 +33,6 @@ class ReviewListView(APIView):
             raise PermissionDenied()
 
 
-#! CREATE
-    def post(self, request): 
-        #* to add the owner
-        request.data['owner'] = request.user.id
-        #* to convert it from json passing a valid object to fit serializer
-        #* request.data = body
-        new_review = ReviewSerializer(data=request.data)
-        #* if it's True its ok to go ahead and create a song in the database - using iS_valid() method
-        #* returns true or false did this data meet the rules set
-        if new_review.is_valid():
-            new_review.save()
-            return Response(new_review.data, status=status.HTTP_201_CREATED)
-        #* if it's not valid
-        return Response(new_review.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-
 #* handling single instances - show, delete
     #* pk = primary key
 class ReviewDetailView(APIView):
@@ -66,6 +51,21 @@ class ReviewDetailView(APIView):
     def is_review_owner(self, review, user):
         if review.owner.id != user.id:
             raise PermissionDenied()
+
+#! CREATE
+    def post(self, request, pk): 
+        #* to add the owner
+        request.data['owner'] = request.user.id
+        #* to convert it from json passing a valid object to fit serializer
+        #* request.data = body
+        new_review = ReviewSerializer(data=request.data)
+        #* if it's True its ok to go ahead and create a song in the database - using iS_valid() method
+        #* returns true or false did this data meet the rules set
+        if new_review.is_valid():
+            new_review.save()
+            return Response(new_review.data, status=status.HTTP_201_CREATED)
+        #* if it's not valid
+        return Response(new_review.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 #! GET ONE REVIEW
     def get(self, _request, pk):

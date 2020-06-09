@@ -9,7 +9,7 @@ class Review(models.Model):
     content = models.TextField(max_length=300)
     #! RATING
     #* small number that must be positive. Minium number of 1, max of 5. Any number in between.
-    rating = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    rating = models.PositiveSmallIntegerField(blank=True, null=True,validators=[MinValueValidator(1), MaxValueValidator(5)])
     owner = models.ForeignKey(
         'jwt_auth.User',
         related_name='reviews', 
