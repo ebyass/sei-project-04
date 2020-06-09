@@ -14,6 +14,8 @@ function Navbar() {
       <Link to="/film"><h1>Film</h1></Link>
       <Link to="/art"><h1>Art</h1></Link>
       <Link to="/music"><h1>Music</h1></Link>
+      <Link to="/register"><h1>Register</h1></Link>
+      <Link to="/login"><h1>Login</h1></Link>
     </nav>
   )
 
