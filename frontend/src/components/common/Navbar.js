@@ -1,24 +1,39 @@
 import React from 'react'
-import { Link  // , useLocation, useHistory 
-} from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
+import { logout, isAuthenticated } from '../../lib/auth'
 
-function Navbar() {
-  // const [navbarOpen, setNavbarOpen] = React.useState(false)
-  // const { pathname } = useLocation()
-  // const history = useHistory
+class Navbar extends React.Component{
 
+  handleLogout = () => {
+    logout()
+    this.props.history.push('/')
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.setState({ isOpen: false })
+    }
+  }
 
-  return (
-    <nav>
-      <Link to="/"><h1>Home</h1></Link>
-      <Link to="/film"><h1>Film</h1></Link>
-      <Link to="/art"><h1>Art</h1></Link>
-      <Link to="/music"><h1>Music</h1></Link>
-      <Link to="/register"><h1>Register</h1></Link>
-      <Link to="/login"><h1>Login</h1></Link>
-    </nav>
-  )
+  render() {
+    return (
+      <nav>
+        <Link to="/"><h1>Home</h1></Link>
+        <Link to="/film"><h1>Film</h1></Link>
+        <Link to="/art"><h1>Art</h1></Link>
+        <Link to="/music"><h1>Music</h1></Link>
 
+        {!isAuthenticated() && 
+      <Link to="/register"><h1>Register</h1></Link>}
+
+        {!isAuthenticated() && 
+      <Link to="/login"><h1>Login</h1></Link>}
+
+        {isAuthenticated() && <span onClick={this.handleLogout} className="navbar-item logout">Logout</span>}
+
+      </nav>
+    )
+
+  }
 }
 
-export default Navbar
+export default withRouter(Navbar)
