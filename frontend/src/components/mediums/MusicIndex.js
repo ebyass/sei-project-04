@@ -99,20 +99,21 @@ function MusicIndex() {
         <div>
           <h1>{recentPost.title}</h1>
           <h2>{recentPost.music_title}</h2>
-          <img alt="post" src={recentPost.image_music} />
+
           {recentPost.mediums.map((medium) =>
-            medium.category === 3 ? (
+            medium.category === 3 ? ( //* music is category 3
+              
               <div key={medium.id}>
                 <h1>{medium.title}</h1>
                 <h1>{medium.creator}</h1>
                 <h1>{medium.duration}</h1>
-								<Link to={`/mediums/${medium.id}`}>
-                <img src={medium.image} alt={medium.title} />
+                <Link to={`/mediums/${medium.id}`}>
+                  <img src={medium.image} alt={medium.title} />
                 </Link>
                 {/* <video src={medium.video} /> */}
               </div>
             ) : 
-						< Spinner />
+              < Spinner />
           )}
         </div>
       ) : null}
