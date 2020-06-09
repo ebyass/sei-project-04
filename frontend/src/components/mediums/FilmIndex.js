@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
 import { Redirect, Link } from 'react-router-dom'
-import Spinner from '../common/Spinner'
+// import Spinner from '../common/Spinner'
 import moment from 'moment'
 
 function FilmIndex() {
@@ -111,7 +111,7 @@ function FilmIndex() {
                 {/* <video src={medium.video} /> */}
               </div>
             ) :
-              < Spinner />
+              null
           )}
         </div>
       ) : null}
