@@ -4,7 +4,8 @@ from django.contrib.auth import get_user_model
 #import django.contrib.auth.password_validation as validations
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
-from favourites.serializers import FavouriteSerializer
+from favourites.serializers import PopulatedFavouriteSerializer
+
 User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
@@ -35,4 +36,4 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class PopulatedUserSerializer(UserSerializer):
-    favourites = FavouriteSerializer(many=True)
+    favourites = PopulatedFavouriteSerializer(many=True)

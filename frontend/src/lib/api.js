@@ -67,8 +67,7 @@ export const getSingleUser = async () => {
 //! ADD A FAVOURITE 
 
 
-export const addFavourite = async () => {
-  console.log('adding fave')
-  const res = await axios.post(`${baseUrl}/favourites/`, withHeaders())
-  console.log(res)
+export const addFavourite = async (mediumId) => {
+  const res = await axios.post(`${baseUrl}/favourites/`, { medium: mediumId }, withHeaders())
+  return res
 }

@@ -34,9 +34,9 @@ class FavouriteListView(APIView):
 
 
 #! CREATE FAVOURITE
-    def post(self, request):
+    def post(self, request): 
         #* to add the owner
-        request.data['owner'] = request.user.id
+        request.data['owner'] = request.user.id #! might need to populate this somewhere
         #* to convert it from json passing a valid object to fit serializer
         #* request.data = body
         new_favourite = FavouriteSerializer(data=request.data)

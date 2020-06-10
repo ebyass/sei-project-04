@@ -11,6 +11,7 @@ import ArtShow from './components/mediums/ArtShow'
 import MusicShow from './components/mediums/MusicShow'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
+import Favourites from './components/common/Favourites'
 
 console.log('%cThis app was built by Eleanor & Yarden, check us out on github:', 'color:#C8A2C8;font-size:20px;font-weight:bold')
 console.log('%cEleanor: github.com/ebyass \nYarden: github.com/YBL123', 'color:#8BD6BB;font-size:16px')
@@ -29,6 +30,7 @@ function App() {
         <Route path="/music" component={MusicIndex} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
+        <Route path="/profile" component={Favourites} />
       
 
       </Switch>

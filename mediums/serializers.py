@@ -1,19 +1,20 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
+# from django.contrib.auth import get_user_model
 
 from reviews.serializers import ReviewSerializer
 from genres.serializers import GenreSerializer
 from categories.serializers import CategorySerializer
-from favourites.serializers import FavouriteSerializer
+# from favourites.serializers import PopulatedFavouriteSerializer
+# from favourites.serializers import FavouriteSerializer
 from .models import Medium
-User = get_user_model()
+# User = get_user_model()
 
-#* wrote another one as only want the id and username
-class UserSerializer(serializers.ModelSerializer):
+# #* wrote another one as only want the id and username
+# class UserSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = User
-        fields = ('id', 'username')
+#     class Meta:
+#         model = User
+#         fields = ('id', 'username')
 
 
 #* making serializer
@@ -37,4 +38,5 @@ class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when
     genres = GenreSerializer(many=True)
     category = CategorySerializer()
     reviews = ReviewSerializer(many=True)
-    favourites = FavouriteSerializer(many=True)
+    # favourites = PopulatedFavouriteSerializer(many=True) #* using PopulatedFavourite to get the medium in  
+    # favourites = FavouriteSerializer(many=True)

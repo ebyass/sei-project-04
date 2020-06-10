@@ -1,45 +1,58 @@
 import React, { useEffect, useState }  from 'react'
-import { getSingleMedium, getSingleUser } from '../../lib/api'
+import { getSingleMedium, getSingleUser, addFavourite } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
 import { Redirect, useParams } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 import Favourites from '../common/Favourites'
+import axios from 'axios'
 
 function FilmShow() {
   const { id } = useParams()
   const { data: medium, loading, error } = useFetch(getSingleMedium, id)
   const { data: user } = useFetch(getSingleUser)
   const [ mediumToMap, setMediumToMap ] = useState([]) //* setting state here
-  const [ userFavourites, setUserFavourites ] = useState([])
+  const [ userFavourites, setUpdateFavourites ] = useState([])
 	
 	
   useEffect(() => {
     const getGenreOfMedium = medium ? medium.genres.map(item => item) : null //* if medium is loaded -> continue to medium.genres.map -> if it's not this return null
     setMediumToMap(getGenreOfMedium) //* setting getGenreOfMedium to state
-	
+    console.log('genre!', getGenreOfMedium)
+
     const userFavourites = user ? user.favourites.map(item => item) : null 
-    setUserFavourites(userFavourites) 
-    console.log('userfavourites', userFavourites) 
+    setUpdateFavourites(userFavourites) 
+    console.log('!!!!userfavourites', userFavourites) 
 		
 		
   },[medium, user]) //* every time medium changes. It will trigger this function to run
 
 
-  const handleClick = (e) => {
-    // setAddToFavourites(true)
+  const handleClick = async (e) => {
+
     const favouriteMediumId = e.target.value
+    console.log('mediumID', favouriteMediumId)
 		
-    const alreadyAFave = userFavourites.map(fave => 
-      fave.id !== favouriteMediumId
-    ) 
-    console.log('alreadyaFave', alreadyAFave)
+    const res = await addFavourite(favouriteMediumId)
+    console.log('res.data!!', res.data)
+    setUpdateFavourites(res.data)
+    console.log('this is the user', user)
+    // userFavourites.map( item => (
+    //   item !== favouriteMediumId
+    // ))
+    // userFavourites.push(favouriteMediumId)
+    // console.log('added favourite', userFavourites)
 		
-    userFavourites.push( favouriteMediumId )
-    return setUserFavourites(userFavourites)
+    // const alreadyAFave = userFavourites.map(fave => 
+    //   fave.id !== favouriteMediumId
+    // ) 
+    // console.log('alreadyaFave', alreadyAFave)
+		
+    // userFavourites.push( favouriteMediumId )
+    // return setUpdateFavourites(userFavourites)
 		
   }
 
-  console.log('USER FAVES', userFavourites)
+  console.log(userFavourites)
 
   if (error) {
     return <Redirect to="/notfound" />
@@ -68,7 +81,7 @@ function FilmShow() {
           <h1>{medium.duration}</h1>
           <img src={medium.image} alt={medium.title} />
           {/* <video src={medium.trailer} /> */}
-          < Favourites userFavourites={userFavourites} user={user} />
+          {/* < Favourites userFavourites={userFavourites} user={user} /> */}
           <button onClick={handleClick} value={medium.id}>Add to favourites</button>
         </div>
       }
