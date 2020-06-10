@@ -30,6 +30,8 @@ class Navbar extends React.Component{
 
         {isAuthenticated() && <span onClick={this.handleLogout} className="navbar-item logout">Logout</span>}
 
+        {isAuthenticated() && <Link to="/profile"><h1>Profile</h1></Link>}
+
       </nav>
     )
 

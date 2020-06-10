@@ -59,7 +59,7 @@ function MusicIndex() {
 
       <select onChange={handleChange} >
 
-        <option value="All">All</option>
+        <option >Filter By Month</option>
         <option value="January">JANUARY</option>
         <option value="February">FEBRUARY</option>
         <option value="March">MARCH</option>
