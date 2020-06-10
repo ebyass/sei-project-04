@@ -22,15 +22,13 @@ class Navbar extends React.Component{
         <Link to="/art"><h1>Art</h1></Link>
         <Link to="/music"><h1>Music</h1></Link>
 
-        {!isAuthenticated() && 
-      <Link to="/register"><h1>Register</h1></Link>}
+        {isAuthenticated() && <Link to="/profile"><h1>My Favourites</h1></Link>}
 
-        {!isAuthenticated() && 
-      <Link to="/login"><h1>Login</h1></Link>}
+        {!isAuthenticated() && <Link to="/register"><h1>Register</h1></Link>}
 
-        {isAuthenticated() && <span onClick={this.handleLogout} className="navbar-item logout">Logout</span>}
+        {!isAuthenticated() && <Link to="/login"><h1>Login</h1></Link>}
 
-        {isAuthenticated() && <Link to="/profile"><h1>Profile</h1></Link>}
+        {isAuthenticated() && <Link to="/" onClick={this.handleLogout}><h1>Logout</h1></Link>}
 
       </nav>
     )

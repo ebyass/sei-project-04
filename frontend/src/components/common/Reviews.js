@@ -34,7 +34,6 @@ class Reviews extends React.Component {
 
   //! RATING
   changeRating = ( newRating ) => {
-    console.log('this is newRating', newRating)
     try {
       this.setState({
         rating: newRating
@@ -55,8 +54,7 @@ class Reviews extends React.Component {
     event.preventDefault()
     const mediumId = this.props.mediumId
     if (this.state.rating === 0 || this.state.rating > 5) {
-      console.log('bad rating')
-      return 
+      return //! add message
     }
     try {
       await createReview({ content: this.state.content, rating: this.state.rating, medium: mediumId }, mediumId) //* the add review function requires a text field so you can pass it through like so - also it needs to match the order that you're using the arguments in your api.js file
@@ -73,11 +71,11 @@ class Reviews extends React.Component {
 
     try {
       const reviewId = event.target.getAttribute('review-id')
-      console.log('this is reviewId:', reviewId)
+
       const mediumId = this.state.medium.id
-      console.log('this is mediumId', mediumId) //* comment out later
-      const deleteTheReview = await deleteReview(mediumId, reviewId)
-      console.log('deleteTheReview', deleteTheReview)
+
+      await deleteReview(mediumId, reviewId)
+
     } catch (err) {
       console.log(err)
     }
@@ -85,8 +83,6 @@ class Reviews extends React.Component {
   }
 
   showMoreReviewsHandleClick = async () => {
-    // console.log('showing more')
-    // event.preventDefault()
     //* now the rows will be equal to the comments array lenght and all the comments will be shown
     const newRows = this.state.medium.reviews.length
     this.setState({ rows: newRows })
@@ -120,7 +116,6 @@ class Reviews extends React.Component {
   render() {
     if (!this.state.medium) return null
     const { medium, content, buttonText, rating, rows } = this.state //* content field in state
-    console.log('medium in reviews', medium)
 
     return (
 

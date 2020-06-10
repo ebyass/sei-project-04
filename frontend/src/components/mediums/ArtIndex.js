@@ -16,18 +16,14 @@ function ArtIndex() {
     const max = post ? post.length - 1 : null //* making the result ternary. Doing it here rather than the render, using the varaible to specify. Only creates variable max with post length if post exists. (-1 becaue length is not the same as the index number)
 
     const recentPost = max ? post[max] : null
-    console.log('post', post)
 
-    const selectedMonth = post ? post.date_posted : null
-    console.log('selectedMonth', selectedMonth)
-    console.log(recentPost)
     setRecentPost(recentPost) //* sets post with index that has the greatest value to state -> it can be resued using recentPost
 
     const dateOfPosts = post ? post.map(post => (
 
-      { ...post, date_posted: moment(post.date_posted).format('LL') } //! Change date into usable format - set these fromatted date posts to state
+      { ...post, date_posted: moment(post.date_posted).format('LL') } //* Change date into usable format - set these fromatted date posts to state
     )) : null
-    console.log('these posts', dateOfPosts)
+
     setDateOfPosts(dateOfPosts)
 
 
@@ -41,7 +37,6 @@ function ArtIndex() {
       post.date_posted.includes(selectedMonth)
 
     )
-    console.log('HERE', postsToRender)
     return setFilteredPosts(postsToRender)
   }
 

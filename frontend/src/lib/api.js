@@ -14,9 +14,7 @@ export const getAllMediums = () => {
 }
 
 export const getSingleMedium = async id => {
-  // console.log('this is the id')
   const result = await axios.get(`${baseUrl}/mediums/${id}`)
-  console.log('this is single medium', result)
   return result
 }
 
@@ -25,17 +23,13 @@ export const getSingleMedium = async id => {
 //! POSTS
 
 export const getAllPosts = async () => {
-  console.log('gettingAllPostsAPIrunning')
   const result = await axios.get(`${baseUrl}/posts`)
-  // console.log(result)
   return result
   
 }
 
 export const getSinglePost = async id => {
-  // console.log('this is the id', id)
   const result = axios.get(`${baseUrl}/posts/${id}`)
-  // console.log(result)
   return result
 }
 
@@ -43,16 +37,11 @@ export const getSinglePost = async id => {
 
 export const createReview = async ( reviewData, mediumId) => {
   const result = await axios.post(`${baseUrl}/reviews/${mediumId}/`, reviewData, withHeaders())
-  console.log('createReview result:', result)
   return result
 }
 
 export const deleteReview = async ( medium, reviewId ) => {
-  console.log('medium in delete', medium)
-  console.log('reviewId in delete', reviewId)
-  console.log('withHeaders', withHeaders())
   const result = await axios.delete(`${baseUrl}/reviews/${reviewId}/`, withHeaders())
-  console.log('deleteReview result:', result)
   return result
 }
 
@@ -60,7 +49,6 @@ export const deleteReview = async ( medium, reviewId ) => {
 //! Register
 
 export const registerUser = async data => {
-  // console.log('this is the data in registerUser')
   const result = axios.post(`${baseUrl}/register`, data)
   return result
 }
@@ -68,7 +56,6 @@ export const registerUser = async data => {
 //! Login
 
 export const loginUser = async data => {
-  // console.log('this is the data in loginUser')
   const result = axios.post(`${baseUrl}/login`, data)
   return result
 }
@@ -76,9 +63,7 @@ export const loginUser = async data => {
 //! USER
 
 export const getSingleUser = async () => {
-  console.log('getting user')
   const result = await axios.get(`${baseUrl}/profile`, withHeaders())
-  console.log(result)
   return result
 }
 
