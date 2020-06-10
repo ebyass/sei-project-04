@@ -1,7 +1,7 @@
 from rest_framework import serializers
 # from django.contrib.auth import get_user_model
 
-from reviews.serializers import ReviewSerializer
+from reviews.serializers import PopulatedReviewSerializer
 from genres.serializers import GenreSerializer
 from categories.serializers import CategorySerializer
 # from favourites.serializers import PopulatedFavouriteSerializer
@@ -37,6 +37,4 @@ class PopulatedMediumSerializer(MediumSerializer): #* Read serializer, used when
 #! Plural = Many to Many
     genres = GenreSerializer(many=True)
     category = CategorySerializer()
-    reviews = ReviewSerializer(many=True)
-    # favourites = PopulatedFavouriteSerializer(many=True) #* using PopulatedFavourite to get the medium in  
-    # favourites = FavouriteSerializer(many=True)
+    reviews = PopulatedReviewSerializer(many=True) #* using populated review to get the user in

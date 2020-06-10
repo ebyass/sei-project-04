@@ -3,8 +3,9 @@ import { getSingleMedium } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
 import { Redirect, useParams } from 'react-router-dom'
 import Spinner from '../common/Spinner'
+import Reviews from '../common/Reviews'
 
-function ArtShow() {
+function MediumShow() {
   const { id } = useParams()
   const { data: medium, loading, error } = useFetch(getSingleMedium, id)
   const [ mediumToMap, setMediumToMap ] = useState([]) //* setting state here
@@ -42,11 +43,23 @@ function ArtShow() {
 
           <h1>{medium.creator}</h1>
           <h1>{medium.duration}</h1>
+          <h1>{medium.price}</h1> 
+          <h1>{medium.start_date}</h1> 
+          <h1>{medium.end_date}</h1>
+          <h1>{medium.art_gallery_location}</h1>
+          <h1>{medium.art_gallery}</h1>
+          <p>{medium.info}</p>
+          <h2>{medium.year}</h2>
           <img src={medium.image} alt={medium.title} />
           {/* <video src={medium.trailer} /> */}
+
+          <Reviews
+            mediumId={medium.id}
+          />
+          
         </div>
       }
     </div>
   )
 }
-export default ArtShow 
+export default MediumShow 
