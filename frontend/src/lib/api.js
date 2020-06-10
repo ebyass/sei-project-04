@@ -47,8 +47,11 @@ export const createReview = async ( reviewData, mediumId) => {
   return result
 }
 
-export const deleteReview = async ( reviewData, reviewId ) => {
-  const result = await axios.delete(`${baseUrl}/reviews/${reviewId}/`, reviewData, withHeaders())
+export const deleteReview = async ( medium, reviewId ) => {
+  console.log('medium in delete', medium)
+  console.log('reviewId in delete', reviewId)
+  console.log('withHeaders', withHeaders())
+  const result = await axios.delete(`${baseUrl}/reviews/${reviewId}/`, withHeaders())
   console.log('deleteReview result:', result)
   return result
 }

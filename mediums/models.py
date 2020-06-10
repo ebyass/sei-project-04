@@ -19,13 +19,6 @@ class Medium(models.Model):
         related_name='mediums'
     )
 
-    #     #! Many To Many
-    # review = models.ForeignKey(
-    #     'reviews.Review',
-    #     related_name='mediums',
-    #     on_delete=models.CASCADE
-    # )
-
     #* i.e artist, musician, director
     creator = models.CharField(max_length=50)
     #* title of the exhibition, film, song

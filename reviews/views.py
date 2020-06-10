@@ -9,7 +9,7 @@ from rest_framework.exceptions import NotFound, PermissionDenied
 
 
 from .models import Review
-from .serializers import ReviewSerializer
+from .serializers import ReviewSerializer, PopulatedReviewSerializer
 
 class ReviewListView(APIView): 
 
@@ -59,7 +59,7 @@ class ReviewDetailView(APIView):
         #* to convert it from json passing a valid object to fit serializer
         #* request.data = body
         new_review = ReviewSerializer(data=request.data)
-        #* if it's True its ok to go ahead and create a song in the database - using iS_valid() method
+        #* if it's True its ok to go ahead and create a review in the database - using iS_valid() method
         #* returns true or false did this data meet the rules set
         if new_review.is_valid():
             new_review.save()
@@ -96,8 +96,9 @@ class ReviewDetailView(APIView):
     def delete(self, request, pk):
         review_to_delete = self.get_review(pk)
         #* ARE THEY ALLOWED
+        print('this is review to delete', review_to_delete)
         self.is_review_owner(review_to_delete, request.user)
-        request.data['owner'] = request.user.id
+        # request.data['owner'] = request.user.id
         #* if the review has been found then 
         review_to_delete.delete()
         #* nothing to send back because we deleted the review
