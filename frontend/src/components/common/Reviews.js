@@ -12,7 +12,8 @@ class Reviews extends React.Component {
     rating: 0,
     rows: '3',
     reviewsStatus: true,
-    buttonText: 'Show More Reviews'
+    buttonText: 'Show More Reviews',
+    errorMessage: null
   }
 
   async getData() { //* this function can be called whenever you need to update the info on the page
@@ -54,9 +55,11 @@ class Reviews extends React.Component {
     event.preventDefault()
     const mediumId = this.props.mediumId
     if (this.state.rating === 0 || this.state.rating > 5) {
-      return //! add message
+      this.setState({ errorMessage: 'Please Add A Rating To Your Review' }) //* if user tried to post a review without adding a rating
+      return 
     }
     try {
+      this.setState({ errorMessage: null }) //* if user has added a rating to review or there was an error message before then we can set the error message back to null
       await createReview({ content: this.state.content, rating: this.state.rating, medium: mediumId }, mediumId) //* the add review function requires a text field so you can pass it through like so - also it needs to match the order that you're using the arguments in your api.js file
       this.setState({ content: '', rating: 0 }) //* setting the review box back to empty
       this.getData() //* calling this getData function again to reload the page with the new database info and display your new review straight away!
@@ -139,6 +142,7 @@ class Reviews extends React.Component {
             <br />
           </div>
         </form>
+        {this.state.errorMessage ? <div style={{ color: 'red' }}>{this.state.errorMessage}</div> : null }
         <Ratings
           rating={rating}
           widgetRatedColors="gold"
