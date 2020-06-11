@@ -74,3 +74,11 @@ export const addFavourite = async (mediumId) => {
   const res = await axios.post(`${baseUrl}/favourites/`, { medium: mediumId }, withHeaders())
   return res
 }
+
+//! DELETE FAVOURITE
+
+export const deleteFavourite = async (favouriteId) => {
+  const res = await axios.delete(`${baseUrl}/favourites/${favouriteId}`, withHeaders())
+  return res 
+
+}
