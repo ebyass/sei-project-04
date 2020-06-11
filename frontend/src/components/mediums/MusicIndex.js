@@ -37,7 +37,6 @@ function MusicIndex() {
       post.date_posted.includes(selectedMonth)
 
     )
-    console.log('HERE', postsToRender)
     return setFilteredPosts(postsToRender)
   }
 
@@ -51,8 +50,7 @@ function MusicIndex() {
 
   return (
     <div>
-      <h1>Music Index</h1>
-      
+
       <div className='select-wrapper'>
         <select onChange={handleChange} className='select-dropdown  fadeInUp'>
 
@@ -71,53 +69,55 @@ function MusicIndex() {
           <option value="December">DECEMBER</option>
         </select>
       </div>
-      {selectHasBeenUsed ? (
-        postsToRender.map(post => (
-          <div key={post.id}>
-            <h1>{post.title}</h1>
-            <h2>{post.music_title}</h2>
-            <div className='index-medium-wrapper'>
-              {post.mediums.map((medium) =>
-                medium.category === 3 ? (
-                  <div key={medium.id} >
-                    <h1>{medium.title}</h1>
-                    <h1>{medium.creator}</h1>
-                    <h1>{medium.duration}</h1>
-                    <Link to={`/mediums/${medium.id}`}>
-                      <img className='index-img' src={medium.image} alt={medium.title} />
-                    </Link>
-                  </div>
-                ) : null
-              )}
-            </div>
-          </div>
-        ))
+      <div className='film-index-wrapper'>
+        {selectHasBeenUsed ? (
+          postsToRender.map(post => (
+            <div key={post.id}>
+              {/* <h1 >{post.title}</h1> */}
+              <h2>{post.music_title}</h2>
+              <div>
+                {post.mediums.map((medium) =>
+                  medium.category === 3 ? (
+                    <div className='medium-wrapper' key={medium.id} >
+                      <h1>{medium.title}</h1>
+                      <h1 >{medium.creator}</h1>
+                      <h1>{medium.duration}</h1>
+                      <Link to={`/mediums/${medium.id}`}>
+                        <img className='medium-image-index-music' src={medium.image} alt={medium.title} />
+                      </Link>
 
-
-      ) : recentPost ? (
-        <div>
-          <h1>{recentPost.title}</h1>
-          <h2>{recentPost.music_title}</h2>
-          {recentPost.mediums.map((medium) =>
-            medium.category === 3 ? ( //* music is category 3
-              
-              <div key={medium.id}>
-                <h1>{medium.title}</h1>
-                <h1>{medium.creator}</h1>
-                <h1>{medium.duration}</h1>
-                <Link to={`/mediums/${medium.id}`}>
-                  <img src={medium.image} alt={medium.title} />
-                </Link>
-                {/* <video src={medium.video} /> */}
+                    </div>
+                  ) : null
+                )}
               </div>
-            ) :
-              null
-          )}
-        </div>
-      ) : null}
+            </div>
+          ))
+
+
+        ) : recentPost ? (
+          <div>
+            {/* <h1>{recentPost.title}</h1> */}
+            <h2>{recentPost.music_title}</h2>
+            {recentPost.mediums.map((medium) =>
+              medium.category === 3 ? ( //* music is category 3
+
+                <div className='medium-wrapper' key={medium.id}>
+                  <h1>{medium.title}</h1>
+                  <h1>{medium.creator}</h1>
+                  <h1>{medium.duration}</h1>
+                  <Link to={`/mediums/${medium.id}`}>
+                    <img className='medium-image-index-music' src={medium.image} alt={medium.title} />
+                  </Link>
+                  {/* <video src={medium.video} /> */}
+                </div>
+              ) :
+                null
+            )}
+          </div>
+        ) : null}
+      </div>
     </div>
   )
-
 }
 
 export default MusicIndex

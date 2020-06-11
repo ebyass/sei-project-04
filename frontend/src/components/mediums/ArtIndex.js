@@ -50,66 +50,71 @@ function ArtIndex() {
 
   return (
     <div>
-      <h1>Art Index</h1>
 
-      <select onChange={handleChange} >
+      <div className='select-wrapper'>
+        <select onChange={handleChange} className='select-dropdown  fadeInUp'>
 
-        <option >Filter By Month</option>
-        <option value="January">JANUARY</option>
-        <option value="February">FEBRUARY</option>
-        <option value="March">MARCH</option>
-        <option value="April">APRIL</option>
-        <option value="May">MAY</option>
-        <option value="June">JUNE</option>
-        <option value="July">JULY</option>
-        <option value="August">AUGUST</option>
-        <option value="September">SEPTEMBER</option>
-        <option value="October">OCTOBER</option>
-        <option value="November">NOVEMBER</option>
-        <option value="December">DECEMBER</option>
-      </select>
+          <option >Filter By Month</option>
+          <option value="January">JANUARY</option>
+          <option value="February">FEBRUARY</option>
+          <option value="March">MARCH</option>
+          <option value="April">APRIL</option>
+          <option value="May">MAY</option>
+          <option value="June">JUNE</option>
+          <option value="July">JULY</option>
+          <option value="August">AUGUST</option>
+          <option value="September">SEPTEMBER</option>
+          <option value="October">OCTOBER</option>
+          <option value="November">NOVEMBER</option>
+          <option value="December">DECEMBER</option>
+        </select>
+      </div>
+      <div className='film-index-wrapper'>
+        {selectHasBeenUsed ? (
+          postsToRender.map(post => (
+            <div key={post.id}>
+              {/* <h1>{post.title}</h1> */}
+              <h2>{post.art_title}</h2>
+              <div>
+                {post.mediums.map((medium) =>
+                  medium.category === 1 ? (
+                    <div className='medium-wrapper' key={medium.id}>
+                      <h1 className='art-creator-title'>{medium.title}</h1>
+                      <h1 className='art-creator-title'>{medium.creator}</h1>
+                      <Link to={`/mediums/${medium.id}`}>
+                        <img className='medium-art-index' src={medium.image} alt={medium.title} />
+                      </Link>
 
-      {selectHasBeenUsed ? (
-        postsToRender.map(post => (
-          <div key={post.id}>
-            <h1>{post.title}</h1>
-            <h2>{post.art_title}</h2>
-            {post.mediums.map((medium) =>
+                    </div>
+                  ) : null
+                )}
+              </div>
+            </div>
+          ))
+
+
+        ) : recentPost ? (
+          <div>
+            {/* <h1>{recentPost.title}</h1> */}
+            <h2>{recentPost.art_title}</h2>
+            {recentPost.mediums.map((medium) =>
               medium.category === 1 ? (
-                <div key={medium.id}>
-                  <h1>{medium.title}</h1>
-                  <h1>{medium.creator}</h1>
+                <div className='medium-wrapper' key={medium.id}>
+                  <h1 className='art-creator-title'>{medium.title}</h1>
+                  <h1 className='art-creator-title'>{medium.creator}</h1>
                   <Link to={`/mediums/${medium.id}`}>
-                    <img src={medium.image} alt={medium.title} />
+                    <img className='medium-art-index' src={medium.image} alt={medium.title} />
                   </Link>
-
+                  {/* <video src={medium.video} /> */}
                 </div>
-              ) : null
+              ) :
+                null
             )}
           </div>
-        ))
-
-
-      ) : recentPost ? (
-        <div>
-          <h1>{recentPost.title}</h1>
-          <h2>{recentPost.art_title}</h2>
-          {recentPost.mediums.map((medium) =>
-            medium.category === 1 ? (
-              <div key={medium.id}>
-                <h1>{medium.title}</h1>
-                <h1>{medium.creator}</h1>
-                <Link to={`/mediums/${medium.id}`}>
-                  <img src={medium.image} alt={medium.title} />
-                </Link>
-                {/* <video src={medium.video} /> */}
-              </div>
-            ) :
-              null
-          )}
-        </div>
-      ) : null}
-    </div>
+        ) : null
+        }
+      </div >
+    </div >
   )
 
 }

@@ -34,27 +34,27 @@ function Home() {
       {recentPost ? //* use recentPost here instead of loading
       //* anything you put before colon will be loaded. If there's nothing there it render the loading spinner.
         <div>
-          <h1 className='post-title'>{recentPost.title}</h1>
+          {/* <h1 className='post-title'>{recentPost.title}</h1> */}
           <h2 className='info-wrapper'>{recentPost.info}</h2>
           <div className='home-wrapper'>
             <h3>{recentPost.film_title}</h3>
             <Link to={'/film'}>
-              <img src={recentPost.image_film} alt={recentPost.title} />
+              <img className='home-image' src={recentPost.image_film} alt={recentPost.title} />
             </Link>
             
             <h3>{recentPost.art_title}</h3>
             <Link to={'/art'}>
-              <img src={recentPost.image_art} alt={recentPost.title} />
+              <img className='home-image' src={recentPost.image_art} alt={recentPost.title} />
             </Link>
             <h3>{recentPost.music_title}</h3>
             <Link to={'/music'}>
-              <img src={recentPost.image_music} alt={recentPost.title}/>
+              <img className='home-image' src={recentPost.image_music} alt={recentPost.title}/>
             </Link>
             
           </div>
         </div>
         :
-        <Spinner />
+        null
       }
     </div>
   )
