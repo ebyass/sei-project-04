@@ -33,7 +33,7 @@ class FavouriteListView(APIView):
             raise PermissionDenied()
 
 
-#! CREATE FAVOURITE
+#! ADD A FAVOURITE
     def post(self, request): 
         #* to add the owner
         request.data['owner'] = request.user.id #! might need to populate this somewhere
@@ -55,6 +55,7 @@ class FavouriteDetailView(APIView):
     permission_classes = (IsAuthenticatedOrReadOnly, )
 
 #* now we can reuse the try and except for all the requests, instead of repeating in each request. Makes code leaner.
+#! GET SINGLE FAVOURITE 
     def get_favourite(self, pk):
         try:
             return Favourite.objects.get(pk=pk)
@@ -78,3 +79,6 @@ class FavouriteDetailView(APIView):
         favourite_to_delete.delete()
         #* nothing to send back because we deleted the review
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+    
