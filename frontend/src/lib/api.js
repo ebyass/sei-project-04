@@ -77,10 +77,8 @@ export const addFavourite = async (mediumId) => {
 
 //! DELETE FAVOURITE
 
-export const deleteFavourite = async (medium, favouriteId) => {
-  console.log('faveId to delete', favouriteId)
+export const deleteFavourite = async (favouriteId) => {
   const res = await axios.delete(`${baseUrl}/favourites/${favouriteId}`, withHeaders())
-  console.log('delete fave', res)
   return res 
 
 }
