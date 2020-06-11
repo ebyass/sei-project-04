@@ -1,5 +1,71 @@
 @import '~bulma/bulma.sass';
 
+
+//! NAVBAR
+
+//* side bar
+site-wrapper {
+  display: flex;
+  margin-top: 8px;
+  //* for footer
+  flex: 1 !important;
+}
+
+menu {
+  width: 15%; 
+  margin-right: 10px;
+.menu-item {
+    margin: 10px 0;
+    font-family: Courier, Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif !important;
+    color: black;
+    a {
+      color: black;
+      font-weight: 300;
+      font-size: 18px;
+    }
+    a:hover {
+      font-weight: 800;
+    }
+  }
+  .menu-item.active {
+    a {
+      font-weight: 800;
+    }
+  }
+}
+
+main {
+  width: 80%;
+}
+
+//! FAVOURITES
+.favourites-button {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 50px;
+  margin-top: 25px;
+}
+.art-favourite-image {
+  background-image: url('https://i.pinimg.com/564x/b9/86/8a/b9868a5b8d4bc9b16c7154bec37f8e5a.jpg');
+}
+
+.favourite-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+//! FOOTER
+
+#root {
+  display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer {
+  flex: 0 !important;
+}
 * {
   box-sizing: border-box;
 }
