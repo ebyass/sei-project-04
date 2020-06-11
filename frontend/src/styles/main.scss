@@ -1,6 +1,5 @@
 @import '~bulma/bulma.sass';
 
-
 //! NAVBAR
 
 //* side bar
@@ -46,13 +45,32 @@ main {
   margin: 0 50px;
   margin-top: 25px;
 }
-.art-favourite-image {
-  background-image: url('https://i.pinimg.com/564x/b9/86/8a/b9868a5b8d4bc9b16c7154bec37f8e5a.jpg');
+
+.favourites-button-film-text {
+  background-color: yellow;
 }
+.art-favourite-image {
+
+}
+.music-favourite-image {
+
+}
+
 
 .favourite-buttons-container {
   display: flex;
   justify-content: center;
+}
+
+.favourites-medium-image {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.favourites-mediums-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
 }
 
 //! FOOTER
@@ -65,7 +83,10 @@ main {
 
 footer {
   flex: 0 !important;
+  background-color: white !important;
+	max-height: 80px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -124,14 +145,6 @@ p {
 }
 
 
-// ***********************************************  FOOTER ************************************************** //
-
-
-.footer {
-	background-color: white;
-	max-height: 80px;
-
-}
 
 // ***********************************************  MEDIUM INDEX  ************************************************** //
 

@@ -37,9 +37,9 @@ function App() {
             <Route path="/profile" component={Favourites} />
             <Route path="/*" component={ErrorPage} />
           </Switch>
+          <Footer />
         </main>
       </site-wrapper>
-      <Footer />
     </BrowserRouter>
   )
 }

@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { getSingleUser } from '../../lib/api'
+import artimage from '../../images/artimage.jpg'
 
 class Favourites extends React.Component {
   state = {
@@ -53,12 +54,12 @@ class Favourites extends React.Component {
     return (
       <>
         <div className="favourite-buttons-container">
-          <button className="favourites-button film-favourite-image" onClick={this.handleClick} value='2'>Film</button>
-          <button className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'>Art</button>
-          <button className="favourites-button music-favourite-image" onClick={this.handleClick} value='3'>Music</button>
+          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button film-favourite-image" onClick={this.handleClick} value='2'><h1 className="favourites-button-film-text">Film</h1></button>
+          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'><h1 className="favourites-button-film-text">Art</h1></button>
+          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button music-favourite-image" onClick={this.handleClick} value='3'><h1 className="favourites-button-film-text">Music</h1></button>
         </div>
 
-        <div>
+        <div className="favourites-mediums-container">
           {buttonClicked ? favesToRender.map((favourite, index) => (
 
             <div key={index}>
@@ -66,7 +67,7 @@ class Favourites extends React.Component {
               <h2>{favourite.creator}</h2>
               <h2>{favourite.duration}</h2>
               <Link to={`/mediums/${favourite.id}`}>
-                <img src={favourite.image} alt={favourite.title} />
+                <img className="favourites-medium-image" src={favourite.image} alt={favourite.title} />
               </Link>
             </div>
 
