@@ -27,7 +27,7 @@ function Home() {
   return (
     <div>
       <h1>FAM</h1>
-      <p className='info-wrapper'>
+      <p className='info-wrapper home-page-p'>
         About
       best app init
       </p>
@@ -37,16 +37,16 @@ function Home() {
           {/* <h1 className='post-title'>{recentPost.title}</h1> */}
           <h2 className='info-wrapper'>{recentPost.info}</h2>
           <div className='home-wrapper'>
-            <h3>{recentPost.film_title}</h3>
+            <h3 className='home-medium-main-title'>{recentPost.film_title}</h3>
             <Link to={'/film'}>
               <img className='home-image' src={recentPost.image_film} alt={recentPost.title} />
             </Link>
             
-            <h3>{recentPost.art_title}</h3>
+            <h3 className='home-medium-main-title'>{recentPost.art_title}</h3>
             <Link to={'/art'}>
               <img className='home-image' src={recentPost.image_art} alt={recentPost.title} />
             </Link>
-            <h3>{recentPost.music_title}</h3>
+            <h3 className='home-medium-main-title'>{recentPost.music_title}</h3>
             <Link to={'/music'}>
               <img className='home-image' src={recentPost.image_music} alt={recentPost.title}/>
             </Link>

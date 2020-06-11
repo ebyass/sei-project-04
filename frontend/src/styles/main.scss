@@ -117,6 +117,7 @@ main {
   height: 100vh;
 }
 
+
 // ***********************************************  HOME PAGE  ************************************************** //
 
 
@@ -138,16 +139,15 @@ main {
 		}
 }
 
-h3 {
+.home-medium-main-title {
 	background-color: yellow;
 	font-size: 17px;
 	letter-spacing: 3px;
 	transform: translate(130px, 180px);
 	padding: 3px;
-	
 }
 
-p {
+.home-page-p {
 	font-size: 14px;
   letter-spacing: 2px;
 }
@@ -195,30 +195,32 @@ select.select-dropdown {
 	display: flex;
 	justify-content: flex-start;
 	padding-left: 75px;
+}
 	
-		h2 {
+		.index-page-h2 {
 			
 			font-size: 30px;
 			letter-spacing: 3px;
 			
 			
 		}
-}
 
-	div {
-		h2 {
+
+.medium-wrapper {
+		.index-h2 {
 			
 			padding-left: 40px;
 		}
-		h1 {
+		.index-page-h1 {
 			
 			transform: translate(450px, 280px);
+			
 
 		}
 
 		.art-creator-title {
 			
-			transform : translate(650px, 280px)
+			transform : translate(650px, 280px);
 		}
 
 		a {
@@ -240,83 +242,6 @@ select.select-dropdown {
 	
 
 	}
+}
 	
-	}
-
-
-
-
-
-
-// .index-medium-wrapper {
-// 	padding: 150px;
-// 	height: 50vh;
-//   justify-content: center;
-//   align-items: center;
-// 	flex-direction: row;
-// }
-
-
-
-
-
-
-// @media only screen and (min-width: 375px) {
 	
-// 	div .home-mediums {
-
-// 		display: flex;
-// 		flex-direction: column;
-// 		margin-left: 50px;
-// 		margin-right: 50px;
-// 		align-items: center;
-
-// 		img {
-// 			max-width: 314px;
-// 			max-height: 314px ;
-// 		}
-
-
-// 	}
-
-	
-
-	
-
-// 	h3 {
-// 		background-color: pink;
-		
-// 	}
-	
-// }
-
-// @media only screen and (min-width: 470px) {
-	
-// }
-
-// @media only screen and (min-width: 735px) {
-
-// 	* {
-// 		box-sizing: border-box;
-// 	}
-
-// 	div .home-mediums {
-
-// 	display: flex;
-// 	flex-direction: row;
-// 	margin-left: 50px;
-// 	margin-right: 50px;
-// 	align-items: center;
-// 	padding-right: 70px;
-// 	line-height: 15px;
-// 	background-color: yellow;
-		
-// 	img {
-// 		line-height: 15px;
-// 		max-width: 450px;
-// 		max-height: 500px ;
-// 	}
-
-// 	}
-
-// }
