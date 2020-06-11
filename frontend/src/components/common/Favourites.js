@@ -65,9 +65,9 @@ class Favourites extends React.Component {
           {buttonClicked ? favesToRender.map((favourite, index) => (
 
             <div key={index}>
-              <h1>{favourite.title}</h1>
+              <h1 className="favourite-title">{favourite.title}</h1>
               <h2>{favourite.creator}</h2>
-              <h2>{favourite.duration}</h2>
+              <h2 className="favourite-duration">{favourite.duration}</h2>
               <Link to={`/mediums/${favourite.id}`}>
                 <img className="favourites-medium-image" src={favourite.image} alt={favourite.title} />
               </Link>

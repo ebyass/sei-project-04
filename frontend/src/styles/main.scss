@@ -74,7 +74,19 @@ main {
 .favourites-mediums-container {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 30px;
+  padding-top: 50px;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+.favourite-title {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.favourite-duration {
+  font-weight: bold;
+  font-style: italic;
 }
 
 //! FOOTER
