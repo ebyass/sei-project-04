@@ -73,7 +73,7 @@ select.select-dropdown {
   height: 38px;
   font-size: 16px;
   margin-top: 14px;
-	width: 10%;
+	width: 15%;
 	padding-left: 5px;
 	letter-spacing: 1px;
 
@@ -84,16 +84,16 @@ select.select-dropdown {
 	padding-left: 15px;
 }
 
-@media only screen and (min-width: 375px) {
-	select.select-dropdown {
-		height: 15px;
-		font-size: 8px;
-		margin-top: 7px;
-		width: 30%;
-		letter-spacing: 1px;
+// @media only screen and (max-width: 375px) {
+// 	select.select-dropdown {
+// 		height: 25px;
+// 		font-size: 8px;
+// 		margin-top: 7px;
+// 		// width: 20%;
+// 		letter-spacing: 1px;
 	
-	}
-}
+// 	}
+// }
 
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
@@ -105,8 +105,8 @@ select.select-dropdown {
 
 
 .index-medium-wrapper {
-	margin: 0 auto;
-  display: flex;
+	padding: 150px;
+
 	height: 50vh;
 	// width: fit-content;
   justify-content: center;

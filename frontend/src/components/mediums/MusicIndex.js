@@ -76,18 +76,20 @@ function MusicIndex() {
           <div key={post.id}>
             <h1>{post.title}</h1>
             <h2>{post.music_title}</h2>
-            {post.mediums.map((medium) =>
-              medium.category === 3 ? (
-                <div key={medium.id} className='index-medium-wrapper'>
-                  <h1>{medium.title}</h1>
-                  <h1>{medium.creator}</h1>
-                  <h1>{medium.duration}</h1>
-                  <Link to={`/mediums/${medium.id}`}>
-                    <img className='index-img' src={medium.image} alt={medium.title} />
-                  </Link>
-                </div>
-              ) : null
-            )}
+            <div className='index-medium-wrapper'>
+              {post.mediums.map((medium) =>
+                medium.category === 3 ? (
+                  <div key={medium.id} >
+                    <h1>{medium.title}</h1>
+                    <h1>{medium.creator}</h1>
+                    <h1>{medium.duration}</h1>
+                    <Link to={`/mediums/${medium.id}`}>
+                      <img className='index-img' src={medium.image} alt={medium.title} />
+                    </Link>
+                  </div>
+                ) : null
+              )}
+            </div>
           </div>
         ))
 
