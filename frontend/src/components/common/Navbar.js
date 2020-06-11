@@ -2,12 +2,12 @@ import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { logout, isAuthenticated } from '../../lib/auth'
 
-class Navbar extends React.Component{
-
+class Navbar extends React.Component{ 
   handleLogout = () => {
     logout()
     this.props.history.push('/')
   }
+
   componentDidUpdate(prevProps) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
       this.setState({ isOpen: false })
@@ -16,21 +16,34 @@ class Navbar extends React.Component{
 
   render() {
     return (
-      <nav>
-        <Link to="/"><h1>Home</h1></Link>
-        <Link to="/film"><h1>Film</h1></Link>
-        <Link to="/art"><h1>Art</h1></Link>
-        <Link to="/music"><h1>Music</h1></Link>
+      <menu>
 
-        {isAuthenticated() && <Link to="/profile"><h1>My Favourites</h1></Link>}
-
-        {!isAuthenticated() && <Link to="/register"><h1>Register</h1></Link>}
-
-        {!isAuthenticated() && <Link to="/login"><h1>Login</h1></Link>}
-
-        {isAuthenticated() && <Link to="/" onClick={this.handleLogout}><h1>Logout</h1></Link>}
-
-      </nav>
+        <div className="menu-item">
+          <Link to="/">Home</Link>
+        </div>
+        <div className="menu-item">
+          <Link to="/film">Film</Link>
+        </div>
+        <div className="menu-item">
+          <Link to="/art">Art</Link>
+        </div>
+        <div className="menu-item">
+          <Link to="/music">Music</Link>
+        </div>
+        <div className="menu-item">
+          {isAuthenticated() && <Link to="/profile">My Favourites</Link>}
+        </div>
+        <div className="menu-item">
+          {!isAuthenticated() && <Link to="/register">Register</Link>}
+        </div>
+        <div className="menu-item">
+          {!isAuthenticated() && <Link to="/login">Login</Link>}
+        </div>
+        <div className="menu-item">
+          {isAuthenticated() && <Link to="/" onClick={this.handleLogout}>Logout</Link>}
+        </div>
+        
+      </menu>
     )
 
   }

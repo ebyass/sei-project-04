@@ -5,7 +5,7 @@ import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
 import Footer from './components/common/Footer'
 import ErrorPage from './components/common/Error'
-// import SecureRoute from './components/common/SecureRoute'
+// import SecureRoute from './components/common/SecureRoute' //! add this in ?
 import FilmIndex from './components/mediums/FilmIndex'
 import ArtIndex from './components/mediums/ArtIndex'
 import MusicIndex from './components/mediums/MusicIndex'
@@ -23,18 +23,22 @@ console.log('%cEleanor: github.com/ebyass \nYarden: github.com/YBL123', 'color:#
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/mediums/:id" component={MediumShow} />
-        <Route path="/film" component={FilmIndex} />
-        <Route path="/art" component={ArtIndex} />
-        <Route path="/music" component={MusicIndex} />
-        <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
-        <Route path="/profile" component={Favourites} />
-        <Route path="/*" component={ErrorPage} />
-      </Switch>
+      <site-wrapper>
+        <Navbar />
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/mediums/:id" component={MediumShow} />
+            <Route path="/film" component={FilmIndex} />
+            <Route path="/art" component={ArtIndex} />
+            <Route path="/music" component={MusicIndex} />
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+            <Route path="/profile" component={Favourites} />
+            <Route path="/*" component={ErrorPage} />
+          </Switch>
+        </main>
+      </site-wrapper>
       <Footer />
     </BrowserRouter>
   )

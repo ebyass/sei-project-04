@@ -52,10 +52,10 @@ class Favourites extends React.Component {
 
     return (
       <>
-        <div>
-          <button onClick={this.handleClick} value='2'>Film</button>
-          <button onClick={this.handleClick} value='1'>Art</button>
-          <button onClick={this.handleClick} value='3'>Music</button>
+        <div className="favourite-buttons-container">
+          <button className="favourites-button film-favourite-image" onClick={this.handleClick} value='2'>Film</button>
+          <button className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'>Art</button>
+          <button className="favourites-button music-favourite-image" onClick={this.handleClick} value='3'>Music</button>
         </div>
 
         <div>
