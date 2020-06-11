@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { createReview, getSingleMedium, deleteReview } from '../../lib/api'
-import { isOwner } from '../../lib/auth'
+import { isOwner, getPayload } from '../../lib/auth'
 import Ratings from 'react-ratings-declarative'
 
 
@@ -13,7 +13,8 @@ class Reviews extends React.Component {
     rows: '3',
     reviewsStatus: true,
     buttonText: 'Show More Reviews',
-    errorMessage: null
+    errorMessage: null,
+    reviewUserIds: null
   }
 
   async getData() { //* this function can be called whenever you need to update the info on the page
@@ -21,16 +22,41 @@ class Reviews extends React.Component {
       const mediumId = this.props.mediumId
       const res = await getSingleMedium(mediumId)
       this.setState({ medium: res.data })
-      // console.log(this.state.plant.comments)
+
+      //* checking if there's a medium in state, if so triggering oneReviewOnly
+      if (this.state.medium) {
+        return this.oneReviewOnly()
+      } else {
+        return
+      }
+
     } catch (error) {
       console.log(error)
-      // this.props.history.push('/notfound')
     }
   }
   componentDidMount() {
-    // console.log(this.props.plantId)
     this.getData() //* calling the getData function as soon as the page loads to display the info straight away
   }
+
+    //! FINDING USER IDS IN MEDIUM.REVIEWS AND SETTING THEM TO STATE WITH reviewUserIds: reviewOwner
+    oneReviewOnly = async () => {
+      try {
+        const reviewOwner = this.state.medium.reviews.map(review => {
+          return review.owner.id
+        })
+        this.setState({ reviewUserIds: reviewOwner }) //* setting state to result of above map function
+      } catch (error) {
+        console.log(error)
+      }
+      this.hasUserPostedReview() //* comment out
+    }
+
+    //! HAS THE USER ALREADY POSTED A REVIEW
+    //* can use this function as a "checker function" to see if it's true or false before the return in the render. Determining whether or not to render the code. Conditional rendering
+    hasUserPostedReview = () => {
+      const currentUser = getPayload().sub
+      return this.state.reviewUserIds.some(reviwUserId => reviwUserId === currentUser) //* single version of array I'm looping through. Seeing if reviewUserId is === to currentUser. Should return true if the currentUser has left a review already
+    }
 
 
   //! RATING
@@ -56,7 +82,7 @@ class Reviews extends React.Component {
     const mediumId = this.props.mediumId
     if (this.state.rating === 0 || this.state.rating > 5) {
       this.setState({ errorMessage: 'Please Add A Rating To Your Review' }) //* if user tried to post a review without adding a rating
-      return 
+      return
     }
     try {
       this.setState({ errorMessage: null }) //* if user has added a rating to review or there was an error message before then we can set the error message back to null
@@ -94,9 +120,6 @@ class Reviews extends React.Component {
   }
 
   ShowLessReviewsHandleClick = async () => {
-    // console.log('showing less')
-    // event.preventDefault()
-
     const lessRows = '3'
     this.setState({ rows: lessRows })
     this.getData()
@@ -105,7 +128,6 @@ class Reviews extends React.Component {
   toggleReviewsHandleClick = async event => {
     event.preventDefault()
     const show = this.state.reviewsStatus
-    console.log(show)
 
     if (show) {
       this.setState({ reviewsStatus: false, buttonText: 'Show Less Reviews' })
@@ -118,80 +140,88 @@ class Reviews extends React.Component {
 
   render() {
     if (!this.state.medium) return null
+    if (!this.state.reviewUserIds) return null
+
     const { medium, content, buttonText, rating, rows } = this.state //* content field in state
 
     return (
-
-      <div className="media-content">
-        <form onSubmit={this.reviewHandleSubmit}>
-          <div className="field">
-            <p className="control">
-              <textarea
-                className="textarea"
-                placeholder="Enter Your Review Here"
-                name="content"
-                onChange={this.reviewHandleChange}
-                value={content}
-              />
-            </p>
-          </div>
-          <div className="field">
-            <p className="control">
-              <button type="submit" className="button post-comment-button">Post Review</button>
-            </p>
-            <br />
-          </div>
-        </form>
-        {this.state.errorMessage ? <div style={{ color: 'red' }}>{this.state.errorMessage}</div> : null }
-        <Ratings
-          rating={rating}
-          widgetRatedColors="gold"
-          changeRating={this.changeRating}
-        >
-          <Ratings.Widget widgetHoverColor="gold"/>
-          <Ratings.Widget widgetHoverColor="gold"/>
-          <Ratings.Widget widgetHoverColor="gold"/>
-          <Ratings.Widget widgetHoverColor="gold"/>
-          <Ratings.Widget widgetHoverColor="gold"/>
-        </Ratings>
-        <div>
-          <article className="media">
-            <div className="media-content">
-              <div className="content">
-                {medium.reviews.slice(0, rows).map((review, index) => {
-                  return (
-                    <div className="item" key={index}>
-                      <p>
-                        <strong>{review.owner.username}</strong>
-                      </p>
-                      <p> {review.content} </p>
-                      <Ratings
-                        rating={review.rating}
-                        widgetRatedColors="gold"
-                        widgetDimensions="20px"
-                        widgetSpacings="3px"
-                      >
-                        <Ratings.Widget widgetHoverColor="gold"/>
-                        <Ratings.Widget widgetHoverColor="gold"/>
-                        <Ratings.Widget widgetHoverColor="gold"/>
-                        <Ratings.Widget widgetHoverColor="gold"/>
-                        <Ratings.Widget widgetHoverColor="gold"/>
-                      </Ratings>
-                      {isOwner(review.owner.id) &&
+      <>
+        <div className="media-content">
+          {!this.hasUserPostedReview() &&
+          <form onSubmit={this.reviewHandleSubmit}>
+            <div className="field">
+              <p className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Enter Your Review Here"
+                  name="content"
+                  onChange={this.reviewHandleChange}
+                  value={content}
+                />
+              </p>
+            </div>
+            <div className="field">
+              <p className="control">
+                <button type="submit" className="button post-comment-button">Post Review</button>
+              </p>
+              <br />
+            </div>
+          </form>
+          }
+          
+          {this.state.errorMessage ? <div style={{ color: 'red' }}>{this.state.errorMessage}</div> : null }
+          {!this.hasUserPostedReview() &&
+          <Ratings
+            rating={rating}
+            widgetRatedColors="gold"
+            changeRating={this.changeRating}
+          >
+            <Ratings.Widget widgetHoverColor="gold"/>
+            <Ratings.Widget widgetHoverColor="gold"/>
+            <Ratings.Widget widgetHoverColor="gold"/>
+            <Ratings.Widget widgetHoverColor="gold"/>
+            <Ratings.Widget widgetHoverColor="gold"/>
+          </Ratings>
+          }
+          <div>
+            <article className="media">
+              <div className="media-content">
+                <div className="content">
+                  {medium.reviews.slice(0, rows).map((review, index) => {
+                    return (
+                      <div className="item" key={index}>
+                        <p>
+                          <strong>{review.owner.username}</strong>
+                        </p>
+                        <p> {review.content} </p>
+                        <Ratings
+                          rating={review.rating}
+                          widgetRatedColors="gold"
+                          widgetDimensions="20px"
+                          widgetSpacings="3px"
+                        >
+                          <Ratings.Widget widgetHoverColor="gold"/>
+                          <Ratings.Widget widgetHoverColor="gold"/>
+                          <Ratings.Widget widgetHoverColor="gold"/>
+                          <Ratings.Widget widgetHoverColor="gold"/>
+                          <Ratings.Widget widgetHoverColor="gold"/>
+                        </Ratings>
+                        {isOwner(review.owner.id) &&
                         <button className="delete comment-delete-button" review-id={review.id}
                           onClick={this.reviewHandleDelete}>Delete
                         </button>}
-                      <hr />
-                    </div>
-                  )
-                })}
-                {this.state.medium.reviews.length > 3 &&
+                        <hr />
+                      </div>
+                    )
+                  })}
+                  {this.state.medium.reviews.length > 3 &&
                   <button className="button show-more-less-button" onClick={this.toggleReviewsHandleClick}>{buttonText}</button>}
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
-      </div>
+      </>
     )
   }
 
