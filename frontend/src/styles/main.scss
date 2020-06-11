@@ -1,1 +1,180 @@
 @import '~bulma/bulma.sass';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  // display:flex;
+  justify-content: center;
+  margin: auto;
+}
+
+main {
+  height: 100vh;
+}
+
+// ***********************************************  HOME PAGE  ************************************************** //
+
+
+.home-wrapper {
+	margin: 0 auto;
+  display: flex;
+	height: 100vh;
+	width: fit-content;
+  justify-content: center;
+  align-items: center;
+	flex-direction: row;
+}
+
+h3 {
+	background-color: yellow;
+	font-size: 17px;
+	letter-spacing: 3px;
+	transform: translate(130px, 180px);
+	padding: 3px;
+	
+}
+
+p {
+	font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.post-title {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-wrapper {
+	margin: 0 auto;
+	display: flex;
+	height: 250px;
+	width: 750px;
+	justify-content: center;
+	align-items: center;
+}
+
+
+// ***********************************************  FOOTER ************************************************** //
+
+
+.footer {
+	background-color: white;
+	max-height: 80px;
+
+}
+
+// ***********************************************  MEDIUM INDEX  ************************************************** //
+
+select.select-dropdown {
+  height: 38px;
+  font-size: 16px;
+  margin-top: 14px;
+	width: 10%;
+	padding-left: 5px;
+	letter-spacing: 1px;
+
+}
+
+.select-wrapper {
+	background-color: yellow;
+	padding-left: 15px;
+}
+
+@media only screen and (min-width: 375px) {
+	select.select-dropdown {
+		height: 15px;
+		font-size: 8px;
+		margin-top: 7px;
+		width: 30%;
+		letter-spacing: 1px;
+	
+	}
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 3s;
+}
+
+
+
+.index-medium-wrapper {
+	margin: 0 auto;
+  display: flex;
+	height: 50vh;
+	// width: fit-content;
+  justify-content: center;
+  align-items: center;
+	flex-direction: row;
+}
+
+
+
+
+
+
+// @media only screen and (min-width: 375px) {
+	
+// 	div .home-mediums {
+
+// 		display: flex;
+// 		flex-direction: column;
+// 		margin-left: 50px;
+// 		margin-right: 50px;
+// 		align-items: center;
+
+// 		img {
+// 			max-width: 314px;
+// 			max-height: 314px ;
+// 		}
+
+
+// 	}
+
+	
+
+	
+
+// 	h3 {
+// 		background-color: pink;
+		
+// 	}
+	
+// }
+
+// @media only screen and (min-width: 470px) {
+	
+// }
+
+// @media only screen and (min-width: 735px) {
+
+// 	* {
+// 		box-sizing: border-box;
+// 	}
+
+// 	div .home-mediums {
+
+// 	display: flex;
+// 	flex-direction: row;
+// 	margin-left: 50px;
+// 	margin-right: 50px;
+// 	align-items: center;
+// 	padding-right: 70px;
+// 	line-height: 15px;
+// 	background-color: yellow;
+		
+// 	img {
+// 		line-height: 15px;
+// 		max-width: 450px;
+// 		max-height: 500px ;
+// 	}
+
+// 	}
+
+// }
