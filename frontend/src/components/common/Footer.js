@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="footer has-background-grey-darker">
+    <footer className="footer">
       <div className="content has-text-centered ">
         {/* <p> */}
         {/* <strong className="has-text-grey">

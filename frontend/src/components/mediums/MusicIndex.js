@@ -52,24 +52,25 @@ function MusicIndex() {
   return (
     <div>
       <h1>Music Index</h1>
+      
+      <div className='select-wrapper'>
+        <select onChange={handleChange} className='select-dropdown  fadeInUp'>
 
-      <select onChange={handleChange} >
-
-        <option >Filter By Month</option>
-        <option value="January">JANUARY</option>
-        <option value="February">FEBRUARY</option>
-        <option value="March">MARCH</option>
-        <option value="April">APRIL</option>
-        <option value="May">MAY</option>
-        <option value="June">JUNE</option>
-        <option value="July">JULY</option>
-        <option value="August">AUGUST</option>
-        <option value="September">SEPTEMBER</option>
-        <option value="October">OCTOBER</option>
-        <option value="November">NOVEMBER</option>
-        <option value="December">DECEMBER</option>
-      </select>
-
+          <option >Filter By Month</option>
+          <option value="January">JANUARY</option>
+          <option value="February">FEBRUARY</option>
+          <option value="March">MARCH</option>
+          <option value="April">APRIL</option>
+          <option value="May">MAY</option>
+          <option value="June">JUNE</option>
+          <option value="July">JULY</option>
+          <option value="August">AUGUST</option>
+          <option value="September">SEPTEMBER</option>
+          <option value="October">OCTOBER</option>
+          <option value="November">NOVEMBER</option>
+          <option value="December">DECEMBER</option>
+        </select>
+      </div>
       {selectHasBeenUsed ? (
         postsToRender.map(post => (
           <div key={post.id}>
@@ -77,12 +78,12 @@ function MusicIndex() {
             <h2>{post.music_title}</h2>
             {post.mediums.map((medium) =>
               medium.category === 3 ? (
-                <div key={medium.id}>
+                <div key={medium.id} className='index-medium-wrapper'>
                   <h1>{medium.title}</h1>
                   <h1>{medium.creator}</h1>
                   <h1>{medium.duration}</h1>
                   <Link to={`/mediums/${medium.id}`}>
-                    <img src={medium.image} alt={medium.title} />
+                    <img className='index-img' src={medium.image} alt={medium.title} />
                   </Link>
                 </div>
               ) : null
