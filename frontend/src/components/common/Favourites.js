@@ -2,7 +2,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { getSingleUser } from '../../lib/api'
+import filmimage from '../../images/filmimage.jpg'
 import artimage from '../../images/artimage.jpg'
+import musicimage from '../../images/musicimage.jpg'
 
 class Favourites extends React.Component {
   state = {
@@ -54,9 +56,9 @@ class Favourites extends React.Component {
     return (
       <>
         <div className="favourite-buttons-container">
-          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button film-favourite-image" onClick={this.handleClick} value='2'><h1 className="favourites-button-film-text">Film</h1></button>
-          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'><h1 className="favourites-button-film-text">Art</h1></button>
-          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button music-favourite-image" onClick={this.handleClick} value='3'><h1 className="favourites-button-film-text">Music</h1></button>
+          <button style={{ backgroundImage: `url(${filmimage})` }} className="favourites-button film-favourite-image" onClick={this.handleClick} value='2'><h1 className="favourites-button-text">Film</h1></button>
+          <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'><h1 className="favourites-button-text">Art</h1></button>
+          <button style={{ backgroundImage: `url(${musicimage})` }} className="favourites-button music-favourite-image" onClick={this.handleClick} value='3'><h1 className="favourites-button-text">Music</h1></button>
         </div>
 
         <div className="favourites-mediums-container">

@@ -44,18 +44,22 @@ main {
   height: 300px;
   margin: 0 50px;
   margin-top: 25px;
+  outline:none;
+}
+.favourites-button:hover {box-shadow: 0 5px yellow;
+  transform: translateY(4px);}
+
+.favourites-button:active {
+  background-color: black;
+  box-shadow: 0 5px  pink;
+  transform: translateY(4px);
 }
 
-.favourites-button-film-text {
+.favourites-button-text {
   background-color: yellow;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  font-size: 20px;
 }
-.art-favourite-image {
-
-}
-.music-favourite-image {
-
-}
-
 
 .favourite-buttons-container {
   display: flex;
