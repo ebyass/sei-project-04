@@ -1,66 +1,205 @@
 [
-  {
-    "model": "genres.genre",
-    "pk": 1,
-    "fields": {
-      "name": "Drama"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 2,
-    "fields": {
-      "name": "Pop"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 3,
-    "fields": {
-      "name": "Watercolour"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 4,
-    "fields": {
-      "name": "Biography"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 5,
-    "fields": {
-      "name": "R&B"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 6,
-    "fields": {
-      "name": "Hip Hop"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 7,
-    "fields": {
-      "name": "Soul"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 8,
-    "fields": {
-      "name": "Paintings"
-    }
-  },
-  {
-    "model": "genres.genre",
-    "pk": 9,
-    "fields": {
-      "name": "Ceramics"
-    }
+{
+  "model": "genres.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Crime"
   }
-  ]
-  
+},
+{
+  "model": "genres.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Drama"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Adventure"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Fantasy"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Action"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Sci-Fi"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Painting"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Ceramics"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Literature & Poetry"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Drawing"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 11,
+  "fields": {
+    "name": "mail-art"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Photography"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Sculpture"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Digital"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 15,
+  "fields": {
+    "name": "Installation"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 16,
+  "fields": {
+    "name": "Multi-disciplinary"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 17,
+  "fields": {
+    "name": "Pop"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 18,
+  "fields": {
+    "name": "Rock"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 19,
+  "fields": {
+    "name": "Country"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 20,
+  "fields": {
+    "name": "Rock & Roll"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 21,
+  "fields": {
+    "name": "Hip Hop"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 22,
+  "fields": {
+    "name": "Punk"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 23,
+  "fields": {
+    "name": "Jazz"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 24,
+  "fields": {
+    "name": "Soul"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 25,
+  "fields": {
+    "name": "Dance"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 26,
+  "fields": {
+    "name": "Funk"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 27,
+  "fields": {
+    "name": "Biography"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 28,
+  "fields": {
+    "name": "History"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 29,
+  "fields": {
+    "name": "Western"
+  }
+}
+]

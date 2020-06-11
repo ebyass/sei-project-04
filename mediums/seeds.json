@@ -1,203 +1,1372 @@
 [
-  {
-    "model": "mediums.medium",
-    "pk": 1,
-    "fields": {
-      "category": 2,
-      "creator": "Gus Van Sant",
-      "title": "My Own Private Idaho",
-      "duration": 1.44,
-      "year": 1991,
-      "image": "https://m.media-amazon.com/images/M/MV5BZDgxMGU3YTEtODEzOC00MGVlLTk4OWUtYmY0ODU0OTI1NmMxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,670,1000_AL_.jpg",
-      "video": "https://www.youtube.com/watch?v=R0lpGZ-FFTA",
-      "info": "Mike Waters lives on the street and befriends the somewhat older and streetwise Scott Favor who shows him what is necessary to survive. Waters suffers from narcolepsy and can fall asleep at any moment and in almost any circumstance. Favor comes from a rich family and is rebelling against his own background. They travel together extensively - Waters is driven by the need to find his biological mother - and spend time in Italy. Later in life however, Favor has joined mainstream society and has little time for his old friend.",
-      "price": null,
-      "start_date": null,
-      "end_date": null,
-      "art_gallery": null,
-      "art_gallery_location": null,
-      "genres": [
-        1
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 2,
-    "fields": {
-      "category": 2,
-      "creator": "Steven Soderbergh",
-      "title": "Erin Brockovich",
-      "duration": 2.11,
-      "year": 2000,
-      "image": "https://m.media-amazon.com/images/M/MV5BYTA1NWRkNTktNDMxNS00NjE4LWEzMDAtNzA3YzlhYzRhNDA4L2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
-      "video": "https://www.youtube.com/watch?v=jjqUUxIy_yk",
-      "info": "An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.",
-      "price": null,
-      "start_date": null,
-      "end_date": null,
-      "art_gallery": null,
-      "art_gallery_location": null,
-      "genres": [
-        1,
-        4
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 3,
-    "fields": {
-      "category": 2,
-      "creator": "Gregg Araki",
-      "title": "Mysterious Skin",
-      "duration": 1.45,
-      "year": 2004,
-      "image": "https://m.media-amazon.com/images/M/MV5BMTgxMjQ4NzE5OF5BMl5BanBnXkFtZTcwNzkwOTkyMQ@@._V1_.jpg",
-      "video": "https://www.youtube.com/watch?v=5Lp5v4oQZRw",
-      "info": "A teenage hustler and a young man obsessed with alien abductions cross paths, together discovering a horrible, liberating truth.",
-      "price": null,
-      "start_date": null,
-      "end_date": null,
-      "art_gallery": null,
-      "art_gallery_location": null,
-      "genres": [
-        1
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 4,
-    "fields": {
-      "category": 3,
-      "creator": "Rihanna ft. Justin Timberlake",
-      "title": "Rehab",
-      "duration": 4.38,
-      "year": 2008,
-      "image": "https://upload.wikimedia.org/wikipedia/en/a/aa/Rihanna_-_Rehab.png",
-      "video": "https://www.youtube.com/watch?v=rJYcmq__nDM",
-      "info": "\"Rehab\" is a song recorded by Barbadian singer Rihanna for her third studio album, Good Girl Gone Bad. Def Jam Recordings serviced the song to contemporary hit radio in the United States on October 6, 2008, as the eighth and final single from the album.",
-      "price": null,
-      "start_date": null,
-      "end_date": null,
-      "art_gallery": null,
-      "art_gallery_location": null,
-      "genres": [
-        2
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 5,
-    "fields": {
-      "category": 3,
-      "creator": "Duke Dumont",
-      "title": "Ocean Drive",
-      "duration": 3.26,
-      "year": 2015,
-      "image": "https://upload.wikimedia.org/wikipedia/en/8/84/Duke_Dumont_-_Ocean_Drive_cover_art.jpg",
-      "video": "https://www.youtube.com/watch?v=KDxJlW6cxRk",
-      "info": "\"Ocean Drive\" is a song by British DJ and record producer Duke Dumont, and features uncredited vocals by Boy Matthews. It was released as the lead single from his seventh extended play, Blasé Boys Club Part 1, on 31 July 2015. A music video for the song was also released on 15 September through Vevo and YouTube.",
-      "price": null,
-      "start_date": null,
-      "end_date": null,
-      "art_gallery": null,
-      "art_gallery_location": null,
-      "genres": [
-        2
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 6,
-    "fields": {
-      "category": 3,
-      "creator": "Childish Gambino",
-      "title": "Feels Like Summer",
-      "duration": 4.57,
-      "year": 2018,
-      "image": "https://vmp-www.imgix.net/images/Awaken_My_Love.original.jpg?auto=format&w=650&h=433.33&fit=crop&bri=-10",
-      "video": "https://www.youtube.com/watch?v=F1B9Fk_SgI0",
-      "info": "\"Feels Like Summer\" is a song by American recording artist Childish Gambino. The song was released by Wolf+Rothstein, Liberator Music and RCA Records on July 11, 2018. It was written and produced by Gambino and his longtime collaborator Ludwig Göransson.",
-      "price": null,
-      "start_date": null,
-      "end_date": null,
-      "art_gallery": null,
-      "art_gallery_location": null,
-      "genres": [
-        7,
-        5
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 7,
-    "fields": {
-      "category": 1,
-      "creator": "V & A",
-      "title": "Renaissance Watercolours: from Du\u0308rer to Van Dyck",
-      "duration": null,
-      "year": 2020,
-      "image": "https://vanda-production-assets.s3.amazonaws.com/2019/12/05/14/13/10/746e9bd7-564e-4df2-9783-f16bd2d5a4ff/1280.jpg",
-      "video": null,
-      "info": "Bringing together 200 rarely-seen masterpieces, this exhibition presents the exquisite medium as a unified art form for the first time, and explores its pivotal role in understanding, interpreting and documenting the natural world.",
-      "price": "Free",
-      "start_date": "2020-06-17",
-      "end_date": "2020-08-19",
-      "art_gallery": "V & A",
-      "art_gallery_location": "London",
-      "genres": [
-        3
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 8,
-    "fields": {
-      "category": 1,
-      "creator": "Various",
-      "title": "Titian: Love, Desire, Death",
-      "duration": null,
-      "year": 2020,
-      "image": "https://media.timeout.com/images/105548694/1372/772/image.jpg",
-      "video": null,
-      "info": "Bodies flailing through the air, mythical creatures rushing by in a blur, golden rays of light and mounds and mounds of flesh: Titian’s poesie series is wild, dramatic, violent and very, very sensual. The Renaissance master’s works are reunited in full here for the first time since the 1500s.",
-      "price": "£8-£12",
-      "start_date": "2020-06-08",
-      "end_date": "2020-06-12",
-      "art_gallery": "National Gallery",
-      "art_gallery_location": "London",
-      "genres": [
-        8
-      ]
-    }
-  },
-  {
-    "model": "mediums.medium",
-    "pk": 9,
-    "fields": {
-      "category": 1,
-      "creator": "Edmund de Waal",
-      "title": "Edmund de Waal: Library of Exile",
-      "duration": null,
-      "year": 2020,
-      "image": "https://media.timeout.com/images/105621470/1372/772/image.jpg",
-      "video": null,
-      "info": "It stings the heart, this installation by Edmund de Waal. The ceramicist and author has lined the walls of his room within a room in the British Museum with books by writers in exile. Albert Camus’s ‘Exile and the Kingdom’, Jean Rhys’s ‘Wide Sargasso Sea’, Ovid’s ‘Metamorphoses’. Shelf after shelf of stories written by people far from home, thinking of home.",
-      "price": "Free",
-      "start_date": "2020-06-08",
-      "end_date": "2020-06-17",
-      "art_gallery": "British Museum",
-      "art_gallery_location": "London",
-      "genres": [
-        9
-      ]
-    }
+{
+  "model": "mediums.medium",
+  "pk": 1,
+  "fields": {
+    "category": 2,
+    "creator": "Francis Ford Coppola",
+    "title": "The Godfather",
+    "duration": 2.55,
+    "year": 1972,
+    "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,704,1000_AL_.jpg",
+    "video": null,
+    "info": "The Godfather \"Don\" Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WW II Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      1,
+      2
+    ]
   }
-  ]
-  
+},
+{
+  "model": "mediums.medium",
+  "pk": 2,
+  "fields": {
+    "category": 2,
+    "creator": "Peter Jackson",
+    "title": "The Lord of the Rings: The Return of the King",
+    "duration": 3.21,
+    "year": 2003,
+    "image": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+    "video": null,
+    "info": "The final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Frodo and Sam reach Mordor in their quest to destroy the One Ring, while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "creator": "Christopher Nolan",
+    "title": "Inception",
+    "duration": 2.28,
+    "year": 2010,
+    "image": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+    "video": null,
+    "info": "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 4,
+  "fields": {
+    "category": 2,
+    "creator": "Peter Jackson",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "duration": 2.58,
+    "year": 2001,
+    "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg",
+    "video": null,
+    "info": "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to the Cracks of Doom in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 5,
+  "fields": {
+    "category": 2,
+    "creator": "Lana Wachowski & Lilly Wachowski",
+    "title": "The Matrix",
+    "duration": 2.16,
+    "year": 1999,
+    "image": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
+    "video": null,
+    "info": "Thomas A. Anderson is a man living two lives. By day he is an average computer programmer and by night a hacker known as Neo. Neo has always questioned his reality, but the truth is far beyond his imagination. Neo finds himself targeted by the police when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government. Morpheus awakens Neo to the real world, a ravaged wasteland where most of humanity have been captured by a race of machines that live off of the humans' body heat and electrochemical energy and who imprison their minds within an artificial reality known as the Matrix. As a rebel against the machines, Neo must return to the Matrix and confront the agents: super-powerful computer programs devoted to snuffing out Neo and the entire human rebellion.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 6,
+  "fields": {
+    "category": 2,
+    "creator": "Peter Jackson",
+    "title": "The Lord of the Rings: The Two Towers",
+    "duration": 2.59,
+    "year": 2002,
+    "image": "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,684,1000_AL_.jpg",
+    "video": null,
+    "info": "The continuing quest of Frodo and the Fellowship to destroy the One Ring. Frodo and Sam discover they are being followed by the mysterious Gollum. Aragorn, the Elf archer Legolas, and Gimli the Dwarf encounter the besieged Rohan kingdom, whose once great King Theoden has fallen under Saruman's deadly spell.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "creator": "Irvin Kershner",
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "duration": 2.04,
+    "year": 1980,
+    "image": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,641,1000_AL_.jpg",
+    "video": null,
+    "info": "Luke Skywalker, Han Solo, Princess Leia and Chewbacca face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi Master's help will Luke survive when the Dark Side of the Force beckons him into the ultimate duel with Darth Vader.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "creator": "Luc Besson",
+    "title": "L\u00e9on: The Professional",
+    "duration": 1.5,
+    "year": 1994,
+    "image": "https://m.media-amazon.com/images/M/MV5BZDAwYTlhMDEtNTg0OS00NDY2LWJjOWItNWY3YTZkM2UxYzUzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SY1000_CR0,0,710,1000_AL_.jpg",
+    "video": null,
+    "info": "After her father, step-mother, step-sister and little brother are killed by her father's employers, the 12-year-old daughter of an abject drug dealer manages to take refuge in the apartment of a professional hitman who at her request teaches her the methods of his job so she can take her revenge on the corrupt DEA agent who ruined her life by killing her beloved brother.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      1,
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "creator": "Ridley Scott",
+    "title": "Gladiator",
+    "duration": 2.35,
+    "year": 2000,
+    "image": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+    "video": null,
+    "info": "Maximus is a powerful Roman general, loved by the people and the aging Emperor, Marcus Aurelius. Before his death, the Emperor chooses Maximus to be his heir over his own son, Commodus, and a power struggle leaves Maximus and his family condemned to death. The powerful general is unable to save his family, and his loss of will allows him to get captured and put into the Gladiator games until he dies. The only desire that fuels him now is the chance to rise to the top so that he will be able to look into the eyes of the man who will feel his revenge.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 10,
+  "fields": {
+    "category": 2,
+    "creator": "James Cameron",
+    "title": "Terminator 2: Judgment Day",
+    "duration": 2.17,
+    "year": 1991,
+    "image": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY999_CR0,0,672,999_AL_.jpg",
+    "video": null,
+    "info": "Over 10 years have passed since the first robot called The Terminator tried to kill Sarah Connor and her unborn son, John. The man who will become the future leader of the human resistance against the Machines is now a healthy young boy. However, another Terminator, called the T-1000, is sent back through time by the supercomputer Skynet. This new Terminator is more advanced and more powerful than its predecessor and its mission is to kill John Connor when he's still a child. However, Sarah and John do not have to face the threat of the T-1000 alone. Another Terminator (identical to the same model that tried and failed to kill Sarah Conner in 1984) is also sent back through time. The battle for tomorrow has begun.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "creator": "Titian",
+    "title": "\u2018Titian: Love, Desire, Death\u2019",
+    "duration": null,
+    "year": 2020,
+    "image": "https://media.timeout.com/images/105548694/1372/772/image.jpg",
+    "video": null,
+    "info": "Bodies flailing through the air, mythical creatures rushing by in a blur, golden rays of light and mounds and mounds of flesh: Titian\u2019s poesie series is wild, dramatic, violent and very, very sensual.\r\n\r\nThe Renaissance master\u2019s works are reunited in full here for the first time since the 1500s. The seven huge paintings here tell stories from Greek myth \u2013 \u2018Diana and Actaeon\u2019, \u2018Venus and Adonis\u2019, \u2018The Rape of Europa\u2019 \u2013 with heaving passion and lyrical intensity. At a time when painting was dominated by religious themes and visual restraint, these free-flowing works were a shock to the system. Like living in a world of Ken Loach films then suddenly watching Michael Bay\u2019s \u2018Transformers\u2019.",
+    "price": "\u00a38-\u00a312",
+    "start_date": "2020-04-08",
+    "end_date": "2020-04-21",
+    "art_gallery": "National Gallery",
+    "art_gallery_location": "London",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 12,
+  "fields": {
+    "category": 1,
+    "creator": "Edmund de Waal",
+    "title": "Edmund de Waal: Library of Exile review",
+    "duration": null,
+    "year": 2020,
+    "image": "https://media.timeout.com/images/105621470/1372/772/image.jpg",
+    "video": null,
+    "info": "It stings the heart, this installation by Edmund de Waal. The ceramicist and author has lined the walls of his room within a room in the British Museum with books by writers in exile. Albert Camus\u2019s \u2018Exile and the Kingdom\u2019, Jean Rhys\u2019s \u2018Wide Sargasso Sea\u2019, Ovid\u2019s \u2018Metamorphoses\u2019. Shelf after shelf of stories written by people far from home, thinking of home.\r\n\r\nDe Waal wants you to come and sit in this quiet space, read the books and write your name in the ones that matter to you. He wants you to \u2018remember those who have been exiled and those who are still in exile\u2019. It left me thinking of my grandmother, who fled Poland for an England that didn\u2019t want her, of my mother, who spent all but three years of her life outside her \u2018native\u2019 country, of all the stories of immigrants risking their lives in boats crossing the Mediterranean, of people fleeing persecution and war. It hurt.",
+    "price": "Free",
+    "start_date": "2020-04-13",
+    "end_date": "2020-04-29",
+    "art_gallery": "British Museum",
+    "art_gallery_location": "London",
+    "genres": [
+      8
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 13,
+  "fields": {
+    "category": 1,
+    "creator": "Edwin Morgan",
+    "title": "The Concrete World of Edwin Morgan",
+    "duration": null,
+    "year": 2020,
+    "image": "https://d33hx0a45ryfj1.cloudfront.net/additional/Dynamic/media/68219d40dfbcfe89?w=1600&h=900&crop=1",
+    "video": null,
+    "info": "This event has been cancelled until Tuesday 30 June as we are currently closed due to the coronavirus crisis.\r\n\r\nMark the centenary of the Scottish poet at an exhibition on his visual poetry and his life as a gay writer.\r\n\r\nShowcasing many rare works from the National Poetry Library collection, the exhibition features displays of Edwin Morgan works as large-scale graphics and sound, alongside publications and ephemera.\r\n\r\nAs part of the exhibition, we have commissioned new work from four LGBTQ+ poets, whose poems are available to view in the exhibition space.\r\n\r\nYou can also interact with a Morgan poem that has been reimagined as a digital game.",
+    "price": "Free",
+    "start_date": "2020-04-03",
+    "end_date": "2020-04-30",
+    "art_gallery": "National Poetry Library",
+    "art_gallery_location": "London",
+    "genres": [
+      9
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "creator": "Zofia Wyszomirska-Noga",
+    "title": "Art & Memory",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/art-memory/images/Zt0CoxTNrdVw/997x1500/monotype-caring-embrace-0004.jpg",
+    "video": null,
+    "info": "Art and Memory is a collection of mixed media artworks created in 2019 to illustrate my thoughts and inspirations derived from the stories of extraordinary women, whose stories were recorded during the historical Forgotten Force project.\r\n\r\nWe are very excited that our new virtual exhibition Art & Memory has finally launched! The new website is part of the Forgotten Force that presents artworks by Zofia Wyszomirska-Noga that were inspired by our heroines' stories. The exhibition is our way to contribute to the virtual Polish Heritage Days and was kindly supported by Polish Embassy UK and National Lottery Heritage Fund.",
+    "price": "Free",
+    "start_date": "2020-04-15",
+    "end_date": "2020-05-15",
+    "art_gallery": "Josef Pilsudski Institute in London",
+    "art_gallery_location": "London",
+    "genres": [
+      7,
+      10
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 15,
+  "fields": {
+    "category": 1,
+    "creator": "Joachim Lambrechts",
+    "title": "On the spur of the moment with Joachim Lambrechts",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/on-the-spur-of-the-moment-with-joachim-lambrechts/images/5ScpJit3iyUJ/1282x1500/JLA-0022-image.webp",
+    "video": null,
+    "info": "For his first solo exhibition entitled On the spur of the moment at Kristin Hjellegjerde Gallery, Wandsworth, Joachim Lambrechts invites viewers into a dynamic visual world inspired by impulsivity and play.",
+    "price": "\u00a35.50",
+    "start_date": "2020-04-11",
+    "end_date": "2020-05-04",
+    "art_gallery": "Kristin Hjellegjerde",
+    "art_gallery_location": "London",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 16,
+  "fields": {
+    "category": 1,
+    "creator": "Various",
+    "title": "Queer Correspondence: a mail-art initiative",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/queer-correspondence-a-mailart-initiative/images/U8DWnhpub8c5/1000x1500/David-Lindert-Untitled-2020-Queer-Correspondence.webp",
+    "video": null,
+    "info": "Cell Project Space presents Queer Correspondence: a mail-art initiative featuring commissions by Alex Margo Arden & Caspar Heinemann; Beatriz Cortez & Kang Seung Lee; Ezra Green & Martin Hansen; Rafa Esparza; Gelare Khoshgozaran; Ati\u00e9na Riollet; David Lindert.",
+    "price": "Free",
+    "start_date": "2020-04-03",
+    "end_date": "2020-04-21",
+    "art_gallery": "Cell Project Space",
+    "art_gallery_location": "London",
+    "genres": [
+      11
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 17,
+  "fields": {
+    "category": 1,
+    "creator": "Various",
+    "title": "Solskifte",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/solskifte/images/JdcWAxBVERgI/1087x1500/Scapula-edited.webp",
+    "video": null,
+    "info": "An online exhibition exploring the interrelations between human power structures and the \u2018natural\u2019 world.",
+    "price": "Free",
+    "start_date": "2020-04-09",
+    "end_date": "2020-06-02",
+    "art_gallery": "Online",
+    "art_gallery_location": null,
+    "genres": [
+      7,
+      9,
+      12
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 18,
+  "fields": {
+    "category": 1,
+    "creator": "Lynette Yiadom-Boakye",
+    "title": "Lynette Yiadom-Boakye",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/lynette-yiadomboakye-tate-britain/images/5b2Ne0uEtuA7/600x774/lyb14-16.webp",
+    "video": null,
+    "info": "Widely considered to be one of the most important painters of her generation, Lynette Yiadom-Boakye is a British artist and writer acclaimed for her enigmatic portraits of fictitious people.\r\n\r\nHer paintings often allude to historic European portraiture \u2013 notably Francisco de Goya, John Singer Sargent and \u00c9douard Manet \u2013 yet in subject matter and technique her approach is decidedly contemporary. Through her focus on the depiction of imagined black characters Yiadom-Boakye\u2019s paintings raise important questions of identity and representation.",
+    "price": "\u00a312",
+    "start_date": "2020-04-07",
+    "end_date": "2020-04-12",
+    "art_gallery": "Tate Britain",
+    "art_gallery_location": "London",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 19,
+  "fields": {
+    "category": 1,
+    "creator": "Annett Zinsmeister & Hans Kotter",
+    "title": "Shifting Space: Annett Zinsmeister & Hans Kotter",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/shifting-space-annett-zinsmeister-hans-kotter/images/2MXog6FUr1xe/1500x1000/Big-Bang-01.jpg",
+    "video": null,
+    "info": "Shifting Space presents an immersive platform through which the visitor can journey through intersections of real and virtual spaces with artworks that reflect an examination of space and light.\r\n\r\nSpatial parameters are put into motion through an immersive installation by Zinsmeister and refractive light sculptures by Kotter. Through each artist\u2019s respective medium, humanity\u2019s relationship with space and the limits of human perception are put into question.",
+    "price": "\u00a38",
+    "start_date": "2020-04-09",
+    "end_date": "2020-04-18",
+    "art_gallery": "JD Malat Gallery",
+    "art_gallery_location": "London",
+    "genres": [
+      13,
+      14,
+      15,
+      16
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 20,
+  "fields": {
+    "category": 1,
+    "creator": "Mike Silva",
+    "title": "Mike Silva: London Portraits, Landscapes and Still Lives",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/mike-silva-london-portraits-landscapes-and-still-lives/images/Za6BDBUA6PfD/1500x1207/ap-silvm-00023-a-300.webp",
+    "video": null,
+    "info": "Silva paints portraits, interiors and still lives that are intimately connected to personal memory. Working from photographs taken on film and archived over the years, mostly of his acquaintances, friends, lovers, and the environments that were once communally inhabited\u2014the artist creates a tender sense of celebration tinted with melancholy.",
+    "price": "\u00a310 - \u00a312",
+    "start_date": "2020-04-12",
+    "end_date": "2020-04-23",
+    "art_gallery": "The Approach",
+    "art_gallery_location": "London",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 21,
+  "fields": {
+    "category": 3,
+    "creator": "Janet Jackson",
+    "title": "Rhythm Nation",
+    "duration": 4.26,
+    "year": 1989,
+    "image": "https://static.billboard.com/files/media/Janet-Jackson-Rhythm-Nation-1814-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "\"Rhythm Nation\" is a song by American singer Janet Jackson, released as the second single from her fourth studio album, Janet Jackson's Rhythm Nation 1814. It was written and produced by Jackson, in collaboration with Jimmy Jam and Terry Lewis.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 22,
+  "fields": {
+    "category": 3,
+    "creator": "Lizzo",
+    "title": "Truth Hurts",
+    "duration": 2.53,
+    "year": 2019,
+    "image": "https://static.billboard.com/files/media/Lizzo-Cuz-I-Love-You-album-art-2019-billboard-1240_0-1024x1024.jpg",
+    "video": null,
+    "info": "Combining her roots in Houston rap, gospel soul, and classical flute as confidently as she addresses issues of race, sexuality, and body positivity, singer/rapper Lizzo\u2019s music abounds with humour and charisma.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 23,
+  "fields": {
+    "category": 3,
+    "creator": "Pink Floyd",
+    "title": "Money",
+    "duration": 6.22,
+    "year": 1973,
+    "image": "https://static.billboard.com/files/media/Pink-Floyd-Dark-Side-of-the-Moon-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "his simple art says so much. The light going through a prism and coming out as a rainbow was meant to convey the band\u2019s stage lighting and the album\u2019s lyrics. And, as evidenced by the number of t-shirts bearing this image today, the prism has become synonymous with Floyd itself.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      18
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 24,
+  "fields": {
+    "category": 3,
+    "creator": "Nirvana",
+    "title": "Smells Like Teen Spirit",
+    "duration": 5.01,
+    "year": 1991,
+    "image": "https://static.billboard.com/files/media/Nirvana-Nevermind-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "One of the most recognizable album covers of all time features an underwater naked baby reaching for a dollar bill on a string. It\u2019s a sad statement about the values our society passes on to our youth -- and oh, btw, that baby is a twenty-something man now.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      18
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 25,
+  "fields": {
+    "category": 3,
+    "creator": "Elvis Presley",
+    "title": "Suspicious Minds",
+    "duration": 4.21,
+    "year": 1959,
+    "image": "https://static.billboard.com/files/media/Elvis-Presley-Elvis-Presley-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Elvis knew what a killer combo green and neon pink were some 20 years before the Clash copped the cover style for London Calling. There\u2019s something about that mid-strum snapshot of a vocal howl that gets us every time -- it visually introduced rock n\u2019 roll to an unsuspecting America even before the needle hit the vinyl.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 26,
+  "fields": {
+    "category": 3,
+    "creator": "The Beatles",
+    "title": "With A Little Help From My Friends",
+    "duration": 2.44,
+    "year": 1967,
+    "image": "https://static.billboard.com/files/media/The-Beatles-Sgt-Peppers-lonely-hearts-club-band-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Info: Where to begin with this album cover? The image features the Beatles, in their Sgt. Pepper\u2019s Lonely Hearts Club Band military getups, standing in front of dozens of celebrities, including Marilyn Monroe, Bob Dylan, Marlon Brando and Sonny Liston, as well as wax figures of themselves. While listeners try to discern the secret meaning of the high-minded music, they can also try to identify the 60-plus faces on the crowded cover.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 27,
+  "fields": {
+    "category": 3,
+    "creator": "Nas",
+    "title": "If I ruled the World",
+    "duration": 4.42,
+    "year": 1994,
+    "image": "https://static.billboard.com/files/media/Nas-Illmatic-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "The image of seven-year-old Nas superimposed over a Danny Clinch photo of the rapper\u2019s native Queensbridge housing projects has been burned into many a hip-hop hed\u2019s memory. \u201cThe projects used to be my world,\u201d he told MTV of the meaning behind the Aimee Macauley-designed art in 1994, \u201cuntil I educated myself to see there\u2019s more out there.\u201d",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      21
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 28,
+  "fields": {
+    "category": 3,
+    "creator": "The Clash",
+    "title": "I Fought The Law",
+    "duration": 2.43,
+    "year": 1979,
+    "image": "https://static.billboard.com/files/media/The-Clash-London-Calling-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "The London Calling cover simultaneously pays tribute to Elvis Presley while also blowing up his version of rock n\u2019 roll. The pink-and-green title letters mimic Presley\u2019s 1956 self-titled album cover, but the King probably never smashed a bass guitar on stage.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      18,
+      22
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 29,
+  "fields": {
+    "category": 3,
+    "creator": "The Roots",
+    "title": "You Got Me",
+    "duration": 4.19,
+    "year": 1999,
+    "image": "https://static.billboard.com/files/media/The-Roots-Things-Fall-Apart-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "As art director Kenny Gravallis put it, \u201cThe concept of \u2018visual failure in society\u2019 on the cover of an album called Things Fall Apart just made sense.\u201d One of five original covers, the image that stuck was a Civil Rights-era photo of two black teenagers running from police in riot gear in Bedford-Stuyvesant -- a powerful image of the inequality the group was trying to address through their music.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      21
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 30,
+  "fields": {
+    "category": 3,
+    "creator": "Miles Davis",
+    "title": "Blue in Green",
+    "duration": 5.37,
+    "year": 1969,
+    "image": "https://static.billboard.com/files/media/Miles-Davis-Bitches-Brew-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "The surrealist art for Bitches Brew was created by German painter Mati Klarwein, who was also responsible for the art on Santana\u2019s Abraxas, another entry on this list. A study in contrasts, the full gatefold cover shows a modified negative rendition of the more familiar front cover -- together, they embody Davis\u2019 searching musical manifesto.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      23
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 31,
+  "fields": {
+    "category": 3,
+    "creator": "David Bowie",
+    "title": "Space Oddity",
+    "duration": 5.18,
+    "year": 1973,
+    "image": "https://static.billboard.com/files/media/David-Bowie-Aladdin-Sane-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "While this isn\u2019t the album that introduced the world to Bowie\u2019s space-man alter ego, when music fans think of Ziggy Stardust, this is the image they see. The lightning-bolt eye makeup, the red mullet -- this is quintessential Bowie.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 32,
+  "fields": {
+    "category": 3,
+    "creator": "Grace Jones",
+    "title": "I\u2019ve Seen That Face Before",
+    "duration": 4.28,
+    "year": 1985,
+    "image": "https://static.billboard.com/files/media/Grace-Jones-Island-Life-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Grace Jones and frequent collaborator Jean-Paul Goude (yes, the man who tried to \u201cbreak the Internet\u201d with a nude Kim Kardashian) partnered to create one of the decade\u2019s most memorable covers for 1985\u2019s Island Life. Featuring a nearly nude Jones in a seemingly superhuman pose, the art was actually a composite of the singer in a series of different poses, cut-and-pasted together for an unforgettable result.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 33,
+  "fields": {
+    "category": 3,
+    "creator": "Aretha Franklin",
+    "title": "Respect",
+    "duration": 2.27,
+    "year": 1967,
+    "image": "https://static.billboard.com/files/media/Aretha-Franklin-I-Never-Loved-a-Man-the-Way-I-Loved-You-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Aretha Franklin\u2019s best album, I Never Loved a Man the Way I Loved You, shows her dressed in an exceedingly elegant gown with a gauzy old Hollywood haze bordering the photo. But it\u2019s her expression -- and the canted angle of the photo -- that make this so important. In 1967, representation of black women in pop culture was political whether intentionally or not, and Aretha\u2019s quiet, un-posed album cover speaks volumes. Unlike many female pop stars of the era, she doesn\u2019t smile invitingly at the viewer, attempting to please or impress or even seduce -- she simply exists, exuding confidence and a quiet sense of majesty.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      24
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 34,
+  "fields": {
+    "category": 3,
+    "creator": "FKA Twigs",
+    "title": "Two Weeks",
+    "duration": 4.07,
+    "year": 2014,
+    "image": "https://static.billboard.com/files/media/FKA-Twigs-LP1-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Leading up to her debut album, the genre-blurring FKA Twigs made a name for herself on stunning visuals: music videos, EP covers, and even magazine shoots. This porcelain-sheen headshot was an exquisite introduction to the wonder of her music.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 35,
+  "fields": {
+    "category": 3,
+    "creator": "Kanye West",
+    "title": "Power",
+    "duration": 4.52,
+    "year": 2010,
+    "image": "https://static.billboard.com/files/media/Kanye-West-My-Beautiful-Dark-Twisted-Fantasy-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "After a handful of album covers featuring the Dropout Bear and a simple, Kaws-designed image for 808s & Heartbreak, Kanye West transitioned into high-concept art for My Beautiful Dark Twisted Fantasy. Teaming with artist George Condo for a series of paintings, the rapper matched the widescreen brilliance of the album\u2019s music with boundary-cracking art, including a controversial image of a demonic West being straddled by a nude angel.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      21
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 36,
+  "fields": {
+    "category": 3,
+    "creator": "Whitney Houston",
+    "title": "How Will I know",
+    "duration": 4.35,
+    "year": 1985,
+    "image": "https://static.billboard.com/files/media/Whitney-Houston-Whitney-Houston-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Although he\u2019s best (worst?) remembered for taking nude photos of a very underage Brooke Shields, Garry Gross\u2019 cover photo for Whitney Houston\u2019s self-titled debut stands out as a beautifully less-is-more image in the visually explosive MTV era. Wearing a simple, timeless toga with pearls, she announced herself to the world as a class act whose elegant ferocity went beyond any fashion trend.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17,
+      24,
+      25
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 37,
+  "fields": {
+    "category": 3,
+    "creator": "Cardi B",
+    "title": "I Like It",
+    "duration": 4.13,
+    "year": 2018,
+    "image": "https://static.billboard.com/files/media/cardi-b-invasion-of-privacy-album-art-2018-billboard-embed-1024x1024.jpg",
+    "video": null,
+    "info": "Brash, bold, badass and whatever other \u201cB\u201d words generally applied to Cardi B\u2019s rise to prominence in 2017 also worked for the cover of her 2018 debut LP, Invasion of Privacy. Captured by photographer Jora Frantzis, Cardi sneers in cat-eyes sunglasses, mustard-blonde hair and a checkered long-sleeve coat -- dazzling and unignorable, just as the accompanying album would soon prove to be on the Billboard charts.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      21
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 38,
+  "fields": {
+    "category": 3,
+    "creator": "Funkadelic",
+    "title": "Can You Get To That",
+    "duration": 2.51,
+    "year": 1971,
+    "image": "https://static.billboard.com/files/media/Funkadelic-Maggot-Brain-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "A screaming Barbara Cheeseborough (who was Essence\u2019s first cover model) possesses the \u201cmaggot brain\u201d in question on the cover of Parliament\u2019s classic 1971 album of the same name. Buried up to her neck, the real twist comes when you turn the album over -- where her head is on the front, there\u2019s a skull on the back.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      24,
+      26
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 39,
+  "fields": {
+    "category": 3,
+    "creator": "The Slits",
+    "title": "I heard It Through The Grapevine",
+    "duration": 3.59,
+    "year": 1979,
+    "image": "https://static.billboard.com/files/media/The-Slits-The-Slits-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "Though technically, yes, it\u2019s an image of three topless women caked in mud, there\u2019s nothing remotely sexualized about this album cover. Instead, the three main women of post-punk outfit The Slits are portrayed as unflinching tribal warrior women. As Viv Albertine later told The Guardian, \u201cWe knew, since we had no clothes on, that we had to look confrontational and hard. We didn\u2019t want to be inviting the male gaze.\u201d It\u2019s safe to say they succeeded.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 40,
+  "fields": {
+    "category": 3,
+    "creator": "Beyonc\u00e9",
+    "title": "Drunk in Love",
+    "duration": 4.2,
+    "year": 2013,
+    "image": "https://static.billboard.com/files/media/Beyonce-Beyonce-greatest-album-covers-billboard-1000x1000-compressed.jpg",
+    "video": null,
+    "info": "The lasting significance of the cover art for Beyonc\u00e9\u2019s 2013 surprise release Beyonc\u00e9 should come as no surprise at all. Not just because anything the ***Flawless female does becomes instantly iconic, but because the simple pink knockout typeface over a plain black background is what contemporary design dreams are made of. The color-font combo became a classic and found its way to shirts, mugs and memes the world over.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      17
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 41,
+  "fields": {
+    "category": 2,
+    "creator": "James Cameron",
+    "title": "Aliens",
+    "duration": 2.17,
+    "year": 1986,
+    "image": "https://m.media-amazon.com/images/M/MV5BZGU2OGY5ZTYtMWNhYy00NjZiLWI0NjUtZmNhY2JhNDRmODU3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,643,1000_AL_.jpg",
+    "video": null,
+    "info": "57 years after Ellen Ripley had a close encounter with the reptilian alien creature from the first movie, she is called back, this time, to help a group of highly trained colonial marines fight off against the sinister extraterrestrials. But this time, the aliens have taken over a space colony on the moon LV-426. When the colonial marines are called upon to search the deserted space colony, they later find out that they are up against more than what they bargained for. Using specially modified machine guns and enough firepower, it's either fight or die as the space marines battle against the aliens. As the Marines do their best to defend themselves, Ripley must attempt to protect a young girl who is the sole survivor of the decimated space colony.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 42,
+  "fields": {
+    "category": 2,
+    "creator": "Christopher Nolan",
+    "title": "Batman Begins",
+    "duration": 2.2,
+    "year": 2005,
+    "image": "https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SY1000_SX750_AL_.jpg",
+    "video": null,
+    "info": "When his parents are killed, billionaire playboy Bruce Wayne relocates to Asia, where he is mentored by Henri Ducard and Ra's Al Ghul in how to fight evil. When learning about the plan to wipe out evil in Gotham City by Ducard, Bruce prevents this plan from getting any further and heads back to his home. Back in his original surroundings, Bruce adopts the image of a bat to strike fear into the criminals and the corrupt as the icon known as \"Batman\". But it doesn't stay quiet for long.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 43,
+  "fields": {
+    "category": 2,
+    "creator": "J.J Abrams",
+    "title": "Star Trek",
+    "duration": 2.07,
+    "year": 2009,
+    "image": "https://m.media-amazon.com/images/M/MV5BMjE5NDQ5OTE4Ml5BMl5BanBnXkFtZTcwOTE3NDIzMw@@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+    "video": null,
+    "info": "On the day of James T. Kirk's birth, his father dies on his damaged starship in a last stand against a Romulan mining vessel looking for Ambassador Spock, who in this time, has grown on Vulcan disdained by his neighbors for his half-human heritage. 25 years later, James T. Kirk has grown into a young rebellious troublemaker. Challenged by Captain Christopher Pike to realize his potential in Starfleet, he comes to annoy academy instructors like Commander Spock. Suddenly, there is an emergency on Vulcan and the newly-commissioned USS Enterprise is crewed with promising cadets like Nyota Uhura, Hikaru Sulu, Pavel Chekov and even Kirk himself, thanks to Leonard McCoy's medical trickery. Together, this crew will have an adventure in the final frontier where the old legend is altered forever as a new version of the legend begins.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 44,
+  "fields": {
+    "category": 2,
+    "creator": "Peter Jackson",
+    "title": "King Kong",
+    "duration": 3.07,
+    "year": 2005,
+    "image": "https://m.media-amazon.com/images/M/MV5BMjYxYmRlZWYtMzAwNC00MDA1LWJjNTItOTBjMzlhNGMzYzk3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
+    "video": null,
+    "info": "Carl Denham needs to finish his movie and has the perfect location; Skull Island. But he still needs to find a leading lady. This 'soon-to-be-unfortunate' soul is Ann Darrow. No one knows what they will encounter on this island and why it is so mysterious, but once they reach it, they will soon find out. Living on this hidden island is a giant gorilla and this beast now has Ann is its grasps. Carl and Ann's new love, Jack Driscoll must travel through the jungle looking for Kong and Ann, whilst avoiding all sorts of creatures and beasts. But Carl has another plan in mind.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 45,
+  "fields": {
+    "category": 2,
+    "creator": "Quentin Tarantino",
+    "title": "Pulp Fiction",
+    "duration": 2.34,
+    "year": 1994,
+    "image": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,686,1000_AL_.jpg",
+    "video": null,
+    "info": "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hit men who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 46,
+  "fields": {
+    "category": 2,
+    "creator": "Steven Spielberg",
+    "title": "Schindler's List",
+    "duration": 3.15,
+    "year": 1993,
+    "image": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
+    "video": null,
+    "info": "Oskar Schindler is a vain and greedy German businessman who becomes an unlikely humanitarian amid the barbaric German Nazi reign when he feels compelled to turn his factory into a refuge for Jews. Based on the true story of Oskar Schindler who managed to save about 1100 Jews from being gassed at the Auschwitz concentration camp, it is a testament to the good in all of us.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      27,
+      28
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 47,
+  "fields": {
+    "category": 2,
+    "creator": "George Lucas",
+    "title": "Star Wars: Episode IV - A New Hope",
+    "duration": 2.01,
+    "year": 1977,
+    "image": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,643,1000_AL_.jpg",
+    "video": null,
+    "info": "The Imperial Forces, under orders from cruel Darth Vader, hold Princess Leia hostage in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker and Han Solo, captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 and C-3PO to rescue the beautiful princess, help the Rebel Alliance and restore freedom and justice to the Galaxy.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 48,
+  "fields": {
+    "category": 2,
+    "creator": "George Miller",
+    "title": "Mad Max: Fury Road",
+    "duration": 2.0,
+    "year": 2015,
+    "image": "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "video": null,
+    "info": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and almost everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order. There's Max, a man of action and a man of few words, who seeks peace of mind following the loss of his wife and child in the aftermath of the chaos. And Furiosa, a woman of action and a woman who believes her path to survival may be achieved if she can make it across the desert back to her childhood homeland.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      3,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 49,
+  "fields": {
+    "category": 2,
+    "creator": "Christopher Nolan",
+    "title": "Interstellar",
+    "duration": 2.49,
+    "year": 2014,
+    "image": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_SX675_AL_.jpg",
+    "video": null,
+    "info": "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      3,
+      6
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 50,
+  "fields": {
+    "category": 2,
+    "creator": "Quentin Tarantino",
+    "title": "Django Unchained",
+    "duration": 2.45,
+    "year": 2012,
+    "image": "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
+    "video": null,
+    "info": "In 1858, a bounty hunter named Schultz seeks out a slave named Django and buys him because he needs him to find some men he is looking for. After finding them, Django wants to find his wife, Broomhilda, who along with him were sold separately by his former owner for trying to escape. Schultz offers to help him if he chooses to stay with him and be his partner. Eventually they learn that she was sold to a plantation in Mississippi. Knowing they can't just go in and say they want her, they come up with a plan so that the owner will welcome them into his home and they can find a way.",
+    "price": null,
+    "start_date": null,
+    "end_date": null,
+    "art_gallery": null,
+    "art_gallery_location": null,
+    "genres": [
+      2,
+      29
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 51,
+  "fields": {
+    "category": 1,
+    "creator": "Rachel Whiteread, Barbara Hepworth",
+    "title": "Breaking The Mould: Sculpture by Women since 1945",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/breaking-the-mould-sculpture-by-women-since-1945/images/z9WLKJcCRjmj/1500x1126/RESIZED-8-Cornelia-Parker-Fleeting-Monument-1985.jpg",
+    "video": null,
+    "info": "This new touring exhibition challenges the male-dominated narratives of post-war British sculpture by presenting a diverse and significant range of ambitious work by women. In 1947, the Arts Council Collection invested in its first work by a sculptor, purchasing Barbara Hepworth\u2019s seminal hospital drawing, Reconstruction. Since then, the Collection has acquired over 250 sculptures and installations by more than 150 women, supporting an impressive range of practices across 75 years. Through an investigation of these important holdings, Breaking the Mould proposes a radical recalibration \u2013 a riposte to the many accounts of British sculpture that have marginalised women or airbrushed their work from the story altogether.",
+    "price": "Free",
+    "start_date": "2020-04-04",
+    "end_date": "2020-06-14",
+    "art_gallery": "Yorkshire Sculpture Park",
+    "art_gallery_location": "Location: Wakefield, UK",
+    "genres": [
+      13
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 52,
+  "fields": {
+    "category": 1,
+    "creator": "Inna Levinson",
+    "title": "In Your Face: Inna Levinson",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/in-your-face-inna-levinson/images/Uma0Ye9paVv8/1400x1158/weserhalle-inna-levinsson.webp",
+    "video": null,
+    "info": "Exposure to digital images and information is evergrowing and difficult to escape. The continuous gaze on and through screens is affecting and distorts how we perceive our surroundings. Painter Inna Levinson addresses this phenomenon, as well as our behavioral patterns in the digital world, as she translates them into painting. In her work, the digital feel of the image collides with the raw haptics of the canvas. Open White Gallery and Weserhalle present new mid- and large scale works by Inna Levinson. Viewing appointments can be booked online.",
+    "price": "Free",
+    "start_date": "2020-06-11",
+    "end_date": "2020-07-10",
+    "art_gallery": "Waserhalle",
+    "art_gallery_location": "Berlin",
+    "genres": [
+      7,
+      14
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 53,
+  "fields": {
+    "category": 1,
+    "creator": "Louisa Clement",
+    "title": "Louisa Clement : omissions",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/louisa-clement-omissions/images/4pFX6b5vP08X/850x661/LClement-inside4.webp",
+    "video": null,
+    "info": "Clement\u2019s most recent series, mould, manifests itself in the exhibition space as a logical consequence and drastic extension of these initial questions. Sex robots cast in bronze lie and stand, encountering us staunchly and shamelessly. These days, they are mass produced, can be ordered with a few mouse clicks, and, if desired, can be custom-made to match individual proclivities. The dummies, with a body of a silicon-like material and outfitted with artificial intelligence, respond to their users, note the users\u2019 preferences, and promise the ultimate pleasure.",
+    "price": null,
+    "start_date": "2020-06-11",
+    "end_date": "2020-08-15",
+    "art_gallery": "Eigen + Art Lab",
+    "art_gallery_location": "Berlin",
+    "genres": [
+      15,
+      16
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 54,
+  "fields": {
+    "category": 1,
+    "creator": "Orsi Cowell-Lehoczky",
+    "title": "Correlation",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/correlation/images/pJsAf0ncczRH/1500x1000/Sandor-Pellet-Erdo-40x60-plextol-rost-lemez.webp",
+    "video": null,
+    "info": "Visual correspondence on art and friendship between generations, across borders and over decades. Correlating works themed around the environment as it is perceived, both in 2 and 3 dimensions. Orsi\u2019s guest exhibitor was planning to travel from Hungary for the duration of this show and to launch his new book on his artistic career.",
+    "price": "\u00a38-\u00a312",
+    "start_date": "2020-06-09",
+    "end_date": "2020-06-21",
+    "art_gallery": "The Fountain Gallery",
+    "art_gallery_location": "Surrey",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 55,
+  "fields": {
+    "category": 1,
+    "creator": "Deana Lawson",
+    "title": "Centropy",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/deana-lawson-centropy/images/hqTKGZr0PmUs/1470x1218/Deana-Lawson-Kunsthalle-Basel-Nation-web-1470x1218.webp",
+    "video": null,
+    "info": "Creating meticulously staged yet profoundly intimate images of the sartorial styles, quotidian habits, and domestic interiors of the African diaspora in her native US or in Brazil and beyond, Deana Lawson\u2019s (*1979) photographs are unforgettable portraits of contemporary Black life.",
+    "price": "Free",
+    "start_date": "2020-06-09",
+    "end_date": "2020-10-11",
+    "art_gallery": "Kunsthalle Basel",
+    "art_gallery_location": "Switzerland",
+    "genres": [
+      12
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 56,
+  "fields": {
+    "category": 1,
+    "creator": "Elena Balsiukait\u0117",
+    "title": "Oxymoron Trap",
+    "duration": null,
+    "year": 2020,
+    "image": "25 https://img.artrabbit.com/events/oxymoron-trap/images/sipzkbDUaQcD/850x571/Elena-Balsiukaite-Brazdziuniene-Oksimorono-spastai-2020.webp",
+    "video": null,
+    "info": "Elena Balsiukait\u0117\u2013Brazd\u017ei\u016bnien\u0117 solo exhibition \u201cOxymoron Trap\u201d represents artworks of recent four years. According to the author \u2013 at the beginning it is always the word \u2013 that\u2019s how thoughts and ideas emerge. Being not too verbose in life, in her paintings she lets this stream of thoughts free and observes \u2013 how word turns into image. Drawing is never an illustration of the phrase, just derives inspiration from it. At this spot of transmutation, an oxymoron point Elena Balsiukait\u0117 is awaiting for the beginning.",
+    "price": "\u00a35.50",
+    "start_date": "2020-06-11",
+    "end_date": "2020-07-05",
+    "art_gallery": "Meno Parkas Gallery",
+    "art_gallery_location": "Kaunas County, Lithuania",
+    "genres": [
+      7,
+      10
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 57,
+  "fields": {
+    "category": 1,
+    "creator": "Sarah Wiseman",
+    "title": "Pool Party",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/pool-party-sarah-wiseman-gallery/images/G1cI0O9bhXLS/1200x967/02-Swimming-Pool-2020-105-x-130-cms-8033.webp",
+    "video": null,
+    "info": "\u2018We felt the need to let our hair down this summer,\u2019 says gallery director Sarah Wiseman. \u2018Art that explores a lovely sun-soaked theme seemed very appealing.\u2019 She says. \u2018It\u2019s also interesting to note that outdoor swimming is growing more popular in recent years, along with people\u2019s appetite for more varied leisure pursuits,\u2019 says Sarah Wiseman \u2018we\u2019re especially interested in the idea of swimming and pools and that alluring, sparkling light contrasted with an urban backdrop.\u2019",
+    "price": null,
+    "start_date": "2020-06-13",
+    "end_date": "2020-07-25",
+    "art_gallery": "Sarah Wiseman Gallery",
+    "art_gallery_location": "Oxford, UK",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 58,
+  "fields": {
+    "category": 1,
+    "creator": "Various",
+    "title": "Natural Beauty",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/natural-beauty/images/r6vNABFManhx/1500x1333/IMG-0222.webp",
+    "video": null,
+    "info": "The artists were given a free rein to interpret the theme of Natural Beauty and were certainly not confined to images of Constable Country. Several painters do acknowledge a debt to Constable, but their own practice of painting en plein air has developed in quite different ways. Looking at the show as a whole there is quite a lot of sky, understandably in these locked down times, but some artists equally find beauty in erosion, decay and rust.",
+    "price": "Free",
+    "start_date": "2020-06-13",
+    "end_date": "2020-08-22",
+    "art_gallery": "North House Gallery",
+    "art_gallery_location": "Manningtree, United Kingdom",
+    "genres": [
+      7
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 59,
+  "fields": {
+    "category": 1,
+    "creator": "J\u00fcrgen Holtz",
+    "title": "Punch, doll, crocodile",
+    "duration": null,
+    "year": 2020,
+    "image": "31 https://img.artrabbit.com/events/j%C3%BCrgen-holtz-punch-doll-crocodile/images/plUk37xG4ht1/900x426/Gas-02-Kopie.webp",
+    "video": null,
+    "info": "With his unmistakable handwriting, with colored felt-tip pens and watercolor, highly alert, concentrated and with a light hand, Holtz casts sharp glances at contemporary affairs and at the same time deeper into history, warning against arrogance, complacency and presumption. Punch, doll and crocodile as the classical actors of the puppet show compete against the grotesquely horrible arsenal of screamers, gathered arsonists, ghosts and gas masks dancing the tango. Even the devil is not missing when hitting, stabbing, pricking, trampling and kicking. \u201cOn the one hand, my pictures are bitterly serious, on the other hand, they are absolutely laughable,\u201d says Holtz. Meanwhile, children who experience the world in a completely different way are spreading confidence and humour. For example, a toddler sitting on the edge of a meadow surrounded by a fence: a recurring logo and signature of the artist at the same time.",
+    "price": "\u00a39",
+    "start_date": "2020-06-13",
+    "end_date": "2020-07-18",
+    "art_gallery": "Galerie Bernet Bertram",
+    "art_gallery_location": "Berlin",
+    "genres": [
+      10
+    ]
+  }
+},
+{
+  "model": "mediums.medium",
+  "pk": 60,
+  "fields": {
+    "category": 1,
+    "creator": "Danica Lundy",
+    "title": "bleach cologne",
+    "duration": null,
+    "year": 2020,
+    "image": "https://img.artrabbit.com/events/danica-lundy-bleach-cologne/images/V26cxpmyqusx/1500x1163/Danica-Lundy-A-Man-s-Gotta-Do-Something-To-Keep-Warm-2020-oil-on-canvas-182-8-x-228-6-cm-72-x-96-in-min.webp",
+    "video": null,
+    "info": "The motion is ceaseless. There is a lot going on, everywhere: tiny details, menacing gestures, surrealistic choreographies. It seems like the whole world is compressed in these canvases, squeezed in so little space. The perspective keeps shifting and the eye can\u2019t find a resting spot. What\u2019s going on here? Hastily, we look for something, not yet knowing what. We engage with the possible meaning of these paintings \u2013 to no avail, at first. Maybe we need to look closer, or from a distance. There must be an answer; the clue might be lying somewhere \u2013 the ultimate interpretation for what looks like a dream, a hallucination, perhaps just an ordinary event \u2013, it\u2019s just a matter of finding it. But we stall. We feel claustrophobic, overwhelmed. And then the motion starts all over again.",
+    "price": "Free",
+    "start_date": "2020-05-16",
+    "end_date": "2020-06-27",
+    "art_gallery": "GNYP",
+    "art_gallery_location": "Berlin",
+    "genres": [
+      7
+    ]
+  }
+}
+]
