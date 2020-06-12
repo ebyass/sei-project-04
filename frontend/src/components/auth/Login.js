@@ -2,6 +2,7 @@ import React from 'react'
 import { loginUser } from '../../lib/api'
 import { setToken } from '../../lib/auth'
 import { Redirect } from 'react-router-dom'
+import loginimage from '../../images/loginimage.png'
 
 class Login extends React.Component {
   state = {
@@ -52,7 +53,7 @@ class Login extends React.Component {
   render() {
     const { formData, error, loading } = this.state
     return (
-      <section className="section">
+      <section className="section login-section-background-image" style={{ backgroundImage: `url(${loginimage})` }}>
         {this.renderRedirect()}
         <div className="container">
           <div className="columns">

@@ -236,7 +236,6 @@ div {
   font-weight: bold;
 }
 
-
 // ***********************************************  HOME PAGE  ************************************************** //
 
 .home-tile-fam {
@@ -451,3 +450,12 @@ select.select-dropdown {
 // 	justify-content: center;
 // 	flex-direction: column;
 // }
+
+
+//! LOGIN
+.login-section-background-image { 
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 1000px;
+}
