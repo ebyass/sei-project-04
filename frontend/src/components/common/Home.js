@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { getAllPosts } from '../../lib/api'
 import useFetch from '../../utils/useFetch'
 import { Redirect, Link } from 'react-router-dom'
-import Spinner from '../common/Spinner'
-
 
 function Home() {
 
@@ -26,7 +24,7 @@ function Home() {
 
   return (
     <div>
-      <h1>FAM</h1>
+      <h1 className="home-tile-fam">FAM</h1>
       <p className='info-wrapper home-page-p'>
       IN CASE YOU MISSED IT 
         <br/>

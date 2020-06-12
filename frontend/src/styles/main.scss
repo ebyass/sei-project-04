@@ -121,11 +121,11 @@ footer {
 	position: fixed;
   flex: 0 !important;
   background-color: white !important;
-	height: 30px;
-	margin-bottom: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+	// height: 10px;
+	// margin-bottom: 0px;
+	// left: 0px;
+	// right: 0px;
+	// bottom: 0px;
 }
 
 * {
@@ -239,6 +239,14 @@ div {
 
 // ***********************************************  HOME PAGE  ************************************************** //
 
+.home-tile-fam {
+  font-size: 80px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 10px;
+}
 
 .home-wrapper {
 	margin: 0 auto;
@@ -403,15 +411,12 @@ select.select-dropdown {
 
 // ***********************************************  REGISTER PAGE  ************************************************** //
 
-form.column {
+.register-form{
 	max-width: 50%;
 
 }
 
-.section {
-	// background-color: #FFC0CB;
-	// display: flex;
-	// justify-content: center;
+.register-section {
 	margin-left: 30%;
 
 }
@@ -421,18 +426,13 @@ form.column {
 	border-radius: 0em	;
 }
 
-.button {
+.button-register {
 	border: 1px solid black;
 	border-radius: 0em	;
 
 }
-// .button:hover {
-// 	box-shadow: 17px 15px 32px -16px rgba(0,0,0,0.75);
-// 	// background-color: #FFC0CB;
-// }
 
-.button:hover {
-	// box-shadow: 0 10px yellow;
+.button-register:hover {
 	box-shadow: 17px 15px 32px -16px rgb(255, 192, 203);
   transform: translateY(4px);}
 

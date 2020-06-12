@@ -110,11 +110,11 @@ class Register extends React.Component {
     const { formData, errors } = this.state
     console.log(this.state)
     return (
-      <section className="section">
+      <section className="section register-section">
         {this.renderRedirect()}
         <div className="">
           <div className="columns">
-            <form onSubmit={this.handleSubmit} className="column">
+            <form  onSubmit={this.handleSubmit} className="column register-form">
               {/* <h1 className="has-text-centered">Sign Up Here</h1><br /> */}
 
               {/* FIRST NAME*/}
@@ -204,12 +204,12 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <button type="submit" className={`button is-fullwidth register-button ${this.state.loading ? 'is-loading' : ''}`}>Register</button>
+                <button type="submit" className={`button button-register is-fullwidth register-button ${this.state.loading ? 'is-loading' : ''}`}>Register</button>
               </div>
               <div className="field">
 
                 {/* HAVE AN ACCOUNT? SIGN IN HERE */}
-                <button onClick={this.sendData} type="button" className="button is-fullwidth is-outlined is-register">Have an account? Sign in Here</button>
+                <button onClick={this.sendData} type="button" className="button button-register is-fullwidth is-outlined is-register">Have an account? Sign in Here</button>
 
               </div>
             </form>
