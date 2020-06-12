@@ -173,10 +173,25 @@ div {
 
 .add-to-favourites-button {
   width: 200px;
-  height: 30px;
+  height: 50px;
   border-radius: 30px;
   margin-bottom: 16px;
+  outline: none;
+  font-size: 13px;
 }
+.add-to-favourites-button:hover {
+  box-shadow: 0 5px#5c5c5c;
+  transform: translateY(4px);
+}
+
+.post-review-button {
+  border-radius: 30px;
+}
+.post-review-button:hover {
+  box-shadow: 0 5px#5c5c5c;
+  transform: translateY(4px);
+}
+
 
 .review-delete-button {
   background: indianred;
@@ -184,6 +199,22 @@ div {
 }
 .review-delete-button:hover {
   background: red;
+}
+
+.medium-show-medium-price {
+  font-weight: bold;
+}
+.medium-show-medium-date {
+  font-style: italic;
+}
+.medium-show-medium-year {
+  font-style: italic
+}
+.medium-show-medium-art-gallery-location {
+  font-weight: bold;
+}
+.medium-show-medium-art-gallery {
+  font-weight: bold;
 }
 
 

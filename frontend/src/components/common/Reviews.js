@@ -162,7 +162,7 @@ class Reviews extends React.Component {
             </div>
             <div className="field">
               <p className="control">
-                <button type="submit" className="button post-comment-button">Post Review</button>
+                <button type="submit" className="button post-review-button">Post Review</button>
               </p>
               <br />
             </div>

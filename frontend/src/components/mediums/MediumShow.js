@@ -81,14 +81,15 @@ function MediumShow() {
 
                 <h1 className="medium-show-medium-creator">{medium.creator}</h1>
                 <h1 className="medium-show-medium-duration">{medium.duration}</h1>
-                <h1>{medium.price}</h1>
-                <h1>
+                <h1 className="medium-show-medium-date">
                   {medium.start_date} {medium.end_date}
                 </h1>
-                <h1>{medium.art_gallery_location}</h1>
-                <h1>{medium.art_gallery}</h1>
+                <h1 className="medium-show-medium-art-gallery-location">{medium.art_gallery_location}</h1>
+                <h1 className="medium-show-medium-art-gallery">{medium.art_gallery}</h1>
+                <h2 className="medium-show-medium-year">{medium.year}</h2> 
+                <h1 className="medium-show-medium-price">{medium.price}</h1>
                 <p className="medium-show-medium-info">{medium.info}</p>
-                <h2>{medium.year}</h2> 
+                
               </div>
             </div>
           </div>
