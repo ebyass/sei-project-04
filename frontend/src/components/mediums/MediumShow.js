@@ -70,25 +70,24 @@ function MediumShow() {
                 )}
               </div>
               <div>
-    
-                <h1>{medium.title}</h1>
+                <h1 className="medium-show-medium-title">{medium.title}</h1>
                 {mediumToMap
                   ? mediumToMap.map((
                     mediumGenre //* like this.state. using mediumToMap from state
                   ) => (
-                    <h1 key={mediumGenre.id}>{mediumGenre.name}</h1> //* this the genre
+                    <h1 className="medium-show-medium-genre" key={mediumGenre.id}>{mediumGenre.name}</h1> //* this the genre
                   ))
                   : null}
 
-                <h1>{medium.creator}</h1>
-                <h1>{medium.duration}</h1>
+                <h1 className="medium-show-medium-creator">{medium.creator}</h1>
+                <h1 className="medium-show-medium-duration">{medium.duration}</h1>
                 <h1>{medium.price}</h1>
                 <h1>
                   {medium.start_date} {medium.end_date}
                 </h1>
                 <h1>{medium.art_gallery_location}</h1>
                 <h1>{medium.art_gallery}</h1>
-                <p>{medium.info}</p>
+                <p className="medium-show-medium-info">{medium.info}</p>
                 <h2>{medium.year}</h2> 
               </div>
             </div>

@@ -144,6 +144,33 @@ main {
   margin-left: 20px;
   flex: 2.5;
 }
+
+.medium-show-medium-title {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div {
+  .medium-show-medium-genre {
+    font-style: italic;
+  }
+}
+
+
+.medium-show-medium-duration {
+  font-style: italic;
+}
+.medium-show-medium-creator {
+  font-size: large;
+}
+
+.medium-show-medium-info {
+    padding-top: 20px !important;
+  }
+
+
+
 .add-to-favourites-button {
   width: 200px;
   height: 30px;
