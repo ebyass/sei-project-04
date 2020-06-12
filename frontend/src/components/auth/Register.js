@@ -3,6 +3,7 @@ import React from 'react'
 import { registerUser, loginUser } from '../../lib/api'
 import { Redirect } from 'react-router-dom'
 import { setToken } from '../../lib/auth'
+import registerimage4 from '../../images/registerimage4.png'
 
 
 class Register extends React.Component {
@@ -110,10 +111,10 @@ class Register extends React.Component {
     const { formData, errors } = this.state
     console.log(this.state)
     return (
-      <section className="section register-section">
+      <section className="section register-section" style={{ backgroundImage: `url(${registerimage4})` }}>
         {this.renderRedirect()}
         <div className="">
-          <div className="columns">
+          <div className="columns register-columns">
             <form  onSubmit={this.handleSubmit} className="column register-form">
               {/* <h1 className="has-text-centered">Sign Up Here</h1><br /> */}
 
