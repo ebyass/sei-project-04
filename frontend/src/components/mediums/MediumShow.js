@@ -62,7 +62,7 @@ function MediumShow() {
               <img className="medium-show-image" src={medium.image} alt={medium.title} />
             </div>
             <div className="medium-show-text">
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: 'right' }}>
                 {isAuthenticated() && (
                   <button className="add-to-favourites-button" onClick={handleClick} value={medium.id}>
                     {isFavourite ? 'Remove from favourites' : 'Add to favourites'}

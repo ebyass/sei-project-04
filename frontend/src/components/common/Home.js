@@ -42,18 +42,18 @@ Why not sign up so you can Get With It and be part of our conversation. Curate y
           {/* <h1 className='post-title'>{recentPost.title}</h1> */}
           <h2 className='info-wrapper index-page-h2'>{recentPost.info}</h2>
           <div className='home-wrapper'>
-            <h3 className='home-medium-main-title'>{recentPost.film_title}</h3>
+            <h3 className='home-medium-main-title-film'>{recentPost.film_title}</h3>
             <Link to={'/film'}>
-              <img className='home-image' src={recentPost.image_film} alt={recentPost.title} />
+              <img className='home-image-film' src={recentPost.image_film} alt={recentPost.title} />
             </Link>
             
-            <h3 className='home-medium-main-title'>{recentPost.art_title}</h3>
+            <h3 className='home-medium-main-title-art'>{recentPost.art_title}</h3>
             <Link to={'/art'}>
               <img className='home-image-art' src={recentPost.image_art} alt={recentPost.title} />
             </Link>
-            <h3 className='home-medium-main-title'>{recentPost.music_title}</h3>
+            <h3 className='home-medium-main-title-music'>{recentPost.music_title}</h3>
             <Link to={'/music'}>
-              <img className='home-image' src={recentPost.image_music} alt={recentPost.title}/>
+              <img className='home-image-music' src={recentPost.image_music} alt={recentPost.title}/>
             </Link>
             
           </div>

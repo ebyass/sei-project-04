@@ -208,7 +208,7 @@ class Reviews extends React.Component {
                           <Ratings.Widget widgetHoverColor="gold"/>
                         </Ratings>
                         {isOwner(review.owner.id) &&
-                        <button className="delete review-delete-button" review-id={review.id}
+                        <button className="review-delete-button" review-id={review.id}
                           onClick={this.reviewHandleDelete}>Delete
                         </button>}
                         <hr />

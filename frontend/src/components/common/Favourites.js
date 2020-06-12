@@ -55,6 +55,9 @@ class Favourites extends React.Component {
 
     return (
       <>
+        <div className="fam-title-index-container">
+          <h1 className="home-tile-fam">FAM</h1>
+        </div>
         <div className="favourite-buttons-container">
           <button style={{ backgroundImage: `url(${filmimage})` }} className="favourites-button film-favourite-image" onClick={this.handleClick} value='2'><h1 className="favourites-button-text">Film</h1></button>
           <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'><h1 className="favourites-button-text">Art</h1></button>

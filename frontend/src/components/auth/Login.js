@@ -53,47 +53,52 @@ class Login extends React.Component {
   render() {
     const { formData, error, loading } = this.state
     return (
-      <section className="section login-section-background-image" style={{ backgroundImage: `url(${loginimage})` }}>
-        {this.renderRedirect()}
-        <div className="container">
-          <div className="columns">
-            <form onSubmit={this.handleSubmit} className="column">
-              <div className="field">
-                <div className="control">
-                  <input
-                    className={`input ${error ? 'is-danger' : '' }`}
-                    placeholder="Email"
-                    name="email"
-                    onChange={this.handleChange}
-                    value={formData.email}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                <div className="control">
-                  <input
-                    type="password"
-                    className={`input ${error ? 'is-danger' : ''}`}
-                    placeholder="Password"
-                    name="password"
-                    onChange={this.handleChange}
-                    value={formData.password}
-                  />
-                </div>
-                {error && <small className="help is-danger">{error}</small>}
-              </div>
-              <div className="field">
-                <button type="submit" className={`button is-fullwidth login-button ${loading ? 'is-loading' : ''}`}>Login</button>
-              </div>
-              <div className="field">
-              
-                <button onClick={this.sendData}type="button" className="button is-fullwidth is-outlined is-register">No Account? Sign Up Here</button>
-            
-              </div>
-            </form>
-          </div>
+      <div>
+        <div className="fam-title-index-container">
+          <h1 className="home-tile-fam">FAM</h1>
         </div>
-      </section>
+        <section className="section login-section-background-image" style={{ backgroundImage: `url(${loginimage})` }}>
+          {this.renderRedirect()}
+          <div className="container">
+            <div className="columns">
+              <form onSubmit={this.handleSubmit} className="column">
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className={`input ${error ? 'is-danger' : '' }`}
+                      placeholder="Email"
+                      name="email"
+                      onChange={this.handleChange}
+                      value={formData.email}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <div className="control">
+                    <input
+                      type="password"
+                      className={`input ${error ? 'is-danger' : ''}`}
+                      placeholder="Password"
+                      name="password"
+                      onChange={this.handleChange}
+                      value={formData.password}
+                    />
+                  </div>
+                  {error && <small className="help is-danger">{error}</small>}
+                </div>
+                <div className="field">
+                  <button type="submit" className={`button is-fullwidth login-button ${loading ? 'is-loading' : ''}`}>Login</button>
+                </div>
+                <div className="field">
+              
+                  <button onClick={this.sendData}type="button" className="button is-fullwidth is-outlined is-register">No Account? Sign Up Here</button>
+            
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
     )
   }
 }

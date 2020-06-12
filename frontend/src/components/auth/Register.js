@@ -111,112 +111,117 @@ class Register extends React.Component {
     const { formData, errors } = this.state
     console.log(this.state)
     return (
-      <section className="section register-section" style={{ backgroundImage: `url(${registerimage4})` }}>
-        {this.renderRedirect()}
-        <div className="">
-          <div className="columns register-columns">
-            <form  onSubmit={this.handleSubmit} className="column register-form">
-              {/* <h1 className="has-text-centered">Sign Up Here</h1><br /> */}
-
-              {/* FIRST NAME*/}
-              <div className="field">
-                <div className="control">
-                  <input
-                    className={`input ${errors.first_name ? 'is-danger' : ''}`}
-                    placeholder="First Name"
-                    name="first_name"
-                    onChange={this.handleChange}
-                    value={formData.first_name}
-                  />
-                </div>
-                {errors.first_name ? <small className="help is-danger">{errors.first_name}</small> : ''}
-              </div>
-
-              {/* LAST NAME */}
-              <div className="field">
-                <div className="control">
-                  <input
-                    className={`input ${errors.last_name ? 'is-danger' : ''}`}
-                    placeholder="Last Name"
-                    name="last_name"
-                    onChange={this.handleChange}
-                    value={formData.last_name}
-                  />
-                </div>
-                {errors.last_name ? <small className="help is-danger">{errors.last_name}</small> : ''}
-              </div>
-
-              {/* USERNAME */}
-              <div className="field">
-                <div className="control">
-                  <input
-                    className={`input ${errors.username ? 'is-danger' : ''}`}
-                    placeholder="Username"
-                    name="username"
-                    onChange={this.handleChange}
-                    value={formData.username}
-                  />
-                </div>
-                {errors.username ? <small className="help is-danger">{errors.username}</small> : ''}
-              </div>
-
-              {/* EMAIL */}
-              <div className="field">
-                <div className="control">
-                  <input
-                    className={`input ${errors.email ? 'is-danger' : ''}`}
-                    placeholder="Email"
-                    name="email"
-                    onChange={this.handleChange}
-                    value={formData.email}
-                  />
-                </div>
-                {this.state.errors.email ? <small className="help is-danger">{errors.email}</small> : ''}
-              </div>
-
-              {/* PASSWORD */}
-              <div className="field">
-                <div className="control">
-                  <input
-                    className={`input ${errors.password ? 'is-danger' : ''}`}
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    onChange={this.handleChange}
-                    value={formData.password}
-                  />
-                </div>
-                {errors.password && <small className="help is-danger">{errors.password}</small>}
-              </div>
-
-              {/* PASSWORD CONFIRMATION */}
-              <div className="field">
-                <div className="control">
-                  <input
-                    type="password"
-                    className={`input ${errors.password_confirmation ? 'is-danger' : ''}`}
-                    placeholder="Password Confirmation"
-                    name="password_confirmation"
-                    onChange={this.handleChange}
-                    value={formData.password_confirmation}
-                  />
-                </div>
-                {errors.password_confirmation && <small className="help is-danger">{errors.password_confirmation}</small>}
-              </div>
-
-              <div className="field">
-                <button type="submit" className={`button button-register is-fullwidth register-button ${this.state.loading ? 'is-loading' : ''}`}>Register</button>
-              </div>
-              <div className="field">
-
-                {/* HAVE AN ACCOUNT? SIGN IN HERE */}
-                <button onClick={this.sendData} type="button" className="button button-register is-fullwidth is-outlined is-register">Have an account? Sign in Here</button>
-
-              </div>
-            </form>
-          </div>
+      <div>
+        <div className="fam-title-index-container">
+          <h1 className="home-tile-fam">FAM</h1>
         </div>
-      </section>
+        <section className="section register-section" style={{ backgroundImage: `url(${registerimage4})` }}>
+          {this.renderRedirect()}
+          <div className="">
+            <div className="columns register-columns">
+              <form  onSubmit={this.handleSubmit} className="column register-form">
+                {/* <h1 className="has-text-centered">Sign Up Here</h1><br /> */}
+
+                {/* FIRST NAME*/}
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className={`input ${errors.first_name ? 'is-danger' : ''}`}
+                      placeholder="First Name"
+                      name="first_name"
+                      onChange={this.handleChange}
+                      value={formData.first_name}
+                    />
+                  </div>
+                  {errors.first_name ? <small className="help is-danger">{errors.first_name}</small> : ''}
+                </div>
+
+                {/* LAST NAME */}
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className={`input ${errors.last_name ? 'is-danger' : ''}`}
+                      placeholder="Last Name"
+                      name="last_name"
+                      onChange={this.handleChange}
+                      value={formData.last_name}
+                    />
+                  </div>
+                  {errors.last_name ? <small className="help is-danger">{errors.last_name}</small> : ''}
+                </div>
+
+                {/* USERNAME */}
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className={`input ${errors.username ? 'is-danger' : ''}`}
+                      placeholder="Username"
+                      name="username"
+                      onChange={this.handleChange}
+                      value={formData.username}
+                    />
+                  </div>
+                  {errors.username ? <small className="help is-danger">{errors.username}</small> : ''}
+                </div>
+
+                {/* EMAIL */}
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className={`input ${errors.email ? 'is-danger' : ''}`}
+                      placeholder="Email"
+                      name="email"
+                      onChange={this.handleChange}
+                      value={formData.email}
+                    />
+                  </div>
+                  {this.state.errors.email ? <small className="help is-danger">{errors.email}</small> : ''}
+                </div>
+
+                {/* PASSWORD */}
+                <div className="field">
+                  <div className="control">
+                    <input
+                      className={`input ${errors.password ? 'is-danger' : ''}`}
+                      type="password"
+                      placeholder="Password"
+                      name="password"
+                      onChange={this.handleChange}
+                      value={formData.password}
+                    />
+                  </div>
+                  {errors.password && <small className="help is-danger">{errors.password}</small>}
+                </div>
+
+                {/* PASSWORD CONFIRMATION */}
+                <div className="field">
+                  <div className="control">
+                    <input
+                      type="password"
+                      className={`input ${errors.password_confirmation ? 'is-danger' : ''}`}
+                      placeholder="Password Confirmation"
+                      name="password_confirmation"
+                      onChange={this.handleChange}
+                      value={formData.password_confirmation}
+                    />
+                  </div>
+                  {errors.password_confirmation && <small className="help is-danger">{errors.password_confirmation}</small>}
+                </div>
+
+                <div className="field">
+                  <button type="submit" className={`button button-register is-fullwidth register-button ${this.state.loading ? 'is-loading' : ''}`}>Register</button>
+                </div>
+                <div className="field">
+
+                  {/* HAVE AN ACCOUNT? SIGN IN HERE */}
+                  <button onClick={this.sendData} type="button" className="button button-register is-fullwidth is-outlined is-register">Have an account? Sign in Here</button>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
     )
   }
 }

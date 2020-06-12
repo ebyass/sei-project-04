@@ -50,7 +50,9 @@ function MusicIndex() {
 
   return (
     <div>
-
+      <div className="fam-title-index-container">
+        <h1 className="home-tile-fam">FAM</h1>
+      </div>
       <div className='select-wrapper'>
         <select onChange={handleChange} className='select-dropdown  fadeInUp'>
 
