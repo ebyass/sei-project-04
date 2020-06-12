@@ -74,7 +74,7 @@ function ArtIndex() {
           postsToRender.map(post => (
             <div key={post.id}>
               {/* <h1>{post.title}</h1> */}
-              <h2>{post.art_title}</h2>
+              <h2 className='index-page-h2'>{post.art_title}</h2>
               <div>
                 {post.mediums.map((medium) =>
                   medium.category === 1 ? (
@@ -96,7 +96,7 @@ function ArtIndex() {
         ) : recentPost ? (
           <div>
             {/* <h1>{recentPost.title}</h1> */}
-            <h2>{recentPost.art_title}</h2>
+            <h2 className='index-page-h2'>{recentPost.art_title}</h2>
             {recentPost.mediums.map((medium) =>
               medium.category === 1 ? (
                 <div className='medium-wrapper' key={medium.id}>
