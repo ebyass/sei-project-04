@@ -76,9 +76,11 @@ function FilmIndex() {
               {post.mediums.map((medium) =>
                 medium.category === 2 ? (
                   <div className='medium-wrapper' key={medium.id}>
+                    
                     <h1 className='index-page-h1'>{medium.title}</h1>
                     <h1 className='index-page-h1'>{medium.creator}</h1>
                     <h1 className='index-page-h1'>{medium.duration}</h1>
+                    
                     <Link to={`/mediums/${medium.id}`}>
                       <img className='medium-image-index' src={medium.image} alt={medium.title} />
                     </Link>
@@ -94,9 +96,11 @@ function FilmIndex() {
             {recentPost.mediums.map((medium) =>
               medium.category === 2 ? (
                 <div className='medium-wrapper' key={medium.id}>
+                  
                   <h1 className='index-page-h1'>{medium.title}</h1>
                   <h1 className='index-page-h1'>{medium.creator}</h1>
                   <h1 className='index-page-h1'>{medium.duration}</h1>
+                  
                   <Link to={`/mediums/${medium.id}`}>
                     <img className='medium-image-index'src={medium.image} alt={medium.title} />
                   </Link>

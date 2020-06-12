@@ -115,7 +115,7 @@ class Register extends React.Component {
         <div className="">
           <div className="columns">
             <form onSubmit={this.handleSubmit} className="column">
-              <h1 className="has-text-centered">Sign Up Here</h1><br />
+              {/* <h1 className="has-text-centered">Sign Up Here</h1><br /> */}
 
               {/* FIRST NAME*/}
               <div className="field">
@@ -209,7 +209,7 @@ class Register extends React.Component {
               <div className="field">
 
                 {/* HAVE AN ACCOUNT? SIGN IN HERE */}
-                <button onClick={this.sendData} type="button" className="button is-fullwidth is-dark is-outlined">Have an account? Sign in Here</button>
+                <button onClick={this.sendData} type="button" className="button is-fullwidth is-outlined is-register">Have an account? Sign in Here</button>
 
               </div>
             </form>
