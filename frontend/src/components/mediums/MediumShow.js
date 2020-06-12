@@ -11,7 +11,6 @@ import useFetch from '../../utils/useFetch'
 import { Redirect, useParams } from 'react-router-dom'
 import Spinner from '../common/Spinner'
 import Reviews from '../common/Reviews'
-import moment from 'moment'
 import { isAuthenticated } from '../../lib/auth'
 function MediumShow() {
   const { id } = useParams()
@@ -57,36 +56,46 @@ function MediumShow() {
       {loading ? (
         <Spinner />
       ) : (
-        <div>
-          <h1>{medium.title}</h1>
-          <br />
-          {mediumToMap
-            ? mediumToMap.map((
-              mediumGenre //* like this.state. using mediumToMap from state
-            ) => (
-              <h1 key={mediumGenre.id}>{mediumGenre.name}</h1> //* this the genre
-            ))
-            : null}
-          <h1>{medium.creator}</h1>
-          <h1>{medium.duration}</h1>
-          <h1>{medium.price}</h1>
-          <h1>
-            {moment(medium.start_date).format('MMM Do YY')} -{' '}
-            {moment(medium.end_date).format('MMM Do YY')}
-          </h1>
-          <h1>{medium.art_gallery_location}</h1>
-          <h1>{medium.art_gallery}</h1>
-          <p>{medium.info}</p>
-          <h2>{medium.year}</h2>
-          <img src={medium.image} alt={medium.title} />
-          {/* <video src={medium.trailer} /> */}
-          <br />
-          {isAuthenticated() && (
-            <button onClick={handleClick} value={medium.id}>
-              {isFavourite ? 'Remove from favourites' : 'Add to favourites'}
-            </button>
-          )}
-          <Reviews mediumId={medium.id} />
+        <div className="medium-show-flex">
+          <div className="medium-show-row">
+            <div className="medium-show-image-div">
+              <img className="medium-show-image" src={medium.image} alt={medium.title} />
+            </div>
+            <div className="medium-show-text">
+              <div style={{ textAlign: 'center' }}>
+                {isAuthenticated() && (
+                  <button className="add-to-favourites-button" onClick={handleClick} value={medium.id}>
+                    {isFavourite ? 'Remove from favourites' : 'Add to favourites'}
+                  </button>
+                )}
+              </div>
+              <div>
+    
+                <h1>{medium.title}</h1>
+                {mediumToMap
+                  ? mediumToMap.map((
+                    mediumGenre //* like this.state. using mediumToMap from state
+                  ) => (
+                    <h1 key={mediumGenre.id}>{mediumGenre.name}</h1> //* this the genre
+                  ))
+                  : null}
+
+                <h1>{medium.creator}</h1>
+                <h1>{medium.duration}</h1>
+                <h1>{medium.price}</h1>
+                <h1>
+                  {medium.start_date} {medium.end_date}
+                </h1>
+                <h1>{medium.art_gallery_location}</h1>
+                <h1>{medium.art_gallery}</h1>
+                <p>{medium.info}</p>
+                <h2>{medium.year}</h2> 
+              </div>
+            </div>
+          </div>
+          <div className="medium-show-row">
+            <Reviews mediumId={medium.id} />
+          </div>
         </div>
       )}
     </div>

@@ -1,5 +1,11 @@
 @import '~bulma/bulma.sass';
 
+
+* {
+  font-family: Courier, Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif !important;
+}
+
+
 //! NAVBAR
 
 //* side bar
@@ -115,6 +121,42 @@ body {
 
 main {
   height: 100vh;
+}
+
+//! MEDIUM SHOW
+.medium-show-flex {
+  display: flex;
+  flex-direction: column;
+}
+.medium-show-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.medium-show-image-div {
+  flex: 1;
+}
+.medium-show-image {
+  min-width: 200px;
+}
+.medium-show-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  flex: 2.5;
+}
+.add-to-favourites-button {
+  width: 200px;
+  height: 30px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+
+.review-delete-button {
+  background: indianred;
+  margin-left: 20px;
+}
+.review-delete-button:hover {
+  background: red;
 }
 
 

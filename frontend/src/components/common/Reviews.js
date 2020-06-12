@@ -173,6 +173,7 @@ class Reviews extends React.Component {
           {!this.hasUserPostedReview() &&
           <Ratings
             rating={rating}
+            widgetDimensions="40px"
             widgetRatedColors="gold"
             changeRating={this.changeRating}
           >
@@ -207,7 +208,7 @@ class Reviews extends React.Component {
                           <Ratings.Widget widgetHoverColor="gold"/>
                         </Ratings>
                         {isOwner(review.owner.id) &&
-                        <button className="delete comment-delete-button" review-id={review.id}
+                        <button className="delete review-delete-button" review-id={review.id}
                           onClick={this.reviewHandleDelete}>Delete
                         </button>}
                         <hr />
