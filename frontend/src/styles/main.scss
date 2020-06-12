@@ -25,7 +25,7 @@
 //* side bar
 site-wrapper {
   display: flex;
-  margin-top: 8px;
+  margin: 8px 20px 0 0;
   //* for footer
   flex: 1 !important;
 }
@@ -33,6 +33,7 @@ site-wrapper {
 menu {
   width: 15%; 
   margin-right: 10px;
+  min-width: 200px;
 .menu-item {
     margin: 10px 0;
     font-family: Courier, Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif !important;
@@ -54,7 +55,7 @@ menu {
 }
 
 main {
-  width: 80%;
+  width: 85%;
 }
 
 //! FAVOURITES
@@ -62,7 +63,7 @@ main {
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  margin: 0 50px;
+  margin: 0 30px;
   margin-top: 25px;
   outline:none;
 }
@@ -83,6 +84,7 @@ main {
 
 .favourite-buttons-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -251,7 +253,6 @@ div {
   justify-content: center;
   align-items: baseline;
 	flex-direction: row-reverse;
-
 		a {
 				.home-image-film {
           flex: 1;
@@ -261,16 +262,28 @@ div {
 
 				}
 				.home-image-art {
-          margin-left: 45px;
           flex: 1.5;
           box-shadow: 17px 15px 32px -16px rgba(0,0,0,0.75);
         }
         .home-image-music {
           flex: 1;
-          margin-left: 50px;
           box-shadow: 17px 15px 32px -16px rgba(0,0,0,0.75);
         }
-		}
+        .responsive-home-image {
+          min-width: 200px;
+          margin-left: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+  .home-wrapper {
+    flex-direction: column-reverse;
+  }
+  .responsive-home-image {
+    max-height: 300px;
+    width: auto !important;
+  }
 }
 
 .home-medium-main-title-film {
@@ -312,14 +325,15 @@ div {
 
 .info-wrapper {
   margin: 0 auto;
-  display: flex;
   padding-bottom: 50px;
-  width: 750px;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   font-size: 15px;
 }
-
+.text-wrap {
+  width: 100%;
+    margin: 0 auto;
+    max-width: 750px;
+}
 
 
 // ***********************************************  MEDIUM INDEX  ************************************************** //

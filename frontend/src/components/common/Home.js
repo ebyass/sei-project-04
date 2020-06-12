@@ -25,35 +25,36 @@ function Home() {
   return (
     <div>
       <h1 className="home-tile-fam">FAM</h1>
-      <p className='info-wrapper home-page-p'>
+      <div className="text-wrap">
+        <p className='info-wrapper home-page-p'>
       IN CASE YOU MISSED IT 
-        <br/>
+          <br/>
 
 Welcome to the FAM Website.
 Discover new music, film, art as we share with you all the things we’ve been loving each month.<br/>  
-        {/* The landing pages show a selection of our newest obsessions -  */}
+          {/* The landing pages show a selection of our newest obsessions -  */}
 
 Why not sign up so you can Get With It and be part of our conversation. Curate your own favourite lists, leave reviews and become a part of FAM
-
-      </p>
+    
+        </p>
+      </div>
       {recentPost ? //* use recentPost here instead of loading
       //* anything you put before colon will be loaded. If there's nothing there it render the loading spinner.
         <div>
-          {/* <h1 className='post-title'>{recentPost.title}</h1> */}
           <h2 className='info-wrapper index-page-h2'>{recentPost.info}</h2>
           <div className='home-wrapper'>
             <h3 className='home-medium-main-title-film'>{recentPost.film_title}</h3>
             <Link to={'/film'}>
-              <img className='home-image-film' src={recentPost.image_film} alt={recentPost.title} />
+              <img className='home-image-film responsive-home-image' src={recentPost.image_film} alt={recentPost.title} />
             </Link>
             
             <h3 className='home-medium-main-title-art'>{recentPost.art_title}</h3>
             <Link to={'/art'}>
-              <img className='home-image-art' src={recentPost.image_art} alt={recentPost.title} />
+              <img className='home-image-art responsive-home-image' src={recentPost.image_art} alt={recentPost.title} />
             </Link>
             <h3 className='home-medium-main-title-music'>{recentPost.music_title}</h3>
             <Link to={'/music'}>
-              <img className='home-image-music' src={recentPost.image_music} alt={recentPost.title}/>
+              <img className='home-image-music responsive-home-image' src={recentPost.image_music} alt={recentPost.title}/>
             </Link>
             
           </div>
