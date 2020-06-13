@@ -70,44 +70,48 @@ function FilmIndex() {
           <option value="December">DECEMBER</option>
         </select>
       </div>
-      <div className='film-index-wrapper'>
+      <div>
         {selectHasBeenUsed ? (
           postsToRender.map(post => (
-            <div key={post.id}>
+            <div className="medium-index-wrapper" key={post.id}>
               {/* <h2 className='post-title'>{post.title}</h2> */}
               <h2 className='index-page-h2'>{post.film_title}</h2>
               {post.mediums.map((medium) =>
                 medium.category === 2 ? (
                   <div className='medium-wrapper' key={medium.id}>
-                    
-                    <h1 className='index-page-h1'>{medium.title}</h1>
-                    <h1 className='index-page-h1'>{medium.creator}</h1>
-                    <h1 className='index-page-h1'>{medium.duration}</h1>
-                    
-                    <Link to={`/mediums/${medium.id}`}>
-                      <img className='medium-image-index' src={medium.image} alt={medium.title} />
-                    </Link>
+                    <div className="medium-info">
+                      <h1 className='index-page-h1-title'>{medium.title}</h1>
+                      <h1 className='index-page-h1'>{medium.creator}</h1>
+                      <h1 className='index-page-h1-duration'>{medium.duration}</h1>
+                    </div>
+                    <div className="medium-img">  
+                      <Link to={`/mediums/${medium.id}`}>
+                        <img className='medium-image-index' src={medium.image} alt={medium.title} />
+                      </Link>
+                    </div>
                   </div>
                 ) : null
               )}
             </div>
           ))
         ) : recentPost ? (
-          <div>
+          <div className="medium-index-wrapper">
             {/* <h1>{recentPost.title}</h1> */}
             <h2 className='index-page-h2'>{recentPost.film_title}</h2>
             {recentPost.mediums.map((medium) =>
               medium.category === 2 ? (
                 <div className='medium-wrapper' key={medium.id}>
-                  
-                  <h1 className='index-page-h1'>{medium.title}</h1>
-                  <h1 className='index-page-h1'>{medium.creator}</h1>
-                  <h1 className='index-page-h1'>{medium.duration}</h1>
-                  
-                  <Link to={`/mediums/${medium.id}`}>
-                    <img className='medium-image-index'src={medium.image} alt={medium.title} />
-                  </Link>
-                  {/* <video src={medium.video} /> */}
+                  <div className="medium-info">
+                    <h1 className='index-page-h1-title'>{medium.title}</h1>
+                    <h1 className='index-page-h1'>{medium.creator}</h1>
+                    <h1 className='index-page-h1-duration'>{medium.duration}</h1>
+                  </div>
+                  <div className="medium-img">
+                    <Link to={`/mediums/${medium.id}`}>
+                      <img className='medium-image-index'src={medium.image} alt={medium.title} />
+                    </Link>
+                    {/* <video src={medium.video} /> */}
+                  </div>
                 </div>
               ) :
                 null

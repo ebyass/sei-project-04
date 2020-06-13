@@ -72,43 +72,48 @@ function ArtIndex() {
           <option value="December">DECEMBER</option>
         </select>
       </div>
-      <div className='film-index-wrapper'>
+      <div>
         {selectHasBeenUsed ? (
           postsToRender.map(post => (
-            <div key={post.id}>
+            <div className="medium-index-wrapper" key={post.id}>
               {/* <h1>{post.title}</h1> */}
               <h2 className='index-page-h2'>{post.art_title}</h2>
-              <div>
-                {post.mediums.map((medium) =>
-                  medium.category === 1 ? (
-                    <div className='medium-wrapper' key={medium.id}>
-                      <h1 className='art-creator-title'>{medium.title}</h1>
-                      <h1 className='art-creator-title'>{medium.creator}</h1>
+              {post.mediums.map((medium) =>
+                medium.category === 1 ? (
+                  <div className='medium-wrapper' key={medium.id}>
+                    <div className="medium-info">
+                      <h1 className='index-page-h1-title'>{medium.title}</h1>
+                      <h1 className='index-page-h1'>{medium.creator}</h1>
+                    </div>
+                    <div className="medium-img">
                       <Link to={`/mediums/${medium.id}`}>
                         <img className='medium-art-index' src={medium.image} alt={medium.title} />
                       </Link>
-
                     </div>
-                  ) : null
-                )}
-              </div>
+                  </div>
+                ) : null
+              )}
             </div>
           ))
 
 
         ) : recentPost ? (
-          <div>
+          <div className="medium-index-wrapper">
             {/* <h1>{recentPost.title}</h1> */}
             <h2 className='index-page-h2'>{recentPost.art_title}</h2>
             {recentPost.mediums.map((medium) =>
               medium.category === 1 ? (
                 <div className='medium-wrapper' key={medium.id}>
-                  <h1 className='art-creator-title'>{medium.title}</h1>
-                  <h1 className='art-creator-title'>{medium.creator}</h1>
-                  <Link to={`/mediums/${medium.id}`}>
-                    <img className='medium-art-index' src={medium.image} alt={medium.title} />
-                  </Link>
-                  {/* <video src={medium.video} /> */}
+                  <div className="medium-info">
+                    <h1 className='index-page-h1-title'>{medium.title}</h1>
+                    <h1 className='index-page-h1'>{medium.creator}</h1>
+                  </div>
+                  <div className="medium-img">
+                    <Link to={`/mediums/${medium.id}`}>
+                      <img className='medium-art-index' src={medium.image} alt={medium.title} />
+                    </Link>
+                    {/* <video src={medium.video} /> */}
+                  </div>
                 </div>
               ) :
                 null
