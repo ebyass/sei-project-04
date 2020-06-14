@@ -43,20 +43,24 @@ Why not sign up so you can Get With It and be part of our conversation. Curate y
         <div>
           <h2 className='info-wrapper index-page-h2'>{recentPost.info}</h2>
           <div className='home-wrapper'>
-            <h3 className='home-medium-main-title-film'>{recentPost.film_title}</h3>
-            <Link to={'/film'}>
-              <img className='home-image-film responsive-home-image' src={recentPost.image_film} alt={recentPost.title} />
-            </Link>
-            
-            <h3 className='home-medium-main-title-art'>{recentPost.art_title}</h3>
-            <Link to={'/art'}>
-              <img className='home-image-art responsive-home-image' src={recentPost.image_art} alt={recentPost.title} />
-            </Link>
-            <h3 className='home-medium-main-title-music'>{recentPost.music_title}</h3>
-            <Link to={'/music'}>
-              <img className='home-image-music responsive-home-image' src={recentPost.image_music} alt={recentPost.title}/>
-            </Link>
-            
+            <div className='home-item-wrapper'>
+              <h3 className='home-medium-main-title-film'>{recentPost.film_title}</h3>
+              <Link to={'/film'}>
+                <img className='home-image-film responsive-home-image' src={recentPost.image_film} alt={recentPost.title} />
+              </Link>
+            </div>
+            <div className='home-item-wrapper'>
+              <h3 className='home-medium-main-title-art'>{recentPost.art_title}</h3>
+              <Link to={'/art'}>
+                <img className='home-image-art responsive-home-image' src={recentPost.image_art} alt={recentPost.title} />
+              </Link>
+            </div>
+            <div className='home-item-wrapper'>
+              <h3 className='home-medium-main-title-music'>{recentPost.music_title}</h3>
+              <Link to={'/music'}>
+                <img className='home-image-music responsive-home-image' src={recentPost.image_music} alt={recentPost.title}/>
+              </Link>
+            </div>
           </div>
         </div>
         :
