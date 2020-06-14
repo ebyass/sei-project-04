@@ -223,6 +223,32 @@ menu {
     padding: 0;
     }
   }
+  //* home
+  .home-page {
+    padding-left: 20px;
+  }
+  //* show
+  .medium-show-flex {
+    width: 100vw;
+  }
+  .medium-show-row {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  .medium-show-text {
+    .favourite-show-button-wrap {
+      text-align: center !important;
+    }
+  }
+  .widget-ratings {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .reviews-p-button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 @media screen and (max-width: 400px) {
   .login-section-background-image {

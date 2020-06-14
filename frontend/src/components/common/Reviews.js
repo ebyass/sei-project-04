@@ -161,7 +161,7 @@ class Reviews extends React.Component {
               </p>
             </div>
             <div className="field">
-              <p className="control">
+              <p className="control reviews-p-button-wrap">
                 <button type="submit" className="button post-review-button">Post Review</button>
               </p>
               <br />

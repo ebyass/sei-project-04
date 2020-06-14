@@ -57,12 +57,15 @@ function MediumShow() {
         <Spinner />
       ) : (
         <div className="medium-show-flex">
+          <div className="fam-title-index-container">
+            <h1 className="home-tile-fam">FAM</h1>
+          </div>
           <div className="medium-show-row">
             <div className="medium-show-image-div">
               <img className="medium-show-image" src={medium.image} alt={medium.title} />
             </div>
             <div className="medium-show-text">
-              <div style={{ textAlign: 'right' }}>
+              <div className="favourite-show-button-wrap" style={{ textAlign: 'right' }}>
                 {isAuthenticated() && (
                   <button className="add-to-favourites-button" onClick={handleClick} value={medium.id}>
                     {isFavourite ? 'Remove from favourites' : 'Add to favourites'}

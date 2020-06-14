@@ -23,7 +23,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="home-page">
       <h1 className="home-tile-fam">FAM</h1>
       <div className="text-wrap">
         <p className='info-wrapper home-page-p'>
