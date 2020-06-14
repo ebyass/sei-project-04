@@ -93,7 +93,13 @@ main {
   margin-right: 20px;
 }
 
+.favourites-mediums-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .favourites-mediums-container {
+  width: 1000px;
   display: flex;
   flex-wrap: wrap;
   padding-top: 50px;
@@ -104,11 +110,19 @@ main {
 .favourite-title {
   font-weight: bold;
   font-size: 13px;
+  max-width: 200px;
 }
 
 .favourite-duration {
   font-weight: bold;
   font-style: italic;
+}
+
+.favourites-item {
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 //! FOOTER

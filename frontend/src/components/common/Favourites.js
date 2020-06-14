@@ -63,20 +63,21 @@ class Favourites extends React.Component {
           <button style={{ backgroundImage: `url(${artimage})` }} className="favourites-button art-favourite-image" onClick={this.handleClick} value='1'><h1 className="favourites-button-text">Art</h1></button>
           <button style={{ backgroundImage: `url(${musicimage})` }} className="favourites-button music-favourite-image" onClick={this.handleClick} value='3'><h1 className="favourites-button-text">Music</h1></button>
         </div>
+        <div className="favourites-medium-wrap">
+          <div className="favourites-mediums-container">
+            {buttonClicked ? favesToRender.map((favourite, index) => (
 
-        <div className="favourites-mediums-container">
-          {buttonClicked ? favesToRender.map((favourite, index) => (
+              <div className="favourites-item" key={index}>
+                <h1 className="favourite-title">{favourite.title}</h1>
+                <h2>{favourite.creator}</h2>
+                <h2 className="favourite-duration">{favourite.duration}</h2>
+                <Link to={`/mediums/${favourite.id}`}>
+                  <img className="favourites-medium-image" src={favourite.image} alt={favourite.title} />
+                </Link>
+              </div>
 
-            <div key={index}>
-              <h1 className="favourite-title">{favourite.title}</h1>
-              <h2>{favourite.creator}</h2>
-              <h2 className="favourite-duration">{favourite.duration}</h2>
-              <Link to={`/mediums/${favourite.id}`}>
-                <img className="favourites-medium-image" src={favourite.image} alt={favourite.title} />
-              </Link>
-            </div>
-
-          )) : null}
+            )) : null}
+          </div>
         </div>
       </>
     )
