@@ -115,6 +115,9 @@ menu {
     width: 100vw;
     padding: 10px 0;
     }
+    .footer-p {
+    margin-right: 40px
+  }
   }
   
   main {
@@ -251,6 +254,21 @@ menu {
   //* favourites
   .favourites-medium-wrap {
     margin-left: 80px;
+  }
+  .favourite-buttons-container {
+    margin-left: 60px;
+  }
+  button.favourites-button.film-favourite-image {
+    width: 200px;
+    height: 200px;
+  }
+  button.favourites-button.art-favourite-image {
+    width: 200px;
+    height: 200px;
+  }
+  button.favourites-button.music-favourite-image {
+    width: 200px;
+    height: 200px;
   }
 
 }

@@ -11,7 +11,7 @@ function Footer() {
             <span role="img" aria-label="logo" className="logo-emoji">🧀</span>
           </strong>
         </p> */}
-        <p>
+        <p className="footer-p">
           Made with <span role="img" aria-label="logo" className="logo-emoji">❤️</span> By Eleanor &  Yarden
         </p>
       </div>
