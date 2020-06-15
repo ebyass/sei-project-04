@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { createReview, getSingleMedium, deleteReview } from '../../lib/api'
-import { isOwner, getPayload } from '../../lib/auth'
+import { isOwner, getPayload, isAuthenticated } from '../../lib/auth'
 import Ratings from 'react-ratings-declarative'
 
 
@@ -146,7 +146,7 @@ class Reviews extends React.Component {
 
     return (
       <>
-        <div className="media-content">
+        {isAuthenticated() ? <div className="media-content">
           {!this.hasUserPostedReview() &&
           <form onSubmit={this.reviewHandleSubmit}>
             <div className="field">
@@ -221,7 +221,7 @@ class Reviews extends React.Component {
               </div>
             </article>
           </div>
-        </div>
+        </div> : null}
       </>
     )
   }
