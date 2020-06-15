@@ -238,10 +238,9 @@ menu {
     flex-direction: column;
     padding-left: 10px;
   }
-  .medium-show-text {
-    .favourite-show-button-wrap {
-      text-align: center !important;
-    }
+  .favourite-show-button-wrap {
+    text-align: center !important;
+    width: 100vw;
   }
   .widget-ratings {
     display: flex !important;
@@ -345,6 +344,11 @@ menu {
   justify-content: space-between;
 }
 
+.favourite-show-button-wrap {
+  text-align: right;
+  width: 100vw;
+}
+
 //! FOOTER
 
 #root {
@@ -385,8 +389,7 @@ main {
 }
 .medium-show-image {
   min-width: 200px;
-  padding-top: 75px;
-    margin-right: 30px;
+  margin-right: 30px;
 }
 .medium-show-text {
   display: flex;

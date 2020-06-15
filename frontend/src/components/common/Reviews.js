@@ -146,9 +146,9 @@ class Reviews extends React.Component {
 
     return (
       <>
-        {isAuthenticated() ? <div className="media-content">
-          {!this.hasUserPostedReview() &&
-          <form onSubmit={this.reviewHandleSubmit}>
+        <div className="media-content">
+          
+          {!this.hasUserPostedReview() && isAuthenticated() ? <form onSubmit={this.reviewHandleSubmit}>
             <div className="field">
               <p className="control">
                 <textarea
@@ -166,24 +166,24 @@ class Reviews extends React.Component {
               </p>
               <br />
             </div>
-          </form>
-          }
+          </form> : null}
+          
           
           {this.state.errorMessage ? <div style={{ color: 'red' }}>{this.state.errorMessage}</div> : null }
-          {!this.hasUserPostedReview() &&
-          <Ratings
-            rating={rating}
-            widgetDimensions="40px"
-            widgetRatedColors="gold"
-            changeRating={this.changeRating}
-          >
-            <Ratings.Widget widgetHoverColor="gold"/>
-            <Ratings.Widget widgetHoverColor="gold"/>
-            <Ratings.Widget widgetHoverColor="gold"/>
-            <Ratings.Widget widgetHoverColor="gold"/>
-            <Ratings.Widget widgetHoverColor="gold"/>
-          </Ratings>
-          }
+          {!this.hasUserPostedReview() && isAuthenticated() ? 
+            <Ratings
+              rating={rating}
+              widgetDimensions="40px"
+              widgetRatedColors="gold"
+              changeRating={this.changeRating}
+            >
+              <Ratings.Widget widgetHoverColor="gold"/>
+              <Ratings.Widget widgetHoverColor="gold"/>
+              <Ratings.Widget widgetHoverColor="gold"/>
+              <Ratings.Widget widgetHoverColor="gold"/>
+              <Ratings.Widget widgetHoverColor="gold"/>
+            </Ratings> : null
+          } 
           <div>
             <article className="media">
               <div className="media-content">
@@ -221,7 +221,7 @@ class Reviews extends React.Component {
               </div>
             </article>
           </div>
-        </div> : null}
+        </div> 
       </>
     )
   }

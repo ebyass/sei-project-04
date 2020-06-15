@@ -61,17 +61,19 @@ function MediumShow() {
             <h1 className="home-tile-fam">FAM</h1>
           </div>
           <div className="medium-show-row">
+            <div className="favourite-show-button-wrap">
+              {isAuthenticated() && (
+                <button className="add-to-favourites-button" onClick={handleClick} value={medium.id}>
+                  {isFavourite ? 'Remove from favourites' : 'Add to favourites'}
+                </button>
+              )}
+            </div>
+          </div>
+          <div className="medium-show-row">
             <div className="medium-show-image-div">
               <img className="medium-show-image" src={medium.image} alt={medium.title} />
             </div>
             <div className="medium-show-text">
-              <div className="favourite-show-button-wrap" style={{ textAlign: 'right' }}>
-                {isAuthenticated() && (
-                  <button className="add-to-favourites-button" onClick={handleClick} value={medium.id}>
-                    {isFavourite ? 'Remove from favourites' : 'Add to favourites'}
-                  </button>
-                )}
-              </div>
               <div>
                 <h1 className="medium-show-medium-title">{medium.title}</h1>
                 {mediumToMap
