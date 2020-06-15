@@ -1,4 +1,3 @@
-<img align="left" width="50" height="50" src="GA.png" alt="GA logo">
+# sei-project-4
 
-# Project 4: FAM
-![FAM title](readme-fam.png)
+TESTING WOOOOOOOOOOPPPPP
