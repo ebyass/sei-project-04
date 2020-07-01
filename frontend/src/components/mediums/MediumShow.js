@@ -50,7 +50,7 @@ function MediumShow() {
       setIsFavourite(medium)
     }
   }
-  if (error) {
+  if (error) { 
     return <Redirect to="/notfound" />
   }
   return (
