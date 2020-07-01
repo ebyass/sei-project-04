@@ -1,4 +1,4 @@
-# sei-project-4
+# Project 4: Full-Stack Django and React App
 
 # Brief 
 In 8 days I had to:
