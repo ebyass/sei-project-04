@@ -1,7 +1,5 @@
 # sei-project-4
 
-# sei-project-4
-
 # Brief 
 In 8 days I had to:
 
