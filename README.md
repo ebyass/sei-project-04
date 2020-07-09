@@ -1,7 +1,6 @@
 # Project 4: Full-Stack Django and React App
 
 # Brief 
-In 8 days I had to:
 
 **Build a full-stack application** by making your own backend and your own front-end
 
@@ -18,6 +17,10 @@ In 8 days I had to:
 **Be deployed online** so it’s publicly accessible
 
 **React Hooks** is optional for this project
+
+# Timeframe 
+
+8 days
 
 # Technologies Used:
 
