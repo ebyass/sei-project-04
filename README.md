@@ -147,9 +147,9 @@ We had originally planned to build 3 models for Film, Art and Music but the ERD 
 
 ![Wireframe](frontend/src/images/9.png)
 
-We chose to build one Medium Model which linked to Categories using the foreign key for the one to many relationship and linked to Genres with a many to many relationship. 
+We chose to build one Medium Model which linked to Categories using a foreign key for the one to many relationship and linked to Genres with a many to many relationship. 
 
-We knew the importance of clear planning from previous projects and used Trello and daily stand ups to organise ourselves and set daily goals. 
+We knew the importance of clear planning from previous projects and used daily stand ups to organise ourselves, set daily goals, help each other and hold each stay on target. 
 
 By day 2 we were happy with the wireframes and could start work on the backend. As we were both relatively new to Python and SQL databases, we worked on this through pair programming. 
 
@@ -157,9 +157,7 @@ Once our backend was working and had been tested making API requests in Insomnia
 
 # Individual inputs
 
-I absolutely loved how well Yarden and I worked together on this project. Our communication was seamless and we were so inspired and excited by each other’s attitudes to the project and our drive to learn. We plan to continue working together on side projects in the near future. 
-
-## Index Page
+## Index Page 
 
 I built the index pages with a dropdown filter function that filters posts by month. I was pleased with how I got this to work, using a ternary statement in the JSX and selectHasBeenUsed set to false in state, I was able to get the page to always show the most recent post, unless user had selected a specific month from the dropdown menu. 
 
@@ -168,8 +166,8 @@ I built the index pages with a dropdown filter function that filters posts by mo
         {selectHasBeenUsed ? (
           postsToRender.map(post => (
             <div className=“medium-index-wrapper” key={post.id}>
-              {//* <h1 >{post.title}</h1> *//}
-              <h2 className=‘index-page-h2’>{post.music_title}</h2>    {post.mediums.map((medium) =>
+              <h2 className=‘index-page-h2’>{post.music_title}</h2>    
+              {post.mediums.map((medium) =>
                 medium.category === 3 ? (
                   <div className=‘medium-wrapper’ key={medium.id}>
                     <div className=“medium-info”>
@@ -191,7 +189,6 @@ I built the index pages with a dropdown filter function that filters posts by mo
 
         ) : recentPost ? (
           <div className=“medium-index-wrapper”>
-            {//* <h1>{recentPost.title}</h1> *//}
             <h2 className=‘index-page-h2’>{recentPost.music_title}</h2>
             {recentPost.mediums.map((medium) =>
               medium.category === 3 ? ( ///* music is category 3/
@@ -205,7 +202,6 @@ I built the index pages with a dropdown filter function that filters posts by mo
                     <Link to={`/mediums/${medium.id}`}>
                       <img className=‘medium-image-index’ src={medium.image} alt={medium.title} />
                     </Link>
-                    {//* <video src={medium.video} /> *//}
                   </div>
                 </div>
               ) :
@@ -216,7 +212,7 @@ I built the index pages with a dropdown filter function that filters posts by mo
       </div>
 ```
 
-## Add to Favourites 
+## Add to Favourites Functionality 
 
 I became a lot more confident with React and it was really fun to push myself further by using React Hooks.  The code snippet below shows how I implemented the add to favourites functionality. There was a lot of double nesting to work through here and I particularly like my use case of `.find` to compare a whole object rather than return a boolean. This was necessary to check if a medium already existed inside a user’s favourites array. 
 
@@ -225,7 +221,6 @@ I became a lot more confident with React and it was really fun to push myself fu
     /// if (!(medium && user)) return/
     /if/ (!medium) /return/ 
     /if/ (!user) /return/ 
-    console.log(‘this is user’, user)
     const getGenreOfMedium = medium.genres.map((item) => item) 
     const listOfFavourites = user.favourites.map((item) => item) || [] 
     const mediumId = medium.id 
@@ -234,6 +229,7 @@ I became a lot more confident with React and it was really fun to push myself fu
     setIsFavourite(isItAlreadyAFave)
     setUpdateFavourites(listOfFavourites)
   }, [medium, user]) 
+  
   const handleClick = /async/ (e) => {
     const mediumId = e.target.value
     /if/ (isFavourite) {
@@ -255,11 +251,15 @@ The biggest blocker was understanding the asynchronous order of things. The code
 
 A huge win for this app is the responsive design. We really wanted our own unique stamp on this project so chose to avoid using any CSS frameworks. This decision meant that styling was incredibly fiddly but I am really pleased with the result. 
 
+I absolutely loved how well Yarden and I worked together on this project. Our communication was seamless and we were so inspired and excited by each other’s attitudes to the project and our drive to learn. We plan to continue working together on side projects in the near future. 
+
 Also a big shout out to Moment.js. The documentation was great and was a massive help when working on the filter by month functionality. 
 
 #  Key Learnings 
 
 Working on this project with Yarden really proved to me the value of making clear comments in my code. It was so helpful to have clear messages for one another about what we were doing and why and really helped cement concepts in my brain. 
+
+
 
 # Future Improvements 
 
